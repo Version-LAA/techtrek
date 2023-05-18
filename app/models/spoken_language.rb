@@ -1,0 +1,2 @@
+class SpokenLanguage < ApplicationRecord
+end
