@@ -10,9 +10,91 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_17_003152) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_18_232329) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assessment_questions", force: :cascade do |t|
+    t.string "answer"
+    t.bigint "question_id", null: false
+    t.bigint "assessment_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["assessment_id"], name: "index_assessment_questions_on_assessment_id"
+    t.index ["question_id"], name: "index_assessment_questions_on_question_id"
+  end
+
+  create_table "assessments", force: :cascade do |t|
+    t.boolean "completed"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_assessments_on_user_id"
+  end
+
+  create_table "consultations", force: :cascade do |t|
+    t.date "start_time"
+    t.date "end_time"
+    t.bigint "specialty_id", null: false
+    t.bigint "mentee_id", null: false
+    t.bigint "mentor_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mentee_id"], name: "index_consultations_on_mentee_id"
+    t.index ["mentor_id"], name: "index_consultations_on_mentor_id"
+    t.index ["specialty_id"], name: "index_consultations_on_specialty_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.bigint "sender_id", null: false
+    t.bigint "receiver_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["receiver_id"], name: "index_messages_on_receiver_id"
+    t.index ["sender_id"], name: "index_messages_on_sender_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string "content"
+    t.bigint "technology_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["technology_id"], name: "index_questions_on_technology_id"
+  end
+
+  create_table "specialties", force: :cascade do |t|
+    t.integer "skill_level"
+    t.integer "hourly_rate"
+    t.bigint "technology_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["technology_id"], name: "index_specialties_on_technology_id"
+    t.index ["user_id"], name: "index_specialties_on_user_id"
+  end
+
+  create_table "spoken_languages", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "technologies", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_spoken_languages", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "spoken_language_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spoken_language_id"], name: "index_user_spoken_languages_on_spoken_language_id"
+    t.index ["user_id"], name: "index_user_spoken_languages_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +108,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_17_003152) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "assessment_questions", "assessments"
+  add_foreign_key "assessment_questions", "questions"
+  add_foreign_key "assessments", "users"
+  add_foreign_key "consultations", "specialties"
+  add_foreign_key "consultations", "users", column: "mentee_id"
+  add_foreign_key "consultations", "users", column: "mentor_id"
+  add_foreign_key "messages", "users", column: "receiver_id"
+  add_foreign_key "messages", "users", column: "sender_id"
+  add_foreign_key "questions", "technologies"
+  add_foreign_key "specialties", "technologies"
+  add_foreign_key "specialties", "users"
+  add_foreign_key "user_spoken_languages", "spoken_languages"
+  add_foreign_key "user_spoken_languages", "users"
 end
