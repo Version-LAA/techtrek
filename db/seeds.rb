@@ -9,8 +9,22 @@
 #clean database
 puts "cleaning database"
 Message.delete_all
-puts "message delted"
+puts "message deleted"
 SpokenLanguage.delete_all
 puts "spoken languages deleted"
 UserSpokenLanguage.delete_all
 puts "spoken languages deleted"
+Consultation.delete_all
+puts "consultations deleted"
+Specialty.delete_all
+puts "specialties deleted"
+Assessment.delete_all
+puts "assessments deleted"
+AssessmentQuestion.delete_all
+puts "assessmentQuestions deleted"
+Question.delete_all
+puts "questions deleted"
+Technology.delete_all
+puts "technologies deleted"
+User.delete_all
+puts "users deleted"
