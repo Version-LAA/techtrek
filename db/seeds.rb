@@ -28,3 +28,7 @@ Technology.delete_all
 puts "technologies deleted"
 User.delete_all
 puts "users deleted"
+
+puts "creating users"
+
+User.create()
