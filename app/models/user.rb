@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :messages_as_receiver, class_name: "Message", foreign_key: :receiver_id
   has_many :consultations_as_mentee, class_name: "Consultation", foreign_key: :mentee_id
   has_many :consultations_as_mentor, class_name: "Consultation", foreign_key: :mentor_id
+  has_one_attached :photo # For cloudinary connection and user profile pic
 end
