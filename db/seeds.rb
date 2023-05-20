@@ -36,23 +36,24 @@ User.create(first_name: "Latoya", last_name: "Alford", location: "Philadelphia",
 User.create(first_name: "Bertrand", last_name: "Tukov", location: "Montreal", about: "text", email: "tukovb@gmail.com", password: "password")
 User.create(first_name: "Peter", last_name: "McClintock", location: "Montreal", about: "text", email: "jannissarkameron@gmail.com", password: "password")
 User.create(first_name: "Andrew", last_name: "Phan", location: "Montreal", about: "text", email: "jannissarkameron@gmail.com", password: "password")
-puts "user created"
+puts "users created"
 # need to fix personal info so that it is accurate
 
 Specialty.create(user_id: "1", skill_level: "10", hourly_rate: "11", technology_id: "1")
-
+puts "specialties created"
 Technology.create(name: , description: )
-
+puts "technologies created"
 Question.create(content: , technology_id: )
-
+puts "questions created"
 AssessmentQuestion.create(answer: , question_id: , assessment_id: )
-
+puts "assessment questions created"
 Assessment.create(completed: , user_id: )
-
+puts "assessments created"
 Consultation.create(start_time: , end_time: )
-
+puts "consultations created"
 UserSpokenLanguage.create(user_id: , spoken_language_id: )
-
+puts "user spoken languages created"
 SpokenLanguage.create(name: )
-
+puts "spoken languages created"
 Message.create(content: , sender_id: , receiver_id: )
+puts "messages created"
