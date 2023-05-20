@@ -40,23 +40,19 @@ puts "user created"
 # need to fix personal info so that it is accurate
 
 Specialty.create(user_id: "1", skill_level: "10", hourly_rate: "11", technology_id: "1")
-Specialty.create(user_id: "2", skill_level: "10", hourly_rate: "12", technology_id: "2")
-Specialty.create(user_id: "3", skill_level: "10", hourly_rate: "13", technology_id: "3")
-Specialty.create(user_id: "4", skill_level: "10", hourly_rate: "14", technology_id: "4")
-Specialty.create(user_id: "5", skill_level: "10", hourly_rate: "15", technology_id: "5")
 
-Technology.create()
+Technology.create(name: , description: )
 
-Question.create()
+Question.create(content: , technology_id: )
 
-AssessmentQuestion.create()
+AssessmentQuestion.create(answer: , question_id: , assessment_id: )
 
-Assessment.create()
+Assessment.create(completed: , user_id: )
 
-Consultation.create()
+Consultation.create(start_time: , end_time: )
 
-UserSpokenLanguage.create()
+UserSpokenLanguage.create(user_id: , spoken_language_id: )
 
-SpokenLanguage.create()
+SpokenLanguage.create(name: )
 
-Message.create()
+Message.create(content: , sender_id: , receiver_id: )
