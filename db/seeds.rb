@@ -33,27 +33,35 @@ puts "creating users"
 
 User.create(first_name: "Kameron", last_name: "Jannissar", location: "Montreal", about: "text", email: "kameron@techtrek.com", password: "password")
 User.create(first_name: "Latoya", last_name: "Alford", location: "Philadelphia", about: "text", email: "latoya@techtrek.com", password: "password")
-User.create(first_name: "Bertrand", last_name: "Tukov", location: "Lachine", about: "text", email: "Bertrand@techtrek.com", password: "password")
-User.create(first_name: "Peter", last_name: "McClintock", location: "Boston", about: "text", email: "Peter@techtrek.com", password: "password")
-User.create(first_name: "Andrew", last_name: "Phan", location: "Montreal", about: "text", email: "Andrew@techtrek.com", password: "password")
+User.create(first_name: "Bertrand", last_name: "Tukov", location: "Lachine", about: "text", email: "bertrand@techtrek.com", password: "password")
+User.create(first_name: "Peter", last_name: "McClintock", location: "Boston", about: "text", email: "[eter@techtrek.com", password: "password")
+User.create(first_name: "Andrew", last_name: "Phan", location: "Montreal", about: "text", email: "andrew@techtrek.com", password: "password")
 puts "users created"
 # need to fix personal info so that it is accurate
 
 Specialty.create(user_id: "1", skill_level: "10", hourly_rate: "11", technology_id: "1")
 puts "specialties created"
-Technology.create(name: "tecnology 1", description: "this is a description")
+
+Technology.create(name: "technology 1", description: "this is a description")
 puts "technologies created"
-Question.create(content: , technology_id: )
+
+Question.create(content: "question 1", technology_id: "1")
 puts "questions created"
+
 AssessmentQuestion.create(answer: , question_id: , assessment_id: )
 puts "assessment questions created"
-Assessment.create(completed: , user_id: )
+
+Assessment.create(completed: "true or false?", user_id: "1")
 puts "assessments created"
-Consultation.create(start_time: , end_time: )
+
+Consultation.create(start_time: "time 1", end_time: "time 2")
 puts "consultations created"
-UserSpokenLanguage.create(user_id: , spoken_language_id: )
+
+UserSpokenLanguage.create(user_id: "1", spoken_language_id: "1")
 puts "user spoken languages created"
-SpokenLanguage.create(name: )
+
+SpokenLanguage.create(name: "english")
 puts "spoken languages created"
-Message.create(content: , sender_id: , receiver_id: )
+
+Message.create(content: "this is content", sender_id: "1", receiver_id: "1")
 puts "messages created"
