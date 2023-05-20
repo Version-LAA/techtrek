@@ -1,10 +1,16 @@
 // Specific CSS for your home-page
-.primary-colour {
+.page-primary-colour {
   background-color: #B1D7B4;
   height: 300px;
 }
 
-.secondary-colour {
+.page-secondary-colour {
   background-color: #F6F7EB;
   height: 500px;
+}
+
+.home-page-actions {
+  // width: auto;
+  width: auto;
+  flex: 0 0 auto;
 }
