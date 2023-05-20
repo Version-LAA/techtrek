@@ -32,4 +32,9 @@ puts "users deleted"
 puts "creating users"
 
 User.create(first_name: "Kameron", last_name: "Jannissar", location: "Montreal", about: "text", email: "jannissarkameron@gmail.com", password: "password")
+User.create(first_name: "Latoya", last_name: "Alford", location: "Philadelphia", about: "text", email: "jannissarkameron@gmail.com", password: "password")
+User.create(first_name: "Bertrand", last_name: "Tukov", location: "Montreal", about: "text", email: "jannissarkameron@gmail.com", password: "password")
+User.create(first_name: "Peter", last_name: "McClintock", location: "Montreal", about: "text", email: "jannissarkameron@gmail.com", password: "password")
+User.create(first_name: "Andrew", last_name: "Phan", location: "Montreal", about: "text", email: "jannissarkameron@gmail.com", password: "password")
 puts "user created"
+# need to fix personal info
