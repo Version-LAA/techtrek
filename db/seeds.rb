@@ -39,7 +39,7 @@ User.create(first_name: "Andrew", last_name: "Phan", location: "Montreal", about
 puts "users created"
 # need to fix personal info so that it is accurate
 
-Specialty.create(user_id: "1", skill_level: "10", hourly_rate: "11", technology_id: "1")
+Specialty.create(user_id: "1", skill_level: rand(6..10), hourly_rate: 11, technology_id: "1")
 puts "specialties created"
 
 Technology.create(name: "technology 1", description: "this is a description")
