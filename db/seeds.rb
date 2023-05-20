@@ -9,8 +9,54 @@
 #clean database
 puts "cleaning database"
 Message.delete_all
-puts "message delted"
+puts "message deleted"
 SpokenLanguage.delete_all
 puts "spoken languages deleted"
 UserSpokenLanguage.delete_all
 puts "spoken languages deleted"
+Consultation.delete_all
+puts "consultations deleted"
+Specialty.delete_all
+puts "specialties deleted"
+Assessment.delete_all
+puts "assessments deleted"
+AssessmentQuestion.delete_all
+puts "assessmentQuestions deleted"
+Question.delete_all
+puts "questions deleted"
+Technology.delete_all
+puts "technologies deleted"
+User.delete_all
+puts "users deleted"
+
+puts "creating users"
+
+User.create(first_name: "Kameron", last_name: "Jannissar", location: "Montreal", about: "text", email: "jannissarkameron@gmail.com", password: "password")
+User.create(first_name: "Latoya", last_name: "Alford", location: "Philadelphia", about: "text", email: "jannissarkameron@gmail.com", password: "password")
+User.create(first_name: "Bertrand", last_name: "Tukov", location: "Montreal", about: "text", email: "tukovb@gmail.com", password: "password")
+User.create(first_name: "Peter", last_name: "McClintock", location: "Montreal", about: "text", email: "jannissarkameron@gmail.com", password: "password")
+User.create(first_name: "Andrew", last_name: "Phan", location: "Montreal", about: "text", email: "jannissarkameron@gmail.com", password: "password")
+puts "user created"
+# need to fix personal info so that it is accurate
+
+Specialty.create(user_id: "1", skill_level: "10", hourly_rate: "11", technology_id: "1")
+Specialty.create(user_id: "2", skill_level: "10", hourly_rate: "12", technology_id: "2")
+Specialty.create(user_id: "3", skill_level: "10", hourly_rate: "13", technology_id: "3")
+Specialty.create(user_id: "4", skill_level: "10", hourly_rate: "14", technology_id: "4")
+Specialty.create(user_id: "5", skill_level: "10", hourly_rate: "15", technology_id: "5")
+
+Technology.create()
+
+Question.create()
+
+AssessmentQuestion.create()
+
+Assessment.create()
+
+Consultation.create()
+
+UserSpokenLanguage.create()
+
+SpokenLanguage.create()
+
+Message.create()
