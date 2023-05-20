@@ -1,4 +1,5 @@
 // Specific CSS for your home-page
+
 .header {
   display: flex;
   flex-direction: column;
@@ -9,4 +10,8 @@
 
 .title {
   text-align: center;
+
+body {
+  background-image: image-url("wallpaper.jpg");
+
 }
