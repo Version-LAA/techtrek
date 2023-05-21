@@ -38,10 +38,16 @@
   <div class="row">
       <div class="col-4 left-body">
         <p>About Me</p>
+        <p><%=@mentor.about%></p>
       </div>
 
       <div class="col-7 right-body">
         <p>Work Exp</p>
+        <ul>
+          <%@experiences.each do |e|%>
+            <li><%=e.company_name%></li>
+          <%end%>
+        </ul>
       </div>
   </div>
   <div class="row">
@@ -51,6 +57,9 @@
 
       <div class="col-7 right-body">
         <p>Education</p>
+        <%@education.each do |edu|%>
+          <%=edu.institution_name%>
+        <%end%>
       </div>
   </div>
 

@@ -117,4 +117,9 @@ User.find_each do |u|
   u.photo.attach(io: file, filename: "profilePic.png", content_type: "image/png")
   u.save
   puts 'photo added'
+  Experience.create(company_name: "TechTrek", position_title: "Lead Developer", start_date:"01-01-2021", end_date:"02-02-2023", user: u)
+  Experience.create(company_name: "Codemon", position_title: "Product Manager", start_date:"01-01-2020", end_date:"01-01-2021", user: u)
+  puts 'experience added'
+  Education.create(institution_name: "LeWagon", degree_type: "Certification", start_date:"01-01-2023", end_date:"06-15-2023", user: u)
+  puts 'education added'
 end

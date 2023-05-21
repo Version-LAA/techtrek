@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_20_223950) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_21_163731) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -71,6 +71,28 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_20_223950) do
     t.index ["mentee_id"], name: "index_consultations_on_mentee_id"
     t.index ["mentor_id"], name: "index_consultations_on_mentor_id"
     t.index ["specialty_id"], name: "index_consultations_on_specialty_id"
+  end
+
+  create_table "educations", force: :cascade do |t|
+    t.string "institution_name"
+    t.string "degree_type"
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_educations_on_user_id"
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string "company_name"
+    t.string "position_title"
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -149,6 +171,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_20_223950) do
   add_foreign_key "consultations", "specialties"
   add_foreign_key "consultations", "users", column: "mentee_id"
   add_foreign_key "consultations", "users", column: "mentor_id"
+  add_foreign_key "educations", "users"
+  add_foreign_key "experiences", "users"
   add_foreign_key "messages", "users", column: "receiver_id"
   add_foreign_key "messages", "users", column: "sender_id"
   add_foreign_key "questions", "technologies"

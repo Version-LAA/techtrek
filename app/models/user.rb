@@ -8,4 +8,6 @@ class User < ApplicationRecord
   has_many :consultations_as_mentee, class_name: "Consultation", foreign_key: :mentee_id
   has_many :consultations_as_mentor, class_name: "Consultation", foreign_key: :mentor_id
   has_one_attached :photo # For cloudinary connection and user profile pic
+  has_many :experiences
+  has_many :educations
 end
