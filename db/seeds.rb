@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-#clean database
+# clean database
+
 puts "cleaning database"
 Message.delete_all
 puts "message deleted"
@@ -30,16 +31,68 @@ User.delete_all
 puts "users deleted"
 
 puts "creating users"
+titles = ['cybersecurity pro', 'junior frontend developer', 'experienced backend developer', 'data scientist']
 
-User.create(first_name: "Kameron", last_name: "Jannissar", location: "Montreal", about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", email: "kameron@techtrek.com", password: "password")
-User.create(first_name: "Latoya", last_name: "Alford", location: "Philadelphia", about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", email: "latoya@techtrek.com", password: "password")
-User.create(first_name: "Bertrand", last_name: "Tukov", location: "Lachine", about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", email: "bertrand@techtrek.com", password: "password")
-User.create(first_name: "Peter", last_name: "McClintock", location: "Boston", about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", email: "[eter@techtrek.com", password: "password")
-User.create(first_name: "Andrew", last_name: "Phan", location: "Montreal", about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", email: "andrew@techtrek.com", password: "password")
+User.create(
+  first_name: "Kameron",
+  last_name: "Jannissar",
+  location: "Montreal",
+  about: "Lorem ipsum dolor sit amet," \
+         "consectetur adipiscing elit, sed do" \
+         "eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  email: "kameron@techtrek.com",
+  password: "password",
+  title: titles[rand(titles.count)]
+)
+
+User.create(
+  first_name: "Latoya",
+  last_name: "Alford",
+  location: "Philadelphia",
+  about: "Lorem ipsum dolor sit amet," \
+         "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut" \
+         "labore et dolore magna aliqua.",
+  email: "latoya@techtrek.com",
+  password: "password",
+  title: titles[rand(titles.count)]
+)
+User.create(
+  first_name: "Bertrand",
+  last_name: "Tukov",
+  location: "Lachine",
+  about: "Lorem ipsum dolor sit amet," \
+         "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut" \
+         "labore et dolore magna aliqua.",
+  email: "bertrand@techtrek.com",
+  password: "password",
+  title: titles[rand(titles.count)]
+)
+
+User.create(
+  first_name: "Peter",
+  last_name: "McClintock",
+  location: "Boston",
+  about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, " \
+         "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  email: "[eter@techtrek.com",
+  password: "password",
+  title: titles[rand(titles.count)]
+)
+User.create(
+  first_name: "Andrew",
+  last_name: "Phan",
+  location: "Montreal",
+  about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, " \
+         "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  email: "andrew@techtrek.com",
+  password: "password",
+  title: titles[rand(titles.count)]
+)
+
 puts "users created"
 # need to fix personal info so that it is accurate
 technology = ['javascript', 'python', 'cybersecurity', 'html', 'css','resume','interviews']
-languages = ['spanish','english','french','chinese','arabic','portuguese','german','japanese','russian']
+languages = ['spanish', 'english', 'french', 'chinese', 'arabic', 'portuguese', 'german', 'japanese', 'russian']
 #skill level: 1 = beginer; 2= midlevel 3= advanced 4 =expert
 
 User.find_each do |u|
@@ -61,6 +114,7 @@ User.find_each do |u|
   UserSpokenLanguage.create(spoken_language:lang_two,user:u)
   puts "languages added to #{u.first_name}"
   file = URI.open('https://assets.stickpng.com/thumbs/5845ca7c1046ab543d25238b.png')
-  u.photo.attach(io: file, filename: "profilePic.png", content_type:"image/png")
+  u.photo.attach(io: file, filename: "profilePic.png", content_type: "image/png")
   u.save
+  puts 'photo added'
 end

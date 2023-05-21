@@ -4,5 +4,6 @@ class MentorsController < ApplicationController
 
   def show
     @mentor = User.find(params[:id])
+    @specialties = Specialty.where(user: @mentor)
   end
 end

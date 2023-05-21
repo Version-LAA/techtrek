@@ -1,0 +1,46 @@
+.profile-pic{
+  border: 1px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  padding: 12%;
+  background-color: #f6f7eb;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 15%;
+
+}
+
+.skills-container{
+  border: 1px;
+  padding: 10%;
+  background-color: #DBF3DE;
+  border-radius: 40px;
+}
+
+.profile-container{
+  position: relative;
+  top: 100px;
+  text-align: center;
+
+}
+
+.left-body{
+  border: 1px;
+  background-color: $white;
+  border-radius: 40px;
+  padding: 1%;
+  margin-right: 40px;
+  margin-bottom: 60px;
+
+
+}
+
+.right-body{
+  border: 1px;
+  background-color: $white;
+  border-radius: 40px;
+  padding: 1%;
+  margin-bottom: 60px;
+
+}
