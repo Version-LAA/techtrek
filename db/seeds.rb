@@ -27,6 +27,10 @@ Question.delete_all
 puts "questions deleted"
 Technology.delete_all
 puts "technologies deleted"
+Education.delete_all
+puts "education deleted"
+Experience.delete_all
+puts "experience deleted"
 User.delete_all
 puts "users deleted"
 
@@ -91,21 +95,25 @@ User.create(
 
 puts "users created"
 # need to fix personal info so that it is accurate
-technology = ['javascript', 'python', 'cybersecurity', 'html', 'css','resume','interviews']
+technology = ['frontend','javascript', 'python', 'cybersecurity', 'html', 'css','resume','interviews','general','datascience']
 languages = ['spanish', 'english', 'french', 'chinese', 'arabic', 'portuguese', 'german', 'japanese', 'russian']
 #skill level: 1 = beginer; 2= midlevel 3= advanced 4 =expert
 
+technology.each do |tech|
+  Technology.create(name: tech, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+end
+
 User.find_each do |u|
   puts "adding to #{u.first_name}"
-  tech_one = Technology.create(name: technology[rand(technology.count)], description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-  tech_two = Technology.create(name: technology[rand(technology.count)], description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
-  tech_three = Technology.create(name: technology[rand(technology.count)], description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+  # tech_one = Technology.create(name: technology[rand(technology.count)], description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+  # tech_two = Technology.create(name: technology[rand(technology.count)], description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+  # tech_three = Technology.create(name: technology[rand(technology.count)], description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
   puts "technology created"
-  Specialty.create(technology: tech_one,skill_level: rand(1..4), hourly_rate: rand(25..100), user: u)
+  Specialty.create(technology: Technology.all.sample,skill_level: rand(1..4), hourly_rate: rand(25..100), user: u)
   puts "specialty one added to #{u.first_name}"
-  Specialty.create(technology: tech_two,skill_level: rand(1..4), hourly_rate: rand(25..100), user: u)
+  Specialty.create(technology: Technology.all.sample,skill_level: rand(1..4), hourly_rate: rand(25..100), user: u)
   puts "specialty two added to #{u.first_name}"
-  Specialty.create(technology: tech_three,skill_level: rand(1..4), hourly_rate: rand(25..100), user: u)
+  Specialty.create(technology: Technology.all.sample,skill_level: rand(1..4), hourly_rate: rand(25..100), user: u)
   puts "specialty three added to #{u.first_name}"
   lang = SpokenLanguage.create(name: languages[rand(languages.count)])
   lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
@@ -123,3 +131,19 @@ User.find_each do |u|
   Education.create(institution_name: "LeWagon", degree_type: "Certification", start_date:"01-01-2023", end_date:"06-15-2023", user: u)
   puts 'education added'
 end
+
+# creating assessment questions
+assessment_questions = [
+  ['What is your budget for a mentor?','general'],
+  ['Do you have a specific topic that you would like to pursue?', 'general'],
+  ['Do you prefer frontend design such as HTML, CSS, and JavaScript?', 'frontend'],
+  ['Would you rather spend time working with databases, and under the hood designs','backend'],
+  ['Would you rather spend time performing analysis of data and providing insights', 'datascience'],
+  ['You love Mr. Robot?', 'cybersecurity']
+]
+
+assessment_questions.each do |question|
+  Question.create(content: question[0],technology:Technology.where(name: question[1])[0])
+end
+
+puts "questions seeded"

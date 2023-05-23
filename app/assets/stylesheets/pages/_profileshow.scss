@@ -44,3 +44,16 @@
   margin-bottom: 60px;
 
 }
+
+.profile-btn{
+  border: 1px;
+  background-color: $white;
+  border-radius: 40px;
+  padding: 5px;
+  width: 125px;
+  height: 50px;
+  margin: 1%;
+  &:hover{
+    background-color: gold;
+  }
+}
