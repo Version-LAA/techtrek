@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get "my_profile", to: "users#my_profile"
   get "javascript", to: "specialties#javascript"
+  get "cyber_security", to: "specialties#cyber_security"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
