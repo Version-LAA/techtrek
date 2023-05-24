@@ -10,4 +10,7 @@ class SpecialtiesController < ApplicationController
 
   def resume_review
   end
+
+  def salary_review
+  end
 end
