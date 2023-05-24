@@ -1,66 +1,10 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="profile-pic">
-        <%=cl_image_tag(@mentor.photo.key,
-          height: 150,
-          width: 200,
-          crop: :scale,
-          aspect_ratio: "4:3"
-          )%>
-      </div>
-    </div>
-    <div class="col-3">
-      <div class="mt-4">
-        <h1><%= "#{@mentor.first_name} #{@mentor.last_name} " %></h1>
-        <p><%=@mentor.title.titleize%></p>
-        <p><%=@mentor.location.titleize%></p>
-        <%=link_to "Book",root_path,class:"btn profile-btn"%>
-        <%=link_to "Chat",root_path,class:"btn profile-btn"%>
-      </div>
-    </div>
-    <div class="col-5">
-      <div class="skills-container mt-4">
-        <div class="skills">
-          <p style="text-align:center;">Skills<p>
-          <%@specialties.each do |specialty|%>
-            <%=specialty.technology.name%>
-          <%end%>
-          skills
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="container profile-container">
-  <div class="row">
-      <div class="col-4 left-body">
-        <p>About Me</p>
-        <p><%=@mentor.about%></p>
-      </div>
-
-      <div class="col-7 right-body">
-        <p>Work Exp</p>
-        <ul>
-          <%@experiences.each do |e|%>
-            <li><%=e.company_name%></li>
-          <%end%>
-        </ul>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-4 left-body">
-        <p>Connect With Me</p>
-      </div>
-
-      <div class="col-7 right-body">
-        <p>Education</p>
-        <%@education.each do |edu|%>
-          <%=edu.institution_name%>
-        <%end%>
-      </div>
-  </div>
-
-</div>
+<%=render "shared/profile" ,
+  profilePhoto: @mentor.photo.key,
+  userFirstName:@mentor.first_name.titleize,
+  userLastName: @mentor.last_name.titleize,
+  userLocation: @mentor.location.titleize,
+  skills:@specialties,
+  user: @mentor.about,
+  experiences: @experiences,
+  education: @education
+%>

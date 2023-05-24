@@ -1,2 +1,10 @@
-<h1>My Profile Page#my_profile</h1>
-<p>See my Profile in app/views/users/my_profile.html.erb</p>
+<%=render "shared/profile" ,
+  profilePhoto: @user.photo.key,
+  userFirstName: @user.first_name.titleize,
+  userLastName: @user.last_name.titleize,
+  userLocation: @user.location.titleize,
+  skills:@specialties,
+  user: @user.about,
+  experiences: @experiences,
+  education: @education
+%>
