@@ -5,26 +5,47 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh;
+  height: 65vh;
 }
 
-.title {
-  text-align: center;
+h6 {
+  font-family: 'Averia Gruesa Libre', cursive;
+  font-size: 32px;
+  margin-top: 10px;
 }
 
+h1 {
+  font-size: 120px;
+  font-weight: bold;
+}
 body {
   background-image: image-url("wallpaper03.jpg");
 }
 
 .subheaders {
-  margin: 100px;
-  // text-decoration: none;
+  text-align: center;
 }
 
-.subheader {
+a {
   text-decoration: none;
+  background-color: #B1D7B4;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  font-family: 'Averia Gruesa Libre', cursive;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
 }
 
 .search {
+  background-color: #B1D7B4;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  font-family: 'Averia Gruesa Libre', cursive;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  width: 200px;
   text-align: center;
+  margin: 100px;
 }
