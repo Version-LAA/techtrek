@@ -7,4 +7,7 @@ class SpecialtiesController < ApplicationController
 
   def python
   end
+
+  def resume_review
+  end
 end
