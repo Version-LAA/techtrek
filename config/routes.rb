@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   get "my_profile", to: "users#my_profile"
-  get "javacript", to: "specialties#javascript"
+  get "javascript", to: "specialties#javascript"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
