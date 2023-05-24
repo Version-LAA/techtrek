@@ -38,8 +38,8 @@
   </div>
 
   <div class="row search justify-content-center">
-    <div class="col-sm-8 my-3">
-      <%= form_with url: specialties_path, method: :get, class: "d-flex" do %>
+    <div class="col-sm-6 ">
+      <%= form_with url: mentors_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,
               params[:query],
               class: "form-control",
@@ -49,5 +49,4 @@
       <% end %>
     </div>
   </div>
-
 </div>

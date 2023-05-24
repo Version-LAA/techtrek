@@ -22,29 +22,26 @@ body {
 
 .subheaders {
   text-align: center;
+  width: 1000px;
+  margin: 100px;
 }
 
 a {
   text-decoration: none;
   background-color: #B1D7B4;
   color: white;
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 20px;
   font-family: 'Averia Gruesa Libre', cursive;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 20px;
 }
 
-// .search {
-//   background-color: #B1D7B4;
-//   color: white;
-//   border-radius: 20px;
-//   padding: 20px;
-//   font-family: 'Averia Gruesa Libre', cursive;
-//   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-//   font-size: 20px;
-//   width: 500px;
-//   text-align: center;
-//   margin: 100px;
-//   // still working on centering this div
-// }
+.search {
+  border-radius: 20px;
+  font-family: 'Averia Gruesa Libre', cursive;
+  font-size: 20px;
+  text-align: center;
+  margin: 50px;
+  // still working on centering this div
+}

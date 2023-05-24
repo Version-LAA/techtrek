@@ -1,6 +1,7 @@
 class MentorsController < ApplicationController
   def index
-    @mentors = Mentor.all
+    # @mentors = Mentor.all
+    # This line seems to break my code so im commenting it out for now, this is what they did in the lecture though :think:
     if params[:query].present?
       sql_subquery = <<~SQL
         mentors.specialty @@ :query
