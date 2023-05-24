@@ -4,4 +4,7 @@ class SpecialtiesController < ApplicationController
 
   def cyber_security
   end
+
+  def python
+  end
 end
