@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="profile-pic">
+        <%=cl_image_tag(profilePhoto,
+          height: 150,
+          width: 200,
+          crop: :scale,
+          aspect_ratio: "4:3"
+          )%>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="mt-4">
+        <h1><%= "#{userFirstName} #{userLastName} " %></h1>
+        <p><%="🧭 #{userLocation}"%></p>
+        <%=link_to "Book",root_path,class:"btn profile-btn"%>
+        <%=link_to "Chat",root_path,class:"btn profile-btn"%>
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="skills-container mt-4">
+        <div class="skills">
+          <p style="text-align:center;"><strong>Skills</strong></p>
+          <%skills.each do |skill|%>
+            <%=skill.technology.name%>
+          <%end%>
+          skills
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="container profile-container">
+  <div class="row">
+      <div class="col-4 left-body">
+        <p><strong>About Me</strong></p>
+        <p><%=user%></p>
+      </div>
+
+      <div class="col-7 right-body">
+        <p><strong>💼 Work Experience 💼</strong></p>
+        <ul>
+          <%experiences.each do |e|%>
+            <li><%="⭐ #{e.position_title} #{e.company_name} #{e.start_date} - #{e.end_date} "%></li>
+            <br>
+          <%end%>
+        </ul>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-4 left-body">
+        <p><strong>Connect With Me </strong></p>
+      </div>
+
+      <div class="col-7 right-body">
+        <p><strong>📚 Education 📚</p>
+        <ul>
+          <%education.each do |edu|%>
+            <li><%="📓 #{edu.institution_name} #{edu.degree_type} #{edu.start_date} - #{edu.end_date}"%></li>
+          <%end%>
+         </ul>
+      </div>
+  </div>
+
+</div>
