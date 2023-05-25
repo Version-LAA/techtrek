@@ -1,5 +1,10 @@
 class SpecialtiesController < ApplicationController
+  def index
+    @mentors = User.all
+  end
+
   def javascript
+
   end
 
   def cyber_security
