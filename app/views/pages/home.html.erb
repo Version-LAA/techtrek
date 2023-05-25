@@ -1,46 +1,55 @@
-<div class="page">
+<div class="container">
+
+  <%# Next 2 divs are for the main header %>
   <div class="header">
 
     <div class="row">
       <div class="col">
-        <h1>TechTrek</h1>
+        <h1 class="mainh1">TechTrek</h1>
       </div>
     </div>
 
     <div class="row subtitle">
       <div class="col">
-        <h6>Journey through Tech without a sweat </h6>
+        <h6 class="mainh6">Journey through Tech without a sweat </h6>
       </div>
     </div>
   </div>
 
+  <%# All these divs are for the subheaders %>
   <div class="row subheaders">
-
     <div class="col">
-      <%= link_to("Javascript", javascript_path)  %>
+      <%= link_to("Javascript", javascript_path, class: "specialties")  %>
     </div>
 
     <div class="col">
-      <%= link_to("Cyber Security", cyber_security_path)  %>
+      <%= link_to("Cyber Security", cyber_security_path, class: "specialties") %>
     </div>
 
     <div class="col">
-      <%= link_to("Python", python_path)  %>
+      <%= link_to("Python", python_path, class: "specialties")  %>
     </div>
 
     <div class="col">
-      <%= link_to("Resume Review", resume_review_path)  %>
+      <%= link_to("Resume Review", resume_review_path, class: "specialties")  %>
     </div>
 
     <div class="col">
-      <%= link_to("Salary Review", salary_review_path)  %>
-    </div>
-  </div>
-
-  <div class="row search">
-    <div class="col">
-      <h3>Search</h3>
+      <%= link_to("Salary Review", salary_review_path, class: "specialties")  %>
     </div>
   </div>
 
+  <%# This is for the search bar %>
+  <div class="row search justify-content-center">
+    <div class="col-sm-6 ">
+      <%= form_with url: mentors_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Type a keyword"
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
 </div>

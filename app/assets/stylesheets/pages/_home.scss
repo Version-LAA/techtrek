@@ -1,5 +1,3 @@
-// Specific CSS for your home-page
-
 .header {
   display: flex;
   flex-direction: column;
@@ -8,45 +6,43 @@
   height: 55vh;
 }
 
-h6 {
-  font-family: 'Averia Gruesa Libre', cursive;
+.mainh6 {
+  font-family: 'Averia Gruesa Libre';
   font-size: 32px;
   margin-top: 10px;
 }
 
-h1 {
+.mainh1 {
   font-size: 120px;
   font-weight: bold;
+  font-family: 'Lato';
 }
+
 body {
   background-image: image-url("wallpaper03.jpg");
 }
 
 .subheaders {
   text-align: center;
+  width: 1000px;
+  margin-left: 100px;
 }
 
-a {
+.specialties {
   text-decoration: none;
   background-color: #B1D7B4;
   color: white;
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 20px;
-  font-family: 'Averia Gruesa Libre', cursive;
+  font-family: 'Averia Gruesa Libre';
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 20px;
 }
 
 .search {
-  background-color: #B1D7B4;
-  color: white;
   border-radius: 20px;
-  padding: 20px;
-  font-family: 'Averia Gruesa Libre', cursive;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Averia Gruesa Libre';
   font-size: 20px;
-  width: 200px;
   text-align: center;
-  margin: 100px;
-  // still working on centering this div
+  margin: 50px;
 }
