@@ -4,7 +4,7 @@
   height: 240px;
   border-radius: 50%;
   padding: 12%;
-  background-color: #f6f7eb;
+  background-color: #f1f4d2;
   text-align: center;
   align-items: center;
   margin-bottom: 15%;
@@ -27,7 +27,7 @@
 
 .left-body{
   border: 1px;
-  background-color: $white;
+  background-color: #FCFDF8;
   border-radius: 40px;
   padding: 1%;
   margin-right: 40px;
@@ -38,19 +38,27 @@
 
 .right-body{
   border: 1px;
-  background-color: $white;
+  background-color: #FCFDF8;
   border-radius: 40px;
   padding: 1%;
   margin-bottom: 60px;
+  & ul{
+    list-style: none;
+    text-align: left;
+  }
 
 }
 
 .profile-btn{
   border: 1px;
-  background-color: $white;
+  background-color: rgb(251, 238, 226);
   border-radius: 40px;
   padding: 5px;
   width: 125px;
+  // color: #a1f2ac;
+  color: #73c17c;
+  font-weight: 600px;
+  font-size: 30px;
   height: 50px;
   margin: 1%;
   &:hover{
