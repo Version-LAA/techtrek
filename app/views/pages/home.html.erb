@@ -1,4 +1,6 @@
 <div class="page">
+
+  <%# Next 2 divs are for the main header %>
   <div class="header">
 
     <div class="row">
@@ -14,8 +16,8 @@
     </div>
   </div>
 
+  <%# All these divs are for the subheaders %>
   <div class="row subheaders">
-
     <div class="col">
       <%= link_to("Javascript", javascript_path)  %>
     </div>
@@ -37,6 +39,7 @@
     </div>
   </div>
 
+  <%# This is for the search bar %>
   <div class="row search justify-content-center">
     <div class="col-sm-6 ">
       <%= form_with url: mentors_path, method: :get, class: "d-flex" do %>

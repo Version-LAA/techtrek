@@ -1,16 +1,6 @@
 class MentorsController < ApplicationController
   def index
-    # @mentors = Mentor.all
-    # This line seems to break my code so im commenting it out for now, this is what they did in the lecture though :think:
-    if params[:query].present?
-      sql_subquery = <<~SQL
-        mentors.specialty @@ :query
-        OR mentors.location @@ :query
-        OR directors.first_name @@ :query
-        OR directors.last_name @@ :query
-      SQL
-      @mentors = @mentors.where(sql_subquery, query: "%#{params[:query]}%")
-    end
+    # This is where we will implement the backend for our search bar if I am not mistaken
   end
 
   def show
