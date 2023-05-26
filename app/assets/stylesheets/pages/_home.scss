@@ -26,7 +26,6 @@ body {
   text-align: center;
 }
 
-
 .row-specialty {
   display: flex;
   justify-content: center;
@@ -37,13 +36,13 @@ body {
   background-color: #B1D7B4;
   color: white;
   border-radius: 30px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 30px;
   padding-right: 30px;
   font-family: 'Averia Gruesa Libre';
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  font-size: 20px;
+  font-size: 22px;
   margin: 20px;
 }
 
@@ -57,6 +56,9 @@ body {
 
 .search .form-control {
   height: 50px;
+  background-color: #D9D9D9;
+  border-radius: 30px;
+  margin-bottom: 20px;
 }
 .loop {
   background-color: #B1D7B4;
@@ -66,15 +68,26 @@ body {
   font-size: 15px;
   position:relative;
   right: 100px;
-
 }
 
 .btn-primary {
   background-color: #B1D7B4;
-  padding: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
   border-radius: 30px;
   color: white;
   border-style: none;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 36px;
+}
+
+a:hover {
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color:#B1D7B4;
+  color: black;
 }
