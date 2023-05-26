@@ -24,8 +24,12 @@ body {
 
 .subheaders {
   text-align: center;
-  width: 1000px;
-  margin-left: 100px;
+}
+
+
+.row-specialty {
+  display: flex;
+  justify-content: center;
 }
 
 .specialties {
@@ -33,10 +37,14 @@ body {
   background-color: #B1D7B4;
   color: white;
   border-radius: 30px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   font-family: 'Averia Gruesa Libre';
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 20px;
+  margin: 20px;
 }
 
 .search {
@@ -53,11 +61,12 @@ body {
 .loop {
   background-color: #B1D7B4;
   border-radius: 50%;
-  height: 35px;
+  height: max-content;
   padding: 5px;
   font-size: 15px;
   position:relative;
   right: 100px;
+
 }
 
 .btn-primary {
