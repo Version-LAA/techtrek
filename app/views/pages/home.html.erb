@@ -19,23 +19,23 @@
   <%# All these divs are for the subheaders %>
   <div class="row subheaders">
     <div class="col">
-      <%= link_to("Javascript", javascript_path, class: "specialties")  %>
+      <%= link_to("Javascript", specialties_path(query: 'specialty name'), class: "specialties")  %>
     </div>
 
     <div class="col">
-      <%= link_to("Cyber Security", cyber_security_path, class: "specialties") %>
+      <%= link_to("Cyber Security", specialties_path(query: 'specialty name'), class: "specialties") %>
     </div>
 
     <div class="col">
-      <%= link_to("Python", python_path, class: "specialties")  %>
+      <%= link_to("Python", specialties_path(query: 'specialty name'), class: "specialties")  %>
     </div>
 
     <div class="col">
-      <%= link_to("Resume Review", resume_review_path, class: "specialties")  %>
+      <%= link_to("Resume Review", specialties_path(query: 'specialty name'), class: "specialties")  %>
     </div>
 
     <div class="col">
-      <%= link_to("Salary Review", salary_review_path, class: "specialties")  %>
+      <%= link_to("Salary Review", specialties_path(query: 'specialty name'), class: "specialties")  %>
     </div>
   </div>
 
