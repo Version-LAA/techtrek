@@ -17,6 +17,7 @@
   </div>
 
   <%# All these divs are for the subheaders %>
+
   <div class="row-specialty subheaders">
     <div class=" subheader">
       <%= link_to("Javascript", specialties_path, class: "specialties")  %>
@@ -36,6 +37,27 @@
 
     <div class="subheader">
       <%= link_to("Salary Review", specialties_path, class: "specialties")  %>
+      
+  <div class="row subheaders">
+    <div class="col">
+      <%= link_to("Javascript", specialties_path(query: 'specialty name'), class: "specialties")  %>
+    </div>
+
+    <div class="col">
+      <%= link_to("Cyber Security", specialties_path(query: 'specialty name'), class: "specialties") %>
+    </div>
+
+    <div class="col">
+      <%= link_to("Python", specialties_path(query: 'specialty name'), class: "specialties")  %>
+    </div>
+
+    <div class="col">
+      <%= link_to("Resume Review", specialties_path(query: 'specialty name'), class: "specialties")  %>
+    </div>
+
+    <div class="col">
+      <%= link_to("Salary Review", specialties_path(query: 'specialty name'), class: "specialties")  %>
+      
     </div>
   </div>
 
