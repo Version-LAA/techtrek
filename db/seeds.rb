@@ -46,8 +46,20 @@ technology = [
   'html',
   'css',
   'resume review',
-  'interviews',
-  'datascience']
+  'technical interviews',
+  'datascience',
+  'react',
+  'node.js',
+  'ruby on rails',
+  'flask',
+  'django',
+  'typescript',
+  'sql',
+  'swift',
+  'C#',
+  'go',
+  'offer negotiation'
+]
 languages = ['spanish', 'english', 'french', 'chinese', 'arabic', 'portuguese', 'german', 'japanese', 'russian']
 technology.each do |tech|
   Technology.create(name: tech, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
@@ -237,11 +249,18 @@ puts "seeding fake users"
   fake_user.photo.attach(io: File.open("app/assets/images/profile/f#{i+1}.jpg"), filename: "f#{i+1}.jpg", content_type: "image/jpg")
   fake_user.save
 
-  4.times do |n|
-    Specialty.new(technology: Technology.all.sample,skill_level: rand(1..4), hourly_rate: rand(25..100), user: fake_user)
-    lang = SpokenLanguage.create(name: languages[rand(languages.count)])
-    UserSpokenLanguage.create(spoken_language:lang,user: fake_user)
+  6.times do
+    skill = Technology.all.sample
+    if Specialty.where(user:fake_user).include?(skill)
+      skill = Technology.all.sample
+    end
+
+    Specialty.create(technology: skill,skill_level: rand(1..4), hourly_rate: rand(25..100), user: fake_user)
   end
+  lang = SpokenLanguage.create(name: languages[rand(languages.count)])
+  UserSpokenLanguage.create(spoken_language:lang,user: fake_user)
+  lang = SpokenLanguage.create(name: 'english')
+  UserSpokenLanguage.create(spoken_language:lang,user: fake_user)
   Experience.create(company_name: Faker::Company.name, position_title: roles[rand(roles.count)], start_date:"01-01-2021", end_date:"02-02-2023", user: fake_user)
   Experience.create(company_name: Faker::Company.name, position_title: roles[rand(roles.count)], start_date:"01-01-2021", end_date:"02-02-2023", user: fake_user)
   Education.create(institution_name: Faker::University.name, degree_type: "Certification", start_date:"01-01-2023", end_date:"06-15-2023", user: fake_user)
@@ -266,16 +285,22 @@ end
   fake_user.photo.attach(io: File.open("app/assets/images/profile/m#{i+1}.jpg"), filename: "f#{i+1}.jpg", content_type: "image/jpg")
   fake_user.save
 
-  4.times do |n|
-    Specialty.new(technology: Technology.all.sample,skill_level: rand(1..4), hourly_rate: rand(25..100), user: fake_user)
-    lang = SpokenLanguage.create(name: languages[rand(languages.count)])
-    UserSpokenLanguage.create(spoken_language:lang,user: fake_user)
+  6.times do |n|
+    skill = Technology.all.sample
+    if Specialty.where(user:fake_user).include?(skill)
+      skill = Technology.all.sample
+    end
+    Specialty.create(technology: skill,skill_level: rand(1..4), hourly_rate: rand(25..100), user: fake_user)
   end
+  lang = SpokenLanguage.create(name: languages[rand(languages.count)])
+  UserSpokenLanguage.create(spoken_language:lang,user: fake_user)
+  lang = SpokenLanguage.create(name: 'english')
+  UserSpokenLanguage.create(spoken_language:lang,user: fake_user)
   Experience.create(company_name: Faker::Company.name, position_title: roles[rand(roles.count)], start_date:"01-01-2021", end_date:"02-02-2023", user: fake_user)
   Experience.create(company_name: Faker::Company.name, position_title: roles[rand(roles.count)], start_date:"01-01-2021", end_date:"02-02-2023", user: fake_user)
   Education.create(institution_name: Faker::University.name, degree_type: "Certification", start_date:"01-01-2023", end_date:"06-15-2023", user: fake_user)
   Education.create(institution_name: "LeWagon", degree_type: "Certification", start_date:"01-01-2023", end_date:"06-15-2023", user: fake_user)
-  puts "user created"
+  puts "user created "
 end
 # User.find_each do |u|
 #   puts "adding to #{u.first_name}"
