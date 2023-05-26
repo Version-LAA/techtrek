@@ -17,6 +17,27 @@
   </div>
 
   <%# All these divs are for the subheaders %>
+
+  <div class="row-specialty subheaders">
+    <div class=" subheader">
+      <%= link_to("Javascript", specialties_path, class: "specialties")  %>
+    </div>
+
+    <div class="subheader">
+      <%= link_to("Cyber Security", specialties_path, class: "specialties") %>
+    </div>
+
+    <div class="subheader">
+      <%= link_to("Python", specialties_path, class: "specialties")  %>
+    </div>
+
+    <div class="subheader">
+      <%= link_to("Resume Review", specialties_path, class: "specialties")  %>
+    </div>
+
+    <div class="subheader">
+      <%= link_to("Salary Review", specialties_path, class: "specialties")  %>
+      
   <div class="row subheaders">
     <div class="col">
       <%= link_to("Javascript", specialties_path(query: 'specialty name'), class: "specialties")  %>
@@ -36,20 +57,24 @@
 
     <div class="col">
       <%= link_to("Salary Review", specialties_path(query: 'specialty name'), class: "specialties")  %>
+      
     </div>
   </div>
 
   <%# This is for the search bar %>
   <div class="row search justify-content-center">
-    <div class="col-sm-6 ">
-      <%= form_with url: mentors_path, method: :get, class: "d-flex" do %>
+    <div class="col-sm-8 ">
+      <%= form_with url: specialties_path, method: :get, class:  do %>
         <%= text_field_tag :query,
               params[:query],
               class: "form-control",
               placeholder: "Type a keyword"
           %>
-        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+          <%= submit_tag "Search", name: "", class: "btn btn-primary mt-5" %>
       <% end %>
+    </div>
+    <div class="loop col-sm-1">
+      🔍
     </div>
   </div>
 </div>
