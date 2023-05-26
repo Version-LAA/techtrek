@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_24_005541) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_23_235249) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -95,16 +95,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_24_005541) do
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
-  create_table "meetings", force: :cascade do |t|
-    t.string "name"
-    t.datetime "start_time"
-    t.datetime "end_time"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_meetings_on_user_id"
-  end
-
   create_table "messages", force: :cascade do |t|
     t.text "content"
     t.bigint "sender_id", null: false
@@ -184,7 +174,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_24_005541) do
   add_foreign_key "consultations", "users", column: "mentor_id"
   add_foreign_key "educations", "users"
   add_foreign_key "experiences", "users"
-  add_foreign_key "meetings", "users"
   add_foreign_key "messages", "users", column: "receiver_id"
   add_foreign_key "messages", "users", column: "sender_id"
   add_foreign_key "questions", "technologies"
