@@ -1,0 +1,40 @@
+.mentor_card{
+  font-family: 'Averia Gruesa Libre';
+  border-radius: 30px;
+  font-size: 20px;
+  border: 1px solid grey;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-profile{
+  background-color: #B1D7B4;
+  color: black;
+  border-radius: 30px;
+  padding: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+  margin-left: 40px;
+}
+
+.btn-profile:hover {
+  background-color: #B1D7B4;
+  color: white;
+}
+
+.title1{
+  font-family: 'lato';
+  font-size: 65px;
+}
+
+.speciality-text{
+  font-family: 'Averia Gruesa Libre';
+  font-size: 20px;
+}
+
+.whole{
+  margin-left: 80px;
+}
+
+.chat:hover {
+  opacity: 0.3;
+}
