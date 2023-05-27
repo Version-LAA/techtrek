@@ -1,6 +1,7 @@
 <div class = "container text-center">
-  <h1 class = "title1">Discover a mentor!</h1>
-  <p class = "speciality-text">Unlock your full potential and fast-track your success by finding a mentor who will provide invaluable guidance and support on your journey.</p>
+  <h1 class = "title1">Discover a <%=params[:query].titleize%> mentor!</h1>
+
+  <p class = "speciality-text"><%=@statement%></p>
   <%=render "shared/mentor_card" ,
     mentors: @mentors %>
 </div>
