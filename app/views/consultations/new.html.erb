@@ -1,3 +1,11 @@
-<%= month_calendar do |date| %>
-  <%= date %>
+<div class="cal">
+  <%= month_calendar(attribute: :start_time, end_attribute: :end_time) do |date| %>
+    <%= date %>
+  <% end %>
+</div>
+
+<%= simple_form_for([@specialty, @consultation]) do |f|%>
+     <%= f.input :start_time, html5: true %>
+     <%= f.input :end_time, html5: true %>
+     <%= f.submit value="Reserve", class:"btn btn-danger new" %>
 <% end %>
