@@ -2,62 +2,29 @@
 
   <%# Next 2 divs are for the main header %>
   <div class="header">
-
     <div class="row">
       <div class="col">
         <h1 class="mainh1">TechTrek</h1>
       </div>
     </div>
-
     <div class="row subtitle">
       <div class="col">
         <h6 class="mainh6">Journey through Tech without a sweat </h6>
       </div>
     </div>
   </div>
-
-  <%# All these divs are for the subheaders %>
-
-  <div class="row-specialty subheaders">
-    <div class=" subheader">
+  <div class="row">
+    <div class="col">
       <%= link_to("Javascript", specialties_path, class: "specialties")  %>
     </div>
-
-    <div class="subheader">
-      <%= link_to("Cyber Security", specialties_path, class: "specialties") %>
+     <div class="col">
+      <%= link_to("Javascript", specialties_path, class: "specialties")  %>
     </div>
-
-    <div class="subheader">
-      <%= link_to("Python", specialties_path, class: "specialties")  %>
+     <div class="col">
+      <%= link_to("Javascript", specialties_path, class: "specialties")  %>
     </div>
-
-    <div class="subheader">
-      <%= link_to("Resume Review", specialties_path, class: "specialties")  %>
-    </div>
-
-    <div class="subheader">
-      <%= link_to("Salary Review", specialties_path, class: "specialties")  %>
-      
-  <div class="row subheaders">
-    <div class="col">
-      <%= link_to("Javascript", specialties_path(query: 'specialty name'), class: "specialties")  %>
-    </div>
-
-    <div class="col">
-      <%= link_to("Cyber Security", specialties_path(query: 'specialty name'), class: "specialties") %>
-    </div>
-
-    <div class="col">
-      <%= link_to("Python", specialties_path(query: 'specialty name'), class: "specialties")  %>
-    </div>
-
-    <div class="col">
-      <%= link_to("Resume Review", specialties_path(query: 'specialty name'), class: "specialties")  %>
-    </div>
-
-    <div class="col">
-      <%= link_to("Salary Review", specialties_path(query: 'specialty name'), class: "specialties")  %>
-      
+     <div class="col">
+      <%= link_to("Javascript", specialties_path, class: "specialties")  %>
     </div>
   </div>
 
@@ -77,7 +44,6 @@
       🔍
     </div>
   </div>
+
+
 </div>
-
-
-<a href="<%= image_path("profile/k.jpg") %>">Open Image</a>
