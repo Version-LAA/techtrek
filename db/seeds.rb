@@ -172,7 +172,7 @@ peter = User.create(
   location: "Boston",
   about: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, " \
          "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  email: "[eter@techtrek.com",
+  email: "peter@techtrek.com",
   password: "password",
   title: "Frontend Guru"
 )
@@ -182,8 +182,8 @@ Specialty.create(technology: Technology.where(name:"css")[0],skill_level: rand(1
 puts "specialties created"
 lang = SpokenLanguage.create(name: languages[rand(languages.count)])
 lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
-UserSpokenLanguage.create(spoken_language:lang,user:peter)
-UserSpokenLanguage.create(spoken_language:lang_two,user:peter)
+UserSpokenLanguage.create(spoken_language: lang, user: peter)
+UserSpokenLanguage.create(spoken_language: lang_two, user: peter)
 puts "languages created"
 puts "#{peter.first_name} created"
 Experience.create(company_name: "TechTrek", position_title: "Frontend Developer", start_date:"01-01-2021", end_date:"02-02-2023", user: peter)
