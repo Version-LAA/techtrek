@@ -1,13 +1,20 @@
 <div class = "row whole">
   <% mentors.each do |mentor| %>
-    <div class="card m-5 mentor_card" style="width: 18rem;">
-      <p><%= "#{mentor.first_name} #{mentor.last_name} - #{mentor.title}"%></p>
-      <%=cl_image_tag(mentor.photo.key,
-          height: 150,
-          width: 200,
-          crop: :scale,
-          aspect_ratio: "4:3"
-          )%>
+    <div class="card m-5 mentor_card" style="width: 19rem;">
+      <div class = "title-header">
+        <div class="card-image-container">
+          <div class = "card-header">
+            <p><%= "#{mentor.first_name} #{mentor.last_name} - #{mentor.title}"%></p>
+          </div>
+        <%=cl_image_tag(mentor.photo.key,
+            height: 150,
+            width: 200,
+            crop: :scale,
+            aspect_ratio: "4:3"
+            )%>
+
+        </div>
+      </div>
       <div class="card-body">
         <%=link_to "View Profile",mentor_path(mentor),class:"btn btn-profile"%>
         <%=link_to image_tag("chat.png", width: "20%"),mentor_path(mentor),class:"btn-link chat"%>

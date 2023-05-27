@@ -1,9 +1,27 @@
 .mentor_card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Averia Gruesa Libre';
   border-radius: 30px;
   font-size: 20px;
   border: 1px solid grey;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.card-image-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.title-header{
+  height: 80%;
+  width: 100%;
+}
+.card-header{
+  background-color: white;
+  border-radius: 30px;
+  width: 80%;
+  height: 20%;
 }
 
 .btn-profile{
