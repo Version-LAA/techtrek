@@ -5,7 +5,7 @@
   font-family: 'Averia Gruesa Libre';
   border-radius: 30px;
   font-size: 20px;
-  border: 1px solid grey;
+  border: 1px grey;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .card-image-container{
@@ -55,4 +55,13 @@
 
 .chat:hover {
   opacity: 0.3;
+}
+
+.pic {
+  text-align: center;
+  box-shadow: 10px 5px 5px gainsboro;
+  transform: scale(1.1);
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

@@ -8,14 +8,16 @@
 
 .skills-container{
   border: 1px;
-  padding: 10%;
+  padding: 5%;
   background-color: #DBF3DE;
   border-radius: 40px;
+  position: relative;
+  bottom: -20%;
 }
 
 .profile-container{
   position: relative;
-  top: 150px;
+  top: 100px;
   text-align: center;
 
 }

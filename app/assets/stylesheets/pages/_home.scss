@@ -1,6 +1,5 @@
 .header {
-  display: flex;
-  flex-direction: column;
+  text-align: center;
   align-items: center;
   justify-content: center;
   height: 55vh;
@@ -90,4 +89,10 @@ a:hover {
 .btn-primary:hover {
   background-color:#B1D7B4;
   color: black;
+}
+
+.filter-container {
+  justify-content: center;
+  position: static;
+  top: 50%;
 }
