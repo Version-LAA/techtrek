@@ -3,12 +3,6 @@
     <div class="card m-5 mentor_card" style="width: 18rem;">
       <p class="mt-3 mb-3"><strong><%= "#{mentor.first_name} #{mentor.last_name}"%></strong><br><%="#{mentor.title.titleize}"%></p>
       <div class="">
-    <div class="card m-5 mentor_card" style="width: 19rem;">
-      <div class="title-header">
-        <div class="card-image-container">
-          <div class="card-header">
-            <p><%= "#{mentor.first_name} #{mentor.last_name} - #{mentor.title}"%></p>
-          </div>
         <%=cl_image_tag(mentor.photo.key,
             height: 150,
             width: 200,
@@ -17,10 +11,6 @@
             class: "pic",
             radius: 10
             )%>
-            aspect_ratio: "4:3"
-            )%>
-
-        </div>
       </div>
       <div class="card-body">
         <%=link_to "View Profile",mentor_path(mentor),class:"btn btn-profile"%>
