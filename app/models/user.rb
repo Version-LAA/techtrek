@@ -10,4 +10,5 @@ class User < ApplicationRecord
   has_one_attached :photo # For cloudinary connection and user profile pic
   has_many :experiences
   has_many :educations
+  has_many :specialties
 end
