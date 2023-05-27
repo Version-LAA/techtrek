@@ -35,12 +35,18 @@ class SpecialtiesController < ApplicationController
 
   def display_statement
     statement = [
-      'This is a test python statement',
-      'this is a test js statement',
-      'this is a test datascience statement',
-      'career services',
-      'frontend',
-      'default statement'
+      'A Python mentor can offer valuable insights into coding best practices, help you troubleshoot errors, and introduce you to industry-relevant
+      libraries and frameworks, empowering you to become a skilled and proficient Python developer.',
+      'Are you ready to embark on an exciting coding journey? Look no further than Javascript!
+      Whether you are a seasoned programmer or just starting out,Javascript is the ultimate language to empower you and have mentor guide you',
+      'Having a mentor teaching data science can greatly accelerate your learning by providing personalized guidance, sharing their practical experience,
+      and helping you navigate the complexities of data analysis, machine learning, and statistical modeling. ',
+      'Career services with a mentor can be particularly valuable as they offer personalized guidance, wisdom, and industry insights tailored to an individual
+      specific career aspirations. A mentor in career services can provide invaluable advice, help navigate challenges, and facilitate networking
+      opportunities, ultimately empowering individuals to make informed career decisions and achieve their professional goals.',
+      'Frontend development is of utmost importance as it directly impacts the user experience, ensuring a visually appealing and intuitive interface that enhances user engagement and satisfaction.
+      A well-designed frontend enables seamless navigation, responsiveness across devices, and efficient interaction, ultimately contributing to the success and adoption of a web or mobile application.',
+      'Unlock your full potential and fast-track your success by finding a mentor who will provide invaluable guidance and support on your journey.'
     ]
   end
 end
