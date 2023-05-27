@@ -2,16 +2,19 @@ class SpecialtiesController < ApplicationController
   def index
     datascience = ['TensorFlow', 'PyTorch','Apache Spark', 'Tableau', 'Matlab', 'python', 'sql']
     careerservices = ['resume review','technical interviews','offer negotiation']
+    frontend = ['javascript', 'html', 'css', 'react', 'angular', 'jquery', 'node.js']
 
     @specialties = Specialty.all
     if params[:query] == 'python'
-      @mentors = set_filter('python')
+      @mentors = get_filter('python')
     elsif params[:query] == 'datascience'
-      @mentors = set_filter(datascience)
-    elsif params[:query] == 'career services'
-      @mentors = @mentors = set_filter(careerservices)
+      @mentors = get_filter(datascience)
+    elsif params[:query] == 'careerservices'
+      @mentors = get_filter(careerservices)
     elsif params[:query] == 'javascript'
-      @mentors = @mentors = set_filter('javascript')
+      @mentors = get_filter('javascript')
+    elsif params[:query] == 'frontend'
+      @mentors = get_filter(frontend)
     else
       @mentors = User.all
     end
@@ -19,8 +22,8 @@ class SpecialtiesController < ApplicationController
 
   private
 
-  def set_filter(filter)
+  def get_filter(filter)
     @mentors = User.joins(specialties: [:technology])
-                   .where(technologies: { name: filter })
+                   .where(technologies: { name: filter }).uniq
   end
 end
