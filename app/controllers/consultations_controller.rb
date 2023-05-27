@@ -1,8 +1,9 @@
 class ConsultationsController < ApplicationController
-  before_action :set_mentor, only: %i[new create]
+  before_action :set_specialty, only: %i[new create]
 
   def new
-    @consultations = Consultation.new
+    @consultation = Consultation.new
+
   end
 
   def create
@@ -21,10 +22,10 @@ class ConsultationsController < ApplicationController
   private
 
   def consultation_params
-    params.require(:consultation).permit(:start_time, :end_time,)
+    params.require(:consultation).permit(:start_time, :end_time)
   end
 
-  def set_mentor
-    @mentor = User.find(params[:mentor_id])
+  def set_specialty
+    @specialty = Specialty.find(params[:specialty_id])
   end
 end

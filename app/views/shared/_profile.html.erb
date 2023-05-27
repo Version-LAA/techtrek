@@ -29,7 +29,7 @@
                 </div>
                 <div class="modal-body">
                   <%skills.each do |s|%>
-                    <%=link_to "#{s.technology.name.titleize}",new_mentor_consultation_path(user_id,query:[s.id,s.hourly_rate]),class:"btn"%>
+                    <%=link_to "#{s.technology.name.titleize}",new_specialty_consultation_path(s),class:"btn"%>
                   <%end%>
                 </div>
                 <div class="modal-footer">
