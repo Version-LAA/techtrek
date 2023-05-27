@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_21_163731) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_27_184354) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,8 +61,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_21_163731) do
   end
 
   create_table "consultations", force: :cascade do |t|
-    t.date "start_time"
-    t.date "end_time"
+    t.datetime "start_time", precision: nil
+    t.datetime "end_time", precision: nil
     t.bigint "specialty_id", null: false
     t.bigint "mentee_id", null: false
     t.bigint "mentor_id", null: false
@@ -159,6 +159,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_21_163731) do
     t.string "location"
     t.text "about"
     t.string "title"
+    t.string "calendly_username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
