@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-2">
       <div class="profile-picture">
         <%=cl_image_tag(profilePhoto,
           height: 225,
@@ -12,22 +12,48 @@
           )%>
       </div>
     </div>
-    <div class="col-3">
-      <div class="mt-4">
+    <div class="col-3 mx-4">
+      <div class="mt-4 profile-info">
         <h1><%= "#{userFirstName} #{userLastName} " %></h1>
         <p><%="🧭 #{userLocation}"%></p>
-        <%=link_to "Book",root_path,class:"btn profile-btn"%>
-        <%=link_to "Chat",root_path,class:"btn profile-btn"%>
+        <%if current_page?(!my_profile_path)%>
+          <button type="button" class="btn profile-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Book
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Which skill can this mentor help you with?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <%skills.each do |s|%>
+                    <%=link_to "#{s.technology.name.titleize}",new_mentor_consultation_path(user_id,query:[s.id,s.hourly_rate]),class:"btn"%>
+                  <%end%>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <%=link_to "Chat",root_path,class:"btn profile-btn"%>
+        <%else%>
+          <%=link_to "Edit",root_path,class:"btn profile-btn"%>
+        <%end%>
       </div>
     </div>
     <div class="col-5">
-      <div class="skills-container mt-4">
+      <div class="skills-container mt-1">
         <div class="skills">
           <p style="text-align:center;"><strong>Skills</strong></p>
-          <%skills.each do |skill|%>
-            <%=skill.technology.name%>
-          <%end%>
-          skills
+          <div class="row" style="text-align:center;">
+            <%skills.each do |skill|%>
+              <div class="col-4 mb-1"><span class="badge rounded-pill bg-light text-dark"><%=skill.technology.name.titleize%></span></div>
+            <%end%>
+          </div>
+
         </div>
       </div>
     </div>
@@ -35,7 +61,7 @@
 
 </div>
 
-<div class="container profile-container">
+<div class="container profile-container mt-4">
   <div class="row">
       <div class="col-4 left-body">
         <p><strong>About Me</strong></p>
@@ -58,8 +84,8 @@
       </div>
 
       <div class="col-7 right-body">
-        <p><strong>📚 Education 📚</p>
-        <ul>
+        <p><strong>📚 Education 📚</strong></p>
+        <ul class="education">
           <%education.each do |edu|%>
             <li><%="📓 #{edu.institution_name} #{edu.degree_type} #{edu.start_date} - #{edu.end_date}"%></li>
           <%end%>
