@@ -9,16 +9,30 @@
   margin-bottom: 15%;
 
 }
+.about-me {
+  max-width: 400px;
+  position: relative;
+  left: 300px;
+  top: 35px;
 
+  & .quote {
+    font-style: italic;
+    font-size: 18px;
+  }
+
+  & .icons {
+    font-size: 32px;
+  }
+}
 .skills-container{
-  padding-left: 25px;
-  padding-right: 150px;
+  padding-left: 20px;
+  padding-right: 120px;
   border: 1px;
   background-color: #FCFDF7;
-  max-width: 450px;
+  max-width: 455px;
   position: relative;
   top: 55px;
-  padding-bottom: 20%;
+  padding-bottom: 17%;
 
   & p {
     text-align: center;
@@ -26,8 +40,8 @@
   }
 
   & .skill-text{
-    font-size: 25px;
-    margin-left: 25px;
+    font-size: 20px;
+    margin-left: 20px;
 
   }
 
@@ -36,6 +50,9 @@
 
 }
 
+.stars {
+  margin-left: 5px;
+}
 
 .profile-container{
   position: relative;
@@ -45,7 +62,7 @@
 }
 
 .profile-body{
-  margin-left: 30%;
+  margin-left: 20%;
   margin-top: 50px;
 
   & .work-exp{
