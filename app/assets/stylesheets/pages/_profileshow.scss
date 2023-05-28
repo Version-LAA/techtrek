@@ -1,3 +1,7 @@
+.container-main{
+  margin-left: 50px;
+}
+
 .profile-picture{
   padding: 12%;
   text-align: center;
@@ -7,18 +11,13 @@
 }
 
 .skills-container{
-  // border: 1px;
-  // padding: 5%;
-  // background-color: #DBF3DE;
-  // border-radius: 40px;
-  // position: relative;
-  // bottom: -20%;
-  padding-left: 10px;
+  padding-left: 25px;
+  padding-right: 150px;
   border: 1px;
   background-color: #FCFDF7;
-  max-width: 400px;
+  max-width: 450px;
   position: relative;
-  top: 62px;
+  top: 55px;
   padding-bottom: 20%;
 
   & p {
@@ -33,12 +32,34 @@
   }
 
 
+
+
 }
+
 
 .profile-container{
   position: relative;
   top: 100px;
   text-align: center;
+
+}
+
+.profile-body{
+  margin-left: 30%;
+  margin-top: 50px;
+
+  & .work-exp{
+    position: relative;
+    right: 150px;
+    font-size: 20px;
+  }
+
+  & .line{
+    position: relative;
+    right: 150px;
+
+  }
+
 
 }
 

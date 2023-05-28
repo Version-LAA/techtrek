@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container-main">
   <div class="d-flex flex-row">
     <div class="">
       <%=cl_image_tag(profilePhoto,
-        height: 275,
-        width: 280,
+        height: 285,
+        width: 290,
         crop: :fill,
         aspect_ratio: "4:3",
         radius: "max",
@@ -50,66 +50,44 @@
 
 </div>
 
-<div class="skills-container d-flex flex-column ">
-  <p class="justify-content-start"><strong>Skills</strong></p>
-  <%skills.each do |skill|%>
-    <div class="skill-text mb-3">
-      <%=skill.technology.name.titleize%>
-      <div class="skill-level">
+<div class="d-flex flex-row ">
+  <div class="skills-container">
+    <p class="justify-content-start"><strong>Skills</strong></p>
+    <%skills.each do |skill|%>
+      <div class="skill-text mb-3">
+        <%=skill.technology.name.titleize%>
         <%skill.skill_level.times do |level|%>
           <%star = "⭐️"%>
           <span><%=star%></span>
         <%end%>
       </div>
-    </div>
-  <%end%>
-
-
-</div>
-
-<div class="container">
-  <div class="row" style="text-align:center;">
-    <p style="text-align:center;"><strong>Skills</strong></p>
-    <%skills.each do |skill|%>
-      <div class="col-4 mb-1"><span class="badge rounded-pill bg-light text-dark"><%=skill.technology.name.titleize%></span></div>
     <%end%>
   </div>
-
-</div>
-
-
-<div class="container profile-container">
-  <div class="row">
-      <div class="col-4 left-body">
-        <p><strong>About Me</strong></p>
-        <p><%=user%></p>
+  <div class="profile-body">
+    <div class="work">
+      <p style="font-size:35px"><strong>💼 Work Experience</strong></p>
+      <div>
+        <%experiences.each do |e|%>
+          <div class="work-exp">
+            <p><%="⭐ #{e.position_title} #{e.company_name} #{e.start_date} - #{e.end_date} "%></p>
+          </div>
+        <%end%>
       </div>
+    </div>
+    <br>
+    <hr class="line">
+    <br>
 
-      <div class="col-7 right-body">
-        <p><strong>💼 Work Experience 💼</strong></p>
-        <ul>
-          <%experiences.each do |e|%>
-            <li><%="⭐ #{e.position_title} #{e.company_name} #{e.start_date} - #{e.end_date} "%></li>
-            <br>
-          <%end%>
-        </ul>
-      </div>
+    <div class="education">
+      <p style="font-size:35px"><strong>📚 Education</strong></p>
+        <%education.each do |edu|%>
+          <div class="work-exp">
+          <p><%="📓 #{edu.institution_name} #{edu.degree_type} #{edu.start_date} - Present"%>
+          </div>
+        <%end%>
+
+
+    </div>
+
   </div>
-  <div class="row">
-      <div class="col-4 left-body">
-        <p><strong>Connect With Me </strong></p>
-        <p>www.github.com/myportfolio</p>
-        <p>www.Linkedin.com/myprofile</p>
-      </div>
-
-      <div class="col-7 right-body">
-        <p><strong>📚 Education 📚</strong></p>
-        <ul class="education">
-          <%education.each do |edu|%>
-            <li><%="📓 #{edu.institution_name} #{edu.degree_type} #{edu.start_date} - Present"%></li>
-          <%end%>
-         </ul>
-      </div>
-  </div>
-
 </div>
