@@ -7,12 +7,32 @@
 }
 
 .skills-container{
+  // border: 1px;
+  // padding: 5%;
+  // background-color: #DBF3DE;
+  // border-radius: 40px;
+  // position: relative;
+  // bottom: -20%;
+  padding-left: 10px;
   border: 1px;
-  padding: 5%;
-  background-color: #DBF3DE;
-  border-radius: 40px;
+  background-color: #FCFDF7;
+  max-width: 400px;
   position: relative;
-  bottom: -20%;
+  top: 62px;
+  padding-bottom: 20%;
+
+  & p {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  & .skill-text{
+    font-size: 25px;
+    margin-left: 25px;
+
+  }
+
+
 }
 
 .profile-container{
@@ -48,23 +68,39 @@
 
 .profile-btn{
   border: 1px;
-  background-color: rgb(251, 238, 226);
-  border-radius: 40px;
+  background-color:rgba(22, 22, 29, 0.79);
+  border-radius: 5px;
   padding: 5px;
-  width: 125px;
+  width: 150px;
   // color: #a1f2ac;
-  color: #73c17c;
+  color: $white;
   font-weight: 600px;
   font-size: 30px;
   height: 50px;
   margin: 1%;
   &:hover{
-    background-color: gold;
+    background-color:#FCFDF8;
+    color: $black;
   }
 }
 
+#chat-btn {
+  margin-right: 20px;
+}
 .profile-info{
-  text-align: center;
+  margin-left: 60px;
+  margin-top: 40px;
+
+  & .title {
+    font-size: 25px;
+  }
+
+
+
+}
+
+.profile-info h1 {
+  font-size: 48px;
 }
 
 .education {

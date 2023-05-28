@@ -1,23 +1,24 @@
 <div class="container">
-  <div class="d-flex flex-row">
-    <div class="">
-      <%=cl_image_tag(profilePhoto,
-        height: 275,
-        width: 280,
-        crop: :fill,
-        aspect_ratio: "4:3",
-        radius: "max",
-        background: "#B1D7B4"
-        )%>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="profile-picture">
+        <%=cl_image_tag(profilePhoto,
+          height: 225,
+          width: 225,
+          crop: :fill,
+          aspect_ratio: "4:3",
+          radius: "max",
+          background: "#B1D7B4"
+          )%>
+      </div>
     </div>
-    <div class="profile-info">
-      <h1><%= "#{userFirstName} #{userLastName} " %></h1>
-      <p class="mt-3 title"><%= "#{user_title}"%></p>
-      <p><i class="fa-solid fa-location-pin"></i> <%="#{userLocation}"%></p>
-      <div class="d-flex flex-row">
+    <div class="col-4 mx-4">
+      <div class="mt-4 profile-info">
+        <h1><%= "#{userFirstName} #{userLastName} " %></h1>
+        <p><%="🧭 #{userLocation}"%></p>
         <%if current_page?(!my_profile_path)%>
-          <button type="button" id="chat-btn" class="btn profile-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Meet
+          <button type="button" class="btn profile-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Book
           </button>
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -41,42 +42,24 @@
         <%else%>
           <%=link_to "Edit",root_path,class:"btn profile-btn"%>
         <%end%>
-
-
       </div>
     </div>
+    <div class="col-4">
+      <div class="skills-container mt-1">
+        <div class="skills">
+          <p style="text-align:center;"><strong>Skills</strong></p>
+          <div class="row" style="text-align:center;">
+            <%skills.each do |skill|%>
+              <div class="col-4 mb-1"><span class="badge rounded-pill bg-light text-dark"><%=skill.technology.name.titleize%></span></div>
+            <%end%>
+          </div>
 
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>
-
-<div class="skills-container d-flex flex-column ">
-  <p class="justify-content-start"><strong>Skills</strong></p>
-  <%skills.each do |skill|%>
-    <div class="skill-text mb-3">
-      <%=skill.technology.name.titleize%>
-      <div class="skill-level">
-        <%skill.skill_level.times do |level|%>
-          <%star = "⭐️"%>
-          <span><%=star%></span>
-        <%end%>
-      </div>
-    </div>
-  <%end%>
-
-
-</div>
-
-<div class="container">
-  <div class="row" style="text-align:center;">
-    <p style="text-align:center;"><strong>Skills</strong></p>
-    <%skills.each do |skill|%>
-      <div class="col-4 mb-1"><span class="badge rounded-pill bg-light text-dark"><%=skill.technology.name.titleize%></span></div>
-    <%end%>
-  </div>
-
-</div>
-
 
 <div class="container profile-container">
   <div class="row">
