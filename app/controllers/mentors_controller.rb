@@ -5,8 +5,10 @@ class MentorsController < ApplicationController
 
   def show
     @mentor = User.find(params[:id])
+    @message = Message.new(receiver:@mentor)
     @specialties = Specialty.where(user: @mentor).order(skill_level: :desc)
     @education = Education.where(user: @mentor)
     @experiences = Experience.where(user: @mentor)
+
   end
 end
