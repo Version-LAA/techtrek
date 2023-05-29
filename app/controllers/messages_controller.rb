@@ -4,7 +4,18 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(sender_id: current_user, receiver_id: params[:id])
+    @message = Message.new(message_params)
+    @message.receiver_id = params[:mentor_id]
+    @message.sender_id = current_user.id
+    @message.save
+    raise
+    if @message.save
+      redirect_to mentor_message_path(params[:mentor_id])
+    else
+      redirect_to root_path, status: :unprocessable_entity
+    end
+    #@message = Message.new(sender_id: current_user, receiver_id: params[:id])
+
 
   end
 
