@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
   resources :assessments, only: %i[new create show]
 
-  resources :mentors, only: %i[show index]
+  resources :mentors, only: %i[show index] do
+    resources :messages, only: %i[create show]
+  end
 
-  resources :privatechats, only: %i[index show]
 end
