@@ -5,7 +5,7 @@ class MentorsController < ApplicationController
 
   def show
     @mentor = User.find(params[:id])
-    @specialties = Specialty.where(user: @mentor)
+    @specialties = Specialty.where(user: @mentor).order(skill_level: :desc)
     @education = Education.where(user: @mentor)
     @experiences = Experience.where(user: @mentor)
   end

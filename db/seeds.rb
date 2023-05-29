@@ -58,7 +58,8 @@ technology = [
   'swift',
   'C#',
   'go',
-  'offer negotiation'
+  'offer negotiation',
+  'figma'
 ]
 languages = ['spanish', 'english', 'french', 'chinese', 'arabic', 'portuguese', 'german', 'japanese', 'russian']
 technology.each do |tech|
@@ -79,10 +80,11 @@ kameron = User.create(
 )
 puts "user created successfully"
 
-Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: kameron)
-Specialty.create(technology: Technology.where(name:"html")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: kameron)
-Specialty.create(technology: Technology.where(name:"css")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: kameron)
-Specialty.create(technology: Technology.where(name:"git")[0][0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: kameron)
+Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: 4, hourly_rate: rand(25..100), user: kameron)
+Specialty.create(technology: Technology.where(name:"html")[0],skill_level: 4, hourly_rate: rand(25..100), user: kameron)
+Specialty.create(technology: Technology.where(name:"css")[0],skill_level: rand(3..4), hourly_rate: rand(25..100), user: kameron)
+Specialty.create(technology: Technology.where(name:"git")[0][0],skill_level: rand(2..4), hourly_rate: rand(25..100), user: kameron)
+Specialty.create(technology: Technology.where(name:"javascript")[0][0],skill_level: rand(2..4), hourly_rate: rand(25..100), user: kameron)
 puts "specialties created"
 lang = SpokenLanguage.create(name: languages[rand(languages.count)])
 lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
@@ -110,13 +112,17 @@ latoya = User.create(
          "labore et dolore magna aliqua.",
   email: "latoya@techtrek.com",
   password: "password",
-  title: "Cybersecurity Pro & Fullstack Dev"
+  title: "Cybersecurity Warrior"
 )
 
-Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: latoya)
-Specialty.create(technology: Technology.where(name:"python")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: latoya)
-Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: latoya)
-Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"sql")[0],skill_level: 3, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"technical interviews")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"resume review")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
+
 puts "specialties created"
 lang = SpokenLanguage.create(name: languages[rand(languages.count)])
 lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
@@ -146,9 +152,13 @@ bertrand = User.create(
   title: "The Rails Backend King"
 )
 
-Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: bertrand)
-Specialty.create(technology: Technology.where(name:"devops")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: bertrand)
-Specialty.create(technology: Technology.where(name:"git")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: bertrand)
+Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: 4, hourly_rate: rand(25..100), user: bertrand)
+Specialty.create(technology: Technology.where(name:"devops")[0],skill_level: 4, hourly_rate: rand(25..100), user: bertrand)
+Specialty.create(technology: Technology.where(name:"git")[0],skill_level: 4, hourly_rate: rand(25..100), user: bertrand)
+Specialty.create(technology: Technology.where(name:"sql")[0],skill_level: 3, hourly_rate: rand(25..100), user: bertrand)
+Specialty.create(technology: Technology.where(name:"ruby on rails")[0],skill_level: 3, hourly_rate: rand(25..100), user: bertrand)
+
+
 puts "specialties created"
 lang = SpokenLanguage.create(name: languages[rand(languages.count)])
 lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
@@ -177,8 +187,10 @@ peter = User.create(
   title: "Frontend Guru"
 )
 Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: peter)
-Specialty.create(technology: Technology.where(name:"html")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: peter)
-Specialty.create(technology: Technology.where(name:"css")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: peter)
+Specialty.create(technology: Technology.where(name:"html")[0],skill_level: 4, hourly_rate: rand(25..100), user: peter)
+Specialty.create(technology: Technology.where(name:"css")[0],skill_level: rand(2..4), hourly_rate: rand(25..100), user: peter)
+Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: peter)
+
 puts "specialties created"
 lang = SpokenLanguage.create(name: languages[rand(languages.count)])
 lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
@@ -207,9 +219,13 @@ andrew = User.create(
   title: "Figma Magician"
 )
 
-Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: andrew)
+Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: 4, hourly_rate: rand(25..100), user: andrew)
 Specialty.create(technology: Technology.where(name:"devops")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: andrew)
-Specialty.create(technology: Technology.where(name:"git")[0],skill_level: rand(1..4), hourly_rate: rand(25..100), user: andrew)
+Specialty.create(technology: Technology.where(name:"git")[0],skill_level: 3, hourly_rate: rand(25..100), user: andrew)
+Specialty.create(technology: Technology.where(name:"css")[0],skill_level: 4, hourly_rate: rand(25..100), user: andrew)
+Specialty.create(technology: Technology.where(name:"figma")[0],skill_level: 4, hourly_rate: rand(25..100), user: andrew)
+
+
 puts "specialties created"
 lang = SpokenLanguage.create(name: languages[rand(languages.count)])
 lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
