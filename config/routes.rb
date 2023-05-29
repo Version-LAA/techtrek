@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :assessments, only: %i[new create show]
 
   resources :mentors, only: %i[show index] do
-    resources :messages, only: %i[create show]
+    resources :messages, only: %i[new create show]
   end
 
 end
