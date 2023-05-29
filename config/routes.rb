@@ -14,5 +14,5 @@ Rails.application.routes.draw do
 
   resources :mentors, only: %i[show index]
 
-  resources :privatechat, only: %i[index show]
+  resources :privatechats, only: %i[index show]
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_27_184354) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_29_143159) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -101,8 +101,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_27_184354) do
     t.bigint "receiver_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "privatechat_id", null: false
+    t.index ["privatechat_id"], name: "index_messages_on_privatechat_id"
     t.index ["receiver_id"], name: "index_messages_on_receiver_id"
     t.index ["sender_id"], name: "index_messages_on_sender_id"
+  end
+
+  create_table "privatechats", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "questions", force: :cascade do |t|
@@ -159,7 +167,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_27_184354) do
     t.string "location"
     t.text "about"
     t.string "title"
-    t.string "calendly_username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -174,6 +181,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_27_184354) do
   add_foreign_key "consultations", "users", column: "mentor_id"
   add_foreign_key "educations", "users"
   add_foreign_key "experiences", "users"
+  add_foreign_key "messages", "privatechats"
   add_foreign_key "messages", "users", column: "receiver_id"
   add_foreign_key "messages", "users", column: "sender_id"
   add_foreign_key "questions", "technologies"
