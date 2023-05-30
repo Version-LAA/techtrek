@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   resources :mentors, only: %i[show index]
 
   resources :chat_channels, only: %i[show index new create] do
-    resources :messages, only: %i[new create show]
+    resources :messages, only: %i[new create index]
   end
 end
