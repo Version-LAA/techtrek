@@ -9,6 +9,5 @@ class MentorsController < ApplicationController
     @specialties = Specialty.where(user: @mentor).order(skill_level: :desc)
     @education = Education.where(user: @mentor)
     @experiences = Experience.where(user: @mentor)
-
   end
 end
