@@ -51,7 +51,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                   <%= simple_form_for message, url: mentor_messages_path(user_id) do |f|%>
+                   <%= simple_form_for message, url: mentor_messages_path(mentor_id:user_id,id:current_user) do |f|%>
                      <%= f.input :content,
                        label: false,
                        placeholder: "Message #",
@@ -69,6 +69,8 @@
             </div>
 
           </div>
+          <%=link_to "View Messages",mentor_message_path(current_user),id:"btn btn-secondary"%>
+
         <%else%>
           <%=link_to "Edit",root_path,class:"btn profile-btn"%>
         <%end%>
