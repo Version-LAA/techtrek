@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_29_204141) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_30_175014) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,6 +60,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_204141) do
     t.index ["user_id"], name: "index_assessments_on_user_id"
   end
 
+  create_table "chat_channels", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+  end
+
   create_table "consultations", force: :cascade do |t|
     t.datetime "start_time", precision: nil
     t.datetime "end_time", precision: nil
@@ -95,12 +101,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_204141) do
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
+  create_table "message_channels", force: :cascade do |t|
+    t.string "subject"
+    t.bigint "message_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["message_id"], name: "index_message_channels_on_message_id"
+  end
+
   create_table "messages", force: :cascade do |t|
     t.text "content"
     t.bigint "sender_id", null: false
     t.bigint "receiver_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "chat_channel_id", null: false
+    t.index ["chat_channel_id"], name: "index_messages_on_chat_channel_id"
     t.index ["receiver_id"], name: "index_messages_on_receiver_id"
     t.index ["sender_id"], name: "index_messages_on_sender_id"
   end
@@ -173,6 +189,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_204141) do
   add_foreign_key "consultations", "users", column: "mentor_id"
   add_foreign_key "educations", "users"
   add_foreign_key "experiences", "users"
+  add_foreign_key "message_channels", "messages"
+  add_foreign_key "messages", "chat_channels"
   add_foreign_key "messages", "users", column: "receiver_id"
   add_foreign_key "messages", "users", column: "sender_id"
   add_foreign_key "questions", "technologies"
