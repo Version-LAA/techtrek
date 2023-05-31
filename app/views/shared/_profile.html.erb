@@ -51,7 +51,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                   <%= simple_form_for @channel do |f|%>
+                   <%= simple_form_for @message, url:chat_channel_messages_path(@channel) do |f|%>
                      <%= f.input :content,
                        label: false,
                        placeholder: "Message #",
@@ -69,7 +69,6 @@
             </div>
 
           </div>
-          <%=link_to "View Messages",mentor_message_path(current_user),id:"btn btn-secondary"%>
 
         <%else%>
           <%=link_to "Edit",root_path,class:"btn profile-btn"%>
@@ -134,6 +133,5 @@
     </div>
 
   </div>
-  <div class="skills-container" id="container-2">
-  </div>
+
 </div>

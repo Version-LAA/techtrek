@@ -4,16 +4,20 @@ class MentorsController < ApplicationController
   end
 
   def show
-    @channel = ChatChannel.create
+    @channel = ChatChannel.new
     @mentor = User.find(params[:id])
-    @message = Message.new(receiver:@mentor)
     @specialties = Specialty.where(user: @mentor).order(skill_level: :desc)
     @education = Education.where(user: @mentor)
     @experiences = Experience.where(user: @mentor)
   end
 
 
+
   private
+
+  def channel_params
+    params.require(:chat_channel).permit(:name)
+  end
 
   def message_params
     params.require(:message).permit(:content)

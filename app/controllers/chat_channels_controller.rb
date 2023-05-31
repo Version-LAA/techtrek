@@ -5,10 +5,10 @@ class ChatChannelsController < ApplicationController
   end
 
   def create
-    @channel = ChatChannel.new(channel_params)
+    @channel = ChatChannel.create(channel_params)
     @message.chat_channel = @channel
     @message = Message.new(message_params)
-    raise
+
 
   end
 

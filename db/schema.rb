@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_30_175014) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_31_015632) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -101,14 +101,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_175014) do
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
-  create_table "message_channels", force: :cascade do |t|
-    t.string "subject"
-    t.bigint "message_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["message_id"], name: "index_message_channels_on_message_id"
-  end
-
   create_table "messages", force: :cascade do |t|
     t.text "content"
     t.bigint "sender_id", null: false
@@ -189,7 +181,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_175014) do
   add_foreign_key "consultations", "users", column: "mentor_id"
   add_foreign_key "educations", "users"
   add_foreign_key "experiences", "users"
-  add_foreign_key "message_channels", "messages"
   add_foreign_key "messages", "chat_channels"
   add_foreign_key "messages", "users", column: "receiver_id"
   add_foreign_key "messages", "users", column: "sender_id"

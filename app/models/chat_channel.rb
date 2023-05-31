@@ -1,3 +1,3 @@
 class ChatChannel < ApplicationRecord
-  has_many :messages
+  has_many :message
 end
