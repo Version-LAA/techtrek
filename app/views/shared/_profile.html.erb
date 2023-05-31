@@ -51,7 +51,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                   <%= simple_form_for chat_channel, url: chat_channel_messages_path(chat_channel_id:@channel,id:current_user) do |f|%>
+                   <%= simple_form_for @channel do |f|%>
                      <%= f.input :content,
                        label: false,
                        placeholder: "Message #",
