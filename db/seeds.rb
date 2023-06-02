@@ -31,6 +31,8 @@ Education.delete_all
 puts "education deleted"
 Experience.delete_all
 puts "experience deleted"
+ChatChannel.delete_all
+puts "cht channel deleted"
 User.delete_all
 puts "users deleted"
 
