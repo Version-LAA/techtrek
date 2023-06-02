@@ -2,6 +2,21 @@
   <h1 class = "title1">Discover a <%=params[:query].titleize%> mentor!</h1>
 
   <p class = "speciality-text"><%=@statement%></p>
+   <div class="search-box">
+    <button class="btn-search"><i class="fas fa-search"></i></button>
+    <input type="text" class="input-search" placeholder="Type to Search...">
+  </div>
   <%=render "shared/mentor_card" ,
     mentors: @mentors %>
+</div>
+
+<div class="search-box">
+  <%= form_with url: specialties_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Type to Search..."
+          %>
+        <%= submit_tag "<i class="fas fa-search"></i>", name: "", class: "btn-search" %>
+      <% end %>
 </div>
