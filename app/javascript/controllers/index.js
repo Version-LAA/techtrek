@@ -8,4 +8,4 @@ import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 import TextAnimationController from "./text_animation_controller"
-application.register("text_animation", TextAnimationController)
+application.register("text-animation", TextAnimationController)
