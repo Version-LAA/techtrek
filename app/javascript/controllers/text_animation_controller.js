@@ -1,11 +1,17 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["Text"]
+  static targets = ["text"]
   connect() {
     var i = 0;
-    var txt = 'Lorem ipsum typing effect!'; /* The text */
+    var txt = 'Journey through tech without a sweat!'; /* The text */
     var speed = 50; /* The speed/duration of the effect in milliseconds */
-    console.log("Hello World!")
+    function typeWriter() {
+      if (i < txt.length) {
+        this.textTarget.innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
   }
 }
