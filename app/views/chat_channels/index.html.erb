@@ -1,0 +1,5 @@
+<ul>
+ <%@channels.each do |channel|%>
+  <li><%=link_to "Channel",chat_channel_path(channel)%></li>
+  <%end%>
+</ul>

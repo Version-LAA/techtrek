@@ -1,7 +1,7 @@
 class ChatChannelsController < ApplicationController
 
   def index
-    @channel = ChatChannel.all
+    @channels = ChatChannel.all
   end
 
   def new
