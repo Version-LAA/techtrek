@@ -10,10 +10,9 @@ class ChatChannelsController < ApplicationController
   end
 
   def create
-    @channel = ChatChannel.create(channel_params)
+    @channel = ChatChannel.new(channel_params)
     @message.chat_channel = @channel
     @message = Message.new(message_params)
-
 
   end
 
@@ -33,6 +32,7 @@ class ChatChannelsController < ApplicationController
 
   def message_params
     params.require(:message).permit(:content)
+
   end
 
 end
