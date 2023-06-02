@@ -40,10 +40,16 @@
   }
 
   & .skill-text{
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 20px;
 
   }
+}
+
+// we got an error arround here, could it be the #container2 that should be .container2? 
+#container2{
+  max-width: 400px;
+  padding: 20px;
 }
 
 .stars {

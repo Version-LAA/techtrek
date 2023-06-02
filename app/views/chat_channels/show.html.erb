@@ -1,0 +1,27 @@
+<div class="container chatroom">
+  <h1>#messages</h1>
+
+  <div class="messages">
+    <% @messages.each do |message| %>
+      <div id="message-<%= message.id %>">
+        <small>
+          <strong><%= message.sender.first_name %></strong>
+          <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+        </small>
+        <p><%= message.content %></p>
+      </div>
+    <% end %>
+
+    <%= simple_form_for [@chat_channel, @message], url:chat_channel_messages_path(@channel) do |f| %>
+      <%= f.input :content,
+        label: false,
+        placeholder: "Message ##",
+        wrapper_html: {class: "flex-grow-1"}
+      %>
+      <%= f.submit "Send", class: "btn btn-primary mb-3" %>
+
+    <% end %>
+
+
+  </div>
+</div>
