@@ -29,7 +29,7 @@
                   </div>
                   <div class="modal-body">
                     <%skills.each do |s|%>
-                      <%=link_to "#{s.technology.name.titleize}",new_specialty_consultation_path(s),class:"btn"%>
+                      <%=link_to "#{s.technology.name.upcase}",new_specialty_consultation_path(s),class:"badge rounded-pill text-bg-secondary skill-badge"%>
                     <%end%>
                   </div>
                   <div class="modal-footer">

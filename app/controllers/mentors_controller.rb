@@ -7,6 +7,7 @@ class MentorsController < ApplicationController
     @mentor = User.find(params[:id])
 
     @specialties = Specialty.where(user: @mentor).order(skill_level: :desc)
+    raise
     @education = Education.where(user: @mentor)
     @experiences = Experience.where(user: @mentor)
     unless current_user.nil?
