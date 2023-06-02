@@ -1,5 +1,16 @@
-<ul>
- <%@channels.each do |channel|%>
-  <li><%=link_to "#{channel.name}",chat_channel_path(channel)%></li>
-  <%end%>
-</ul>
+<div class="container">
+  <div class="channels mt-5">
+  <%@channels.each do |channel|%>
+    <div class="row">
+      <%=link_to cl_image_tag("#{User.where(id:channel.user2_id)[0].photo.key}",
+      height: 100,
+      width:100,
+      crop: :scale,
+      aspect_ratio: "4:3",
+      radius: "max"),
+      chat_channel_path(channel),
+      class:"chat-channels"%>
+    </div>
+    <%end%>
+  </div>
+</div>
