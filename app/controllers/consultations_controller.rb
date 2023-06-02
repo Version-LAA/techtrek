@@ -7,6 +7,7 @@ class ConsultationsController < ApplicationController
   end
 
   def create
+    #create
     @consultation = Consultation.new(consultation_params)
     @consultation.specialty = @specialty
     @consultation.mentor = @specialty.user
@@ -17,7 +18,6 @@ class ConsultationsController < ApplicationController
       redirect_to new_specialty_consultation_path(@specialty)
     end
   end
-
 
   private
 
