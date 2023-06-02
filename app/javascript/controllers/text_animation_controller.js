@@ -1,17 +1,20 @@
 import { Controller } from "@hotwired/stimulus"
+let i = 0;
+let txt = 'Journey through tech without a sweat!'; /* The text */
+let speed = 50; /* The speed/duration of the effect in milliseconds */
 
 export default class extends Controller {
   static targets = ["text"]
   connect() {
-    var i = 0;
-    var txt = 'Journey through tech without a sweat!'; /* The text */
-    var speed = 50; /* The speed/duration of the effect in milliseconds */
-    function typeWriter() {
-      if (i < txt.length) {
-        this.textTarget.innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
+    console.log("chris")
+    typeWriter()
+  }
+}
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
   }
 }
