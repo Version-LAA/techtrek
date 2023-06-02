@@ -1,11 +1,4 @@
-<div class="cal">
-  <%= month_calendar(attribute: :start_time, end_attribute: :end_time) do |date| %>
-    <%= date %>
-  <% end %>
-</div>
-
-<%= simple_form_for([@specialty, @consultation]) do |f|%>
-     <%= f.input :start_time, html5: true %>
-     <%= f.input :end_time, html5: true %>
-     <%= f.submit value="Reserve", class:"btn btn-danger new" %>
-<% end %>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/d/2jw-mhc-x6w/30min?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
