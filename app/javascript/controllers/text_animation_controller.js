@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 let i = 0;
 let txt = 'Journey through tech without a sweat!';
-let speed = 50;
+let speed = 40;
 
 export default class extends Controller {
   static targets = ["text"]
