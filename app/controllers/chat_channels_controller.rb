@@ -4,6 +4,11 @@ class ChatChannelsController < ApplicationController
     @channel = ChatChannel.all
   end
 
+  def new
+    @chat_channel = ChatChannel.create
+    redirect_to chat_channel_path(@chat_channel, receiver_id: params[:receiver_id])
+  end
+
   def create
     @channel = ChatChannel.create(channel_params)
     @message.chat_channel = @channel

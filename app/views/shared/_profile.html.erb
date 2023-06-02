@@ -51,17 +51,17 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                   <%= simple_form_for @message, url:chat_channel_messages_path(@channel) do |f|%>
-                     <%= f.input :content,
-                       label: false,
-                       placeholder: "Message #",
-                       wrapper_html: {class: "flex-grow-1"}
-                     %>
-                     <div class="d-flex justify-content-end">
-                     <%= f.submit "Send", class: "btn btn-secondary mx-3" %>
-                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                     </div>
-                   <% end %>
+                    <%= simple_form_for [@chat_channel,@message] do |f|%>
+                      <%= f.input :content,
+                        label: false,
+                        placeholder: "Message #",
+                        wrapper_html: {class: "flex-grow-1"}
+                      %>
+                      <div class="d-flex justify-content-end">
+                      <%= f.submit "Send", class: "btn btn-secondary mx-3" %>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    <% end %>
 
                   </div>
                 </div>

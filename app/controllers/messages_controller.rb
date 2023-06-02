@@ -5,14 +5,16 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(message_params)
-    @message.receiver_id = params[:mentor_id]
+    @chat_channel = ChatChannel.find(params[:chat_channel_id])
+    @message.receiver_id = @chat_channel.user1 == current_user ? @chat_channel.user2.id : @chat_channel.user1.id
     @message.sender_id = current_user.id
+    @message.chat_channel = @chat_channel
     @message.save
     @user = params[:id]
     if @message.save
-      redirect_to mentor_path(params[:mentor_id])
+      redirect_to chat_channel_path(@chat_channel)
     else
-      redirect_to root_path, status: :unprocessable_entity
+      render "new"
     end
   end
 

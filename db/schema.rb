@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_31_015632) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_01_230838) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -64,6 +64,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_31_015632) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.bigint "user1_id"
+    t.bigint "user2_id"
+    t.index ["user1_id"], name: "index_chat_channels_on_user1_id"
+    t.index ["user2_id"], name: "index_chat_channels_on_user2_id"
   end
 
   create_table "consultations", force: :cascade do |t|
@@ -176,6 +180,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_31_015632) do
   add_foreign_key "assessment_questions", "assessments"
   add_foreign_key "assessment_questions", "questions"
   add_foreign_key "assessments", "users"
+  add_foreign_key "chat_channels", "users", column: "user1_id"
+  add_foreign_key "chat_channels", "users", column: "user2_id"
   add_foreign_key "consultations", "specialties"
   add_foreign_key "consultations", "users", column: "mentee_id"
   add_foreign_key "consultations", "users", column: "mentor_id"
