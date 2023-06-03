@@ -61,7 +61,10 @@ technology = [
   'C#',
   'go',
   'offer negotiation',
-  'figma'
+  'figma',
+  'general',
+  'frontend',
+  'backend'
 ]
 languages = ['spanish', 'english', 'french', 'chinese', 'arabic', 'portuguese', 'german', 'japanese', 'russian']
 technology.each do |tech|
