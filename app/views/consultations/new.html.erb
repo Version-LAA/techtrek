@@ -1,6 +1,6 @@
 <!-- Calendly inline widget begin -->
 <div class="row">
-  <div class="col mentor-profile">
+  <div class="col col-4 mentor-profile">
           <%=cl_image_tag(@specialty.user.photo.key,
         height: 285,
         width: 290,
@@ -13,10 +13,10 @@
     <h4 class="position"><%= @specialty.user.title  %></h4>
     <div class="skills">
       <h6 class="skill-chosen">Skill Chosen:</h6>
-      <h4 class="skill">Skill</h4>
+      <h4 class="skill"><%= @specialty.technology.name  %></h4>
     </div>
   </div>
-  <div class="col calendly">
+  <div class="col col-8 calendly">
     <div class="calendly-inline-widget" data-url="https://calendly.com/d/2jw-mhc-x6w/30min?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </div>
