@@ -9,7 +9,7 @@
         )%>
     <h1 class="name"><%= @specialty.user.first_name  %></h1>
     <h5 class="position"><%= @specialty.user.title.capitalize  %></h4>
-    <div class="skills" style="margin-top: 60px; border-radius: 10px; padding:15px; background-color: white;">
+    <div class="skills">
       <h5 class="skill-chosen">Skill chosen:</h5>
       <h2 class="skill"><%= @specialty.technology.name.capitalize  %></h2>
     </div>
