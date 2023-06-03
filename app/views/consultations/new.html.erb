@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row booking-page">
   <div class="col col-2 mentor-profile">
           <%=cl_image_tag(@specialty.user.photo.key,
         height: 255,
@@ -12,6 +12,9 @@
     <div class="skills">
       <h5 class="skill-chosen">Skill chosen:</h5>
       <h3 class="skill"><%= @specialty.technology.name.capitalize  %></h3>
+    </div>
+    <div class="skills">
+      <h3>Total: xx.xx$</h3>
     </div>
   </div>
   <div class="col col-8 calendly">
