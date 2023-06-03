@@ -6,13 +6,12 @@
         crop: :fill,
         aspect_ratio: "4:3",
         radius: "max",
-        background: "#B1D7B4"
         )%>
     <h1 class="name" style="margin-top: 20px;"><%= @specialty.user.first_name  %></h1>
-    <h5 class="position"><%= @specialty.user.title  %></h4>
+    <h5 class="position"><%= @specialty.user.title.capitalize  %></h4>
     <div class="skills" style="margin-top: 60px; border-radius: 10px; padding:15px; background-color: white;">
-      <h5 class="skill-chosen">Skill Chosen:</h5>
-      <h2 class="skill"><%= @specialty.technology.name.upcase  %></h2>
+      <h5 class="skill-chosen">Skill chosen:</h5>
+      <h2 class="skill"><%= @specialty.technology.name.capitalize  %></h2>
     </div>
   </div>
   <div class="col col-8 calendly">
