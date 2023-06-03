@@ -22,14 +22,14 @@
             </button>
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content custom-modal">
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Which skill can this mentor help you with?</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <%skills.each do |s|%>
-                      <%=link_to "#{s.technology.name.titleize}",new_specialty_consultation_path(s),class:"btn"%>
+                      <%=link_to "#{s.technology.name.upcase}",new_specialty_consultation_path(s),class:"badge rounded-pill text-bg-secondary skill-badge"%>
                     <%end%>
                   </div>
                   <div class="modal-footer">
@@ -45,22 +45,29 @@
             </button>
             <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true" >
               <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content custom-modal">
                   <div class="modal-header">
                     <h5 class="modal-title" id="chatModalLabel">Send a message to <%="#{userFirstName}"%></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
                     <%= simple_form_for [@chat_channel,@message] do |f|%>
+                      <%= f.fields_for :chat_channel do |cc| %>
+                        <%= cc.input :name,
+                          label: false,
+                          placeholder: "Message Subject",
+                          wrapper_html: { class: "flex-grow-1" } %>
+                      <% end %>
                       <%= f.input :content,
                         label: false,
-                        placeholder: "Message #",
+                        placeholder: "........",
                         wrapper_html: {class: "flex-grow-1"}
                       %>
                       <div class="d-flex justify-content-end">
                       <%= f.submit "Send", class: "btn btn-secondary mx-3" %>
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                       </div>
+
                     <% end %>
 
                   </div>

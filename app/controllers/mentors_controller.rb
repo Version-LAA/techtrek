@@ -20,8 +20,6 @@ class MentorsController < ApplicationController
     end
   end
 
-  private
-
   def channel_params
     params.require(:chat_channel).permit(:name)
   end
