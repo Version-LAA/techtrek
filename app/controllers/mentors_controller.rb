@@ -7,7 +7,6 @@ class MentorsController < ApplicationController
     @mentor = User.find(params[:id])
 
     @specialties = Specialty.where(user: @mentor).order(skill_level: :desc)
-    raise
     @education = Education.where(user: @mentor)
     @experiences = Experience.where(user: @mentor)
     unless current_user.nil?
@@ -20,8 +19,6 @@ class MentorsController < ApplicationController
       @message = Message.new(receiver: @mentor, sender: current_user, chat_channel: @chat_channel)
     end
   end
-
-  private
 
   def channel_params
     params.require(:chat_channel).permit(:name)
