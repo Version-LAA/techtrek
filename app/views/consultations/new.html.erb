@@ -1,6 +1,6 @@
 <!-- Calendly inline widget begin -->
 <div class="row">
-  <div class="col col-2 mentor-profile" style="margin-left: 200px; margin-top: 100px; text-align: center;">
+  <div class="col col-2 mentor-profile" style="margin-left: 200px; margin-top: 90px; text-align: center;">
           <%=cl_image_tag(@specialty.user.photo.key,
         height: 285,
         width: 290,
@@ -11,7 +11,7 @@
         )%>
     <h1 class="name" style="margin-top: 10px;"><%= @specialty.user.first_name  %></h1>
     <h4 class="position"><%= @specialty.user.title  %></h4>
-    <div class="skills" style="margin-top: 100px; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; padding:10px">
+    <div class="skills" style="margin-top: 100px; border-radius: 10px; padding:10px; background-color: white;">
       <h6 class="skill-chosen">Skill Chosen:</h6>
       <h2 class="skill"><%= @specialty.technology.name  %></h2>
     </div>
