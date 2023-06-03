@@ -1,15 +1,12 @@
-<div class="container chatroom">
-  <h1>#messages</h1>
+<div class="container chatroom"
+ data-controller="chatroom-subscription"
+ data-chatroom-subscription-chatroom-id-value="<%=@channel.id%>"
+ >
 
-  <div class="messages">
+  <h1>#messages</h1>
+  <div class="messages" data-chatroom-subscription-target="messages">
     <% @messages.each do |message| %>
-      <div id="message-<%= message.id %>">
-        <small>
-          <strong><%= message.sender.first_name %></strong>
-          <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-        </small>
-        <p><%= message.content %></p>
-      </div>
+
     <% end %>
 
     <%= simple_form_for [@chat_channel, @message], url:chat_channel_messages_path(@channel) do |f| %>

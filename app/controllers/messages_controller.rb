@@ -16,6 +16,10 @@ class MessagesController < ApplicationController
     @message.save
     @user = params[:id]
     if @message.save
+      ChatroomChannel.broadcast_to(
+        @chat_channel,
+        "You have a new message!!"
+      )
       redirect_to chat_channel_path(@chat_channel)
     else
       render "new"
