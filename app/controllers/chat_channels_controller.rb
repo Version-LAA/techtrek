@@ -1,8 +1,7 @@
 class ChatChannelsController < ApplicationController
 
   def index
-    @channels = ChatChannel.all
-
+    @channels = ChatChannel.where(user1_id: current_user).or(ChatChannel.where(user2_id: current_user))
   end
 
   def new
