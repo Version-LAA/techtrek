@@ -15,15 +15,12 @@ class MessagesController < ApplicationController
     @chat_channel.save
     @message.save
     @user = params[:id]
-    if @message.save
-      ChatroomChannel.broadcast_to(
-        @chat_channel,
-        "You have a new message!!"
-      )
-      redirect_to chat_channel_path(@chat_channel)
-    else
-      render "new"
-    end
+    @message.save
+    ChatroomChannel.broadcast_to(
+      @chat_channel,
+      render_to_string(partial: "chat_channels/messages", locals: { message: @message })
+    )
+    head :ok
   end
 
   def show
