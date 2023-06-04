@@ -9,17 +9,20 @@ class MessagesController < ApplicationController
     @message.receiver_id = @chat_channel.user1 == current_user ? @chat_channel.user2.id : @chat_channel.user1.id
     @message.sender_id = current_user.id
     @message.chat_channel = @chat_channel
-    if params[:message].key?(:chat_channel)
-      @chat_channel.update(name: params[:message][:chat_channel][:name])
-    end
+    # if params[:message].key?(:chat_channel)
+    #   @chat_channel.update(name: params[:message][:chat_channel][:name])
+    #   @chat_channel.save
+    #   @message.save
+    # end
     @chat_channel.save
     @message.save
     @user = params[:id]
-    if @message.save
-      redirect_to chat_channel_path(@chat_channel)
-    else
-      render "new"
-    end
+    @message.save
+    ChatroomChannel.broadcast_to(
+      @chat_channel,
+      render_to_string(partial: "chat_channels/messages", locals: { message: @message })
+    )
+    head :ok
   end
 
   def show
@@ -31,7 +34,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content).permit(:content, chat_channel_attributes: [:name])
+    params.require(:message).permit(:content) #.permit(:content, chat_channel_attributes: [:name])
   end
 
   def chat_params

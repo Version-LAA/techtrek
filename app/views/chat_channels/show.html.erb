@@ -1,26 +1,23 @@
 <div class="container chatroom">
-  <h1>#messages</h1>
 
-  <div class="messages">
-    <% @messages.each do |message| %>
-      <div id="message-<%= message.id %>">
-        <small>
-          <strong><%= message.sender.first_name %></strong>
-          <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-        </small>
-        <p><%= message.content %></p>
-      </div>
-    <% end %>
+ <div data-controller="chatroom-subscription"
+  data-chatroom-subscription-chatroom-id-value="<%=@channel.id%>"
+  >
+    <h1>#messages</h1>
+    <div class="messages" data-chatroom-subscription-target="messages">
+      <% @messages.each do |message| %>
+        <%= render "chat_channels/messages", message: message%>
+      <% end %>
+    </div>
 
-    <%= simple_form_for [@chat_channel, @message], url:chat_channel_messages_path(@channel) do |f| %>
+    <%= simple_form_for [@chat_channel, @message],  html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }},
+       url:chat_channel_messages_path(@channel) do |f| %>
       <%= f.input :content,
         label: false,
         placeholder: "Message ##",
         class:"form-control"
       %>
       <%= f.submit "Send", class: "btn btn-primary ml-1" %>
-
     <% end %>
-
   </div>
 </div>

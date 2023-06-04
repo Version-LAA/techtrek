@@ -52,12 +52,6 @@
                   </div>
                   <div class="modal-body">
                     <%= simple_form_for [@chat_channel,@message] do |f|%>
-                      <%= f.fields_for :chat_channel do |cc| %>
-                        <%= cc.input :name,
-                          label: false,
-                          placeholder: "Message Subject",
-                          wrapper_html: { class: "flex-grow-1" } %>
-                      <% end %>
                       <%= f.input :content,
                         label: false,
                         placeholder: "........",
