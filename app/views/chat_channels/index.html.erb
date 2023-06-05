@@ -5,7 +5,13 @@
     <%@channels.each do |channel|%>
       <div class="row">
         <%= link_to(chat_channel_path(channel), class: "chat-channels") do %>
-          <%= cl_image_tag(User.where(id: channel.user2_id).first.photo.key,
+          <%userphoto_attribute = if channel.user1_id == current_user.id%>
+            <%userphoto = :user2_id%>
+          <%else%>
+            <%userphoto = :user1_id%>
+          <%end%>
+          <% userphoto = channel.send(userphoto_attribute) %>
+          <%= cl_image_tag(User.find(userphoto).photo.key,
                             height: 75,
                             width: 75,
                             crop: :scale,
