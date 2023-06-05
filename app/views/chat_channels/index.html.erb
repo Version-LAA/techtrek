@@ -1,16 +1,30 @@
-<div class="container">
-  <div class="channels mt-5">
-  <%@channels.each do |channel|%>
-    <div class="row">
-      <%=link_to cl_image_tag("#{User.where(id:channel.user2_id)[0].photo.key}",
-      height: 100,
-      width:100,
-      crop: :scale,
-      aspect_ratio: "4:3",
-      radius: "max"),
-      chat_channel_path(channel),
-      class:"chat-channels"%>
+<div class="messaging">
+  <div class="container">
+  <h1 class="message-header">Private Messages</h1>
+    <div class="channels mt-2">
+    <%@channels.each do |channel|%>
+      <div class="row">
+        <%= link_to(chat_channel_path(channel), class: "chat-channels") do %>
+          <%userphoto_attribute = if channel.user1_id == current_user.id%>
+            <%userphoto = :user2_id%>
+          <%else%>
+            <%userphoto = :user1_id%>
+          <%end%>
+          <% userphoto = channel.send(userphoto_attribute) %>
+          <%= cl_image_tag(User.find(userphoto).photo.key,
+                            height: 75,
+                            width: 75,
+                            crop: :scale,
+                            aspect_ratio: "4:3",
+                            radius: "20") %>
+          <%if Message.where(chat_channel_id:channel).exists?%>
+            <%# <%="#{Message.where(chat_channel_id:channel.id).last.content}"%>
+          <%end%>
+            <p class="message-content m-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
+
+        <% end %>
+      </div>
+      <%end%>
     </div>
-    <%end%>
   </div>
 </div>
