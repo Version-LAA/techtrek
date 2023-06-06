@@ -1,0 +1,146 @@
+.entirecontainer{
+  justify-content: center;
+  text-align: center;
+  width: 500;
+  height: 500;
+  // background-color: black;
+}
+
+.boxaroundh2{
+  margin-bottom: 500;
+  // background-color: purple;
+  }
+
+.titlesignin{
+justify-content: center;
+font-family: 'Averia Gruesa Libre';
+}
+
+.logincontainer{
+  justify-content: center;
+  margin: 70px;
+  margin-top: 30px;
+  padding: 0px;
+  border-radius: 40px;
+  padding: 20px;
+  background-color: white;
+  // background-color: red;
+  }
+
+  .text-input-boxes{
+  justify-content: center;
+  margin: 5px;
+  }
+
+.form-actions-login input {
+justify-content: center;
+margin: 140;
+background-color:#B1D7B4;
+color: white;
+width: 460px;
+height: 50px;
+border-radius: 30px;
+font-size: 36;
+// background-color: blue;
+}
+
+.form-actions-login input:hover{
+background-color: rgb(242, 236, 236);
+// width: 600px;
+// border-radius: 50px;
+// justify-content: center;
+// margin: 140;
+// width: 600px;
+// height: 50px;
+// border-radius: 30px;
+font-size: 36;
+}
+
+.user_email{
+padding-bottom: 1px;
+background-color: white;
+}
+
+.email, .password{
+border:none;
+background-color: white;
+border-bottom: 1px solid black
+}
+
+// .password{
+// border:none;
+// background-color: white;
+// }
+// .optional{
+// background-color: white;
+// // padding-bottom: 1px;
+// // margin-bottom: 1px;
+// }
+
+.emailfieldbox{
+text-align: left;
+justify-content: center;
+margin-bottom: 1px;
+padding-bottom: 0px;
+background-color: white;
+// background-color: bisque;
+border-radius: 60%;
+// border-bottom: 1px solid black
+}
+
+.passwordfieldbox{
+text-align: left;
+margin-top: 1px;
+padding-top: 0px;
+background-color: white;
+// background-color: bisque;
+border-radius: 60%;
+// border-bottom: 1px solid black
+}
+
+.inputboxes{
+justify-content: center;
+margin-bottom: 5px;
+padding: 10px;
+padding-top: 0px;
+// background-color: aquamarine;
+}
+
+// .mergerow1{
+// margin-bottom: 0px;
+// padding-bottom: 0px;
+// }
+
+// .mergerow2{
+//   margin-top: 0px;
+//   padding-top: 0px;
+// }
+
+// .mergecol1{
+// margin-top: Opx;
+// padding-top: 0px;
+//}
+
+// .form-control:focus{
+//   justify-content: center;
+//   height: 600;
+// }
+
+// .input{
+//   justify-content: center;
+//   box-sizing: content-box;
+// }
+
+// .emailinput{
+//   justify-content: center;
+//   height:max-content;
+// }
+
+
+.beigecontainerbox{
+  justify-content: center;
+  margin: 5px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  // background-color: orange;
+}
