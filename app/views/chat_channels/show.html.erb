@@ -3,7 +3,8 @@
  <div data-controller="chatroom-subscription"
   data-chatroom-subscription-chatroom-id-value="<%=@channel.id%>"
   >
-    <h1>#messages</h1>
+    <h3> Message Between <%="#{User.find(@channel.user1_id).first_name} & #{User.find(@channel.user2_id).first_name}" %></h3>
+
     <div class="messages" data-chatroom-subscription-target="messages">
       <% @messages.each do |message| %>
         <%= render "chat_channels/messages", message: message%>
