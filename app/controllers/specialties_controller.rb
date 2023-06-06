@@ -23,11 +23,10 @@ class SpecialtiesController < ApplicationController
     else
       @mentors = User.all
       @statement = display_statement[5]
-    end
-
-    if params[:query].present?
-      sql_subquery = "first_name ILIKE :query OR last_name ILIKE :query OR title ILIKE :query"
-      @mentors = @mentors.where(sql_subquery, query: "%#{params[:query]}%")
+      if params[:query].present?
+        sql_subquery = "first_name ILIKE :query OR last_name ILIKE :query OR title ILIKE :query"
+        @mentors = @mentors.where(sql_subquery, query: "%#{params[:query]}%")
+      end
     end
   end
 
