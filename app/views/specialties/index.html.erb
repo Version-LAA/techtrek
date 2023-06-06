@@ -2,6 +2,16 @@
   <h1 class = "title1">Discover a <%=params[:query].titleize%> mentor!</h1>
 
   <p class = "speciality-text"><%=@statement%></p>
+   <div class="search-box">
+  <%= form_with url: specialties_path, method: :get do %>
+        <button class="btn-search"type = "submit"><i class="fas fa-search"></i></button>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "input-search",
+              placeholder: "Type to Search..."
+          %>
+  <% end %>
+</div>
   <%=render "shared/mentor_card" ,
     mentors: @mentors %>
 </div>
