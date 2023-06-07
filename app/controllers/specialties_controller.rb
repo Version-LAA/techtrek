@@ -28,6 +28,7 @@ class SpecialtiesController < ApplicationController
         sql_subquery = <<~SQL
           users.first_name ILIKE :query
           OR users.last_name ILIKE :query
+          OR users.title ILIKE :query
           OR users.about ILIKE :query
           OR technologies.name ILIKE :query
         SQL
