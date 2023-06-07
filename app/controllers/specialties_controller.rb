@@ -4,6 +4,7 @@ class SpecialtiesController < ApplicationController
     careerservices = ['resume review','technical interviews','offer negotiation']
     frontend = ['javascript', 'html', 'css', 'react', 'angular', 'jquery', 'node.js']
 
+    # line 9 - 23 to be refactored. Statement complicates things. We shouldnt't specify these words.
     @specialties = Specialty.all
     if params[:query] == 'python'
       @mentors = get_filter('python')
