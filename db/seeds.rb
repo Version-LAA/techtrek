@@ -31,6 +31,8 @@ Education.delete_all
 puts "education deleted"
 Experience.delete_all
 puts "experience deleted"
+ChatChannel.delete_all
+puts "cht channel deleted"
 User.delete_all
 puts "users deleted"
 
@@ -59,7 +61,10 @@ technology = [
   'C#',
   'go',
   'offer negotiation',
-  'figma'
+  'figma',
+  'general',
+  'frontend',
+  'backend'
 ]
 languages = ['spanish', 'english', 'french', 'chinese', 'arabic', 'portuguese', 'german', 'japanese', 'russian']
 technology.each do |tech|

@@ -1,0 +1,7 @@
+<h3>What skill do you need mentoship for?</h3>
+
+<ul>
+  <% @technologies.each do |technology| %>
+    <li><%= link_to technology.name %></li>
+  <% end %>
+</ul>

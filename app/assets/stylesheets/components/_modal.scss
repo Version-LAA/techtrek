@@ -1,0 +1,19 @@
+.custom-modal{
+  border-radius: 10px;
+}
+
+.skill-badge {
+  font-size: 20px;
+  text-decoration: none;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 5px;
+  justify-content: center;
+  color: $black;
+
+  &:hover{
+    background-color: $main-color;
+    color: $white;
+  }
+}

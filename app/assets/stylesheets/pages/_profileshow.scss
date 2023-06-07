@@ -40,14 +40,16 @@
   }
 
   & .skill-text{
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 20px;
 
   }
+}
 
-
-
-
+// we got an error arround here, could it be the #container2 that should be .container2? 
+#container2{
+  max-width: 400px;
+  padding: 20px;
 }
 
 .stars {
@@ -58,7 +60,6 @@
   position: relative;
   top: 100px;
   text-align: center;
-
 }
 
 .profile-body{
@@ -76,8 +77,6 @@
     right: 150px;
 
   }
-
-
 }
 
 .left-body{
@@ -87,8 +86,6 @@
   padding: 1%;
   margin-right: 40px;
   margin-bottom: 60px;
-
-
 }
 
 .right-body{
@@ -101,7 +98,6 @@
     list-style: none;
     text-align: left;
   }
-
 }
 
 .profile-btn{
@@ -132,9 +128,6 @@
   & .title {
     font-size: 25px;
   }
-
-
-
 }
 
 .profile-info h1 {

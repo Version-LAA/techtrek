@@ -1,0 +1,36 @@
+.chat-channels {
+  border: solid $main-color;
+  padding: 50px;
+  margin: auto;
+  border-radius: 10px;
+  color: $black;
+  max-width: 50%;
+  margin-bottom: 3%;
+  box-shadow: 10px 5px 5px $main-color;
+
+  &:hover {
+    background: $main-color;
+  }
+}
+
+.channels {
+  background-color: $secondary-color;
+  padding: 5%;
+}
+
+.messaging {
+  background-color: $secondary-color;
+
+}
+
+.message-header{
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.message-content{
+  filter: blur(2px);
+  display: inline;
+  white-space: nowrap;
+}
