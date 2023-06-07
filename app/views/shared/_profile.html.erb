@@ -1,7 +1,8 @@
 <div class="container-main">
   <div class="d-flex flex-row">
     <div class="">
-      <%=cl_image_tag(profilePhoto,
+      <%#  TODO fix profile image upload %>
+      <%=cl_image_tag(profilePhoto || "default-profile.jpg",
         height: 285,
         width: 290,
         crop: :fill,

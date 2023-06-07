@@ -1,0 +1,18 @@
+.registration-form {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: $secondary-color;
+  border-radius: 20px;
+}
+
+.new-btn {
+  border: solid $black;
+  padding: 10px;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: $main-color;
+    color: $white;
+  }
+}
