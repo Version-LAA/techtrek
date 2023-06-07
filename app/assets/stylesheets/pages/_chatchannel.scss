@@ -1,12 +1,12 @@
 .chat-channels {
-  border: solid $main-color;
+  border: solid $light-gray;
   padding: 50px;
   margin: auto;
   border-radius: 10px;
   color: $black;
   max-width: 50%;
   margin-bottom: 3%;
-  box-shadow: 10px 5px 5px $main-color;
+  box-shadow: 10px 5px 5px rgb(193, 191, 191);
 
   &:hover {
     background: $main-color;
@@ -14,12 +14,12 @@
 }
 
 .channels {
-  background-color: $secondary-color;
+  background-color: $white;
   padding: 5%;
 }
 
 .messaging {
-  background-color: $secondary-color;
+  background-color: $white;
 
 }
 
