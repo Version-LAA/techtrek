@@ -59,6 +59,7 @@ body {
   margin: 50px;
   justify-content: center;
   width: 800px;
+  position: relative;
 }
 
 .search .form-control {
@@ -72,9 +73,9 @@ body {
   height: max-content;
   padding: 5px;
   font-size: 15px;
-  position:relative;
-  right: 80px;
-  top: 9px;
+  position: absolute;
+  right: 100px;
+  top: 1px;
   height: 50px;
   width: 50px;
 }
@@ -87,7 +88,7 @@ a:hover {
   justify-content: center;
   position: static;
   top: 50%;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 p {
