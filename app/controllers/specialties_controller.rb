@@ -30,7 +30,7 @@ class SpecialtiesController < ApplicationController
           OR users.about ILIKE :query
           OR technologies.name ILIKE :query
         SQL
-        @mentors = @mentors.joins(:technologies).where(sql_subquery, query: "%#{params[:query]}%")
+        @mentors = @mentors.joins(specialties: [:technology]).where(sql_subquery, query: "%#{params[:query]}%")
       end
     end
   end
