@@ -59,6 +59,7 @@ body {
   margin: 50px;
   justify-content: center;
   width: 800px;
+  position: relative;
 }
 
 .search .form-control {
@@ -72,32 +73,15 @@ body {
   height: max-content;
   padding: 5px;
   font-size: 15px;
-  position:relative;
-  right: 80px;
-  top: 9px;
+  position: absolute;
+  top: 8px;
   height: 50px;
   width: 50px;
-}
-
-.btn-primary {
-  background-color: #B1D7B4;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 40px;
-  padding-right: 40px;
-  border-radius: 10px;
-  color: white;
-  border-style: none;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  font-size: 36px;
+  right: 153px;
+  border: none;
 }
 
 a:hover {
-  color: black;
-}
-
-.btn-primary:hover {
-  background-color:#B1D7B4;
   color: black;
 }
 
@@ -105,7 +89,7 @@ a:hover {
   justify-content: center;
   position: static;
   top: 50%;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 p {
