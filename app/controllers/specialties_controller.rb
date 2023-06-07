@@ -1,4 +1,6 @@
 class SpecialtiesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
+
   def index
     datascience = ['TensorFlow', 'PyTorch','Apache Spark', 'Tableau', 'Matlab', 'python', 'sql']
     careerservices = ['resume review','technical interviews','offer negotiation']

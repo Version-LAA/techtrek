@@ -1,4 +1,5 @@
 class MentorsController < ApplicationController
+  # skip_before_action :authenticate_user!, only: [:show]
   def index
     # This is where we will implement the backend for our search bar if I am not mistaken
   end
