@@ -1,0 +1,15 @@
+.technology-card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.technology-card {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 24px;
+  text-align: center;
+  i {
+    font-size: 48px;
+  }
+}
