@@ -25,12 +25,12 @@ class SpecialtiesController < ApplicationController
       @statement = display_statement[5]
       if params[:query].present?
         sql_subquery = <<~SQL
-          users.title ILIKE :query
-          OR users.synopsis ILIKE :query
-          OR specialties.first_name ILIKE :query
-          OR specialties.last_name ILIKE :query
+          users.first_name ILIKE :query
+          OR users.last_name ILIKE :query
+          OR users.about ILIKE :query
+          OR technologies.name ILIKE :query
         SQL
-        @mentors = @mentors.joins(:specialties).where(sql_subquery, query: "%#{params[:query]}%")
+        @mentors = @mentors.joins(:technologies).where(sql_subquery, query: "%#{params[:query]}%")
       end
     end
   end
