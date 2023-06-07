@@ -57,6 +57,7 @@
                         placeholder: "........",
                         wrapper_html: {class: "flex-grow-1"}
                       %>
+                      <%= f.hidden_field :redirect, value: true%>
                       <div class="d-flex justify-content-end">
                       <%= f.submit "Send", class: "btn btn-secondary mx-3" %>
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
