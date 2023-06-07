@@ -3,6 +3,7 @@
     <h1><strong>You are booking with:</strong></h1>
   </div>
 </div>
+
 <div class="row booking-page">
   <div class="col col-2 mentor-profile">
           <%=cl_image_tag(@specialty.user.photo.key,
@@ -12,16 +13,19 @@
         aspect_ratio: "4:3",
         radius: "max",
         )%>
+
     <div class="skills">
       <h1 class="name"><%= @specialty.user.first_name  %></h1>
       <h5 class="position"><%= @specialty.user.title.capitalize  %></h4>
     </div>
+
     <div class="skills">
       <h5 class="skill-chosen">Skill:</h5>
       <h3 class="skill"><%= @specialty.technology.name.capitalize  %></h3>
       <h3>Total: <%= @specialty.hourly_rate%>$</h3>
     </div>
   </div>
+
   <div class="col col-8 calendly">
     <div class="calendly-inline-widget" data-url="https://calendly.com/d/2jw-mhc-x6w/30min?hide_gdpr_banner=1"></div>
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
