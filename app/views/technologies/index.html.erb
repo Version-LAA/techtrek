@@ -1,43 +1,46 @@
-<h3>What skill do you need mentoship for?</h3>
+<div class="container">
+  <h3>What skill do you need mentoship for?</h3>
 
-<div class="technology-card-container">
-  <% @technologies.each do |technology| %>
-    <div class="technology-card">
-      <% if technology.name == "javascript" %>
-           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-      <% elsif technology.name == "ruby on rails" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg" />
-      <% elsif technology.name == "react" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
-      <% elsif technology.name == "node.js" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-      <% elsif technology.name == "typescript" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
-      <% elsif technology.name == "css" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-      <% elsif technology.name == "html" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
-      <% elsif technology.name == "python" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-      <% elsif technology.name == "django" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
-      <% elsif technology.name == "sql" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-      <% elsif technology.name == "flask" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" />
-      <% elsif technology.name == "swift" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original-wordmark.svg" />
-      <% elsif technology.name == "go" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" />
-      <% elsif technology.name == "C#" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
-      <% elsif technology.name == "figma" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
-      <% elsif technology.name == "git" %>
-         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" />
-      <% elsif technology.name == "ruby" %>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original-wordmark.svg" />
-      <% end %>
-    </div>
-  <% end %>
-</ul>
+  <div class="technology-card-container">
+    <% @technologies.each do |technology| %>
+      <div class="technology-card">
+      <%# TODO - Need images for some of the items - may need to find another source %>
+        <% if technology.name == "javascript" %>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+        <% elsif technology.name == "ruby on rails" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg" />
+        <% elsif technology.name == "react" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
+        <% elsif technology.name == "node.js" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+        <% elsif technology.name == "typescript" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
+        <% elsif technology.name == "css" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+        <% elsif technology.name == "html" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
+        <% elsif technology.name == "python" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+        <% elsif technology.name == "django" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
+        <% elsif technology.name == "sql" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
+        <% elsif technology.name == "flask" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" />
+        <% elsif technology.name == "swift" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original-wordmark.svg" />
+        <% elsif technology.name == "go" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" />
+        <% elsif technology.name == "C#" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
+        <% elsif technology.name == "figma" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+        <% elsif technology.name == "git" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" />
+        <% elsif technology.name == "ruby" %>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original-wordmark.svg" />
+        <% end %>
+      </div>
+    <% end %>
+  </ul>
+</div>
