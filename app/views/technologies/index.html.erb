@@ -1,7 +1,8 @@
 <div class="container">
   <h3>What skill do you need mentoship for?</h3>
 
-  <div class="technology-card-container">
+  <div class="technology-card-container"
+    data-controller="technology">
     <% @technologies.each do |technology| %>
       <div class="technology-card">
       <%# TODO - Need images for some of the items - may need to find another source %>

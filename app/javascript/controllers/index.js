@@ -10,5 +10,8 @@ application.register("chatroom-subscription", ChatroomSubscriptionController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import TechnologyController from "./technology_controller"
+application.register("technology", TechnologyController)
+
 import TextAnimationController from "./text_animation_controller"
 application.register("text-animation", TextAnimationController)
