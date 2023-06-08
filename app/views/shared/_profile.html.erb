@@ -41,9 +41,11 @@
             </div>
           </div>
           <div class="model2">
+          <% if current_user %>
             <button type="button" class="btn profile-btn" data-bs-toggle="modal" data-bs-target="#chatModal">
               Chat
             </button>
+            <% end %>
             <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true" >
               <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content custom-modal">
@@ -52,19 +54,22 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                    <%= simple_form_for [@chat_channel,@message] do |f|%>
-                      <%= f.input :content,
-                        label: false,
-                        placeholder: "........",
-                        wrapper_html: {class: "flex-grow-1"}
-                      %>
-                      <%= f.hidden_field :redirect, value: true%>
-                      <div class="d-flex justify-content-end">
-                      <%= f.submit "Send", class: "btn btn-secondary mx-3" %>
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      </div>
+                    <% if current_user %>
+                      <%= simple_form_for [@chat_channel,@message] do |f|%>
+                        <%= f.input :content,
+                          label: false,
+                          placeholder: "........",
+                          wrapper_html: {class: "flex-grow-1"}
+                        %>
+                        <%= f.hidden_field :redirect, value: true%>
+                        <div class="d-flex justify-content-end">
+                        <%= f.submit "Send", class: "btn btn-secondary mx-3" %>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
 
                     <% end %>
+                    <%end %>
+
 
                   </div>
                 </div>
