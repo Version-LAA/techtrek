@@ -4,12 +4,21 @@
 }
 
 .technology-card {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 120px;
   border: 1px solid black;
   margin: 24px;
+  padding: 10px;
+  border-radius: 10px;
   text-align: center;
+  background-color: $secondary-color;
   i {
-    font-size: 48px;
+    font-size: 30px;
   }
+}
+
+.checkbox {
+  position: relative;
+  left: 45%;
+  display: inline;
 }
