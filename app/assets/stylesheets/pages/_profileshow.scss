@@ -46,7 +46,7 @@
   }
 }
 
-// we got an error arround here, could it be the #container2 that should be .container2? 
+// we got an error arround here, could it be the #container2 that should be .container2?
 #container2{
   max-width: 400px;
   padding: 20px;
@@ -127,11 +127,13 @@
 
   & .title {
     font-size: 25px;
+    color: $white;
   }
 }
 
 .profile-info h1 {
   font-size: 48px;
+  color: $white;
 }
 
 .education {
