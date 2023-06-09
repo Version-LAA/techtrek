@@ -1,5 +1,6 @@
 .container-main{
   margin-left: 50px;
+
 }
 
 .profile-picture{
@@ -12,8 +13,8 @@
 .about-me {
   max-width: 400px;
   position: relative;
-  left: 300px;
-  top: 35px;
+  left: 170px;
+  top: 45px;
 
   & .quote {
     font-style: italic;
@@ -25,13 +26,14 @@
   }
 }
 .skills-container{
-  padding-left: 20px;
+
   padding-right: 120px;
   border: 1px;
-  background-color: #FCFDF7;
+  background-color: $light-gray;
   max-width: 455px;
   position: relative;
-  top: 63px;
+  top: 50px;
+
   padding-bottom: 20%;
 
   & p {
@@ -60,11 +62,12 @@
   position: relative;
   top: 100px;
   text-align: center;
+
 }
 
 .profile-body{
-  margin-left: 20%;
-  margin-top: 60px;
+  margin-left: 18%;
+  margin-top: 40px;
 
   & .work-exp{
     position: relative;
@@ -76,7 +79,18 @@
     position: relative;
     right: 150px;
 
+
   }
+}
+
+.top-line{
+  width: 50%;
+  border: solid black;
+  background-color: black;
+  margin-bottom: 0;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .left-body{
@@ -102,7 +116,7 @@
 
 .profile-btn{
   border: 1px;
-  background-color:rgba(22, 22, 29, 0.79);
+  background-color:$secondary-color;
   border-radius: 5px;
   padding: 5px;
   width: 150px;
@@ -113,10 +127,12 @@
   height: 50px;
   margin: 1%;
   &:hover{
-    background-color:#FCFDF8;
-    color: $black;
+    border: solid $secondary-color;
+
+    color: $secondary-color;
   }
 }
+
 
 #chat-btn {
   margin-right: 20px;

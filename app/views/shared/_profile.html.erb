@@ -1,11 +1,11 @@
-<div class="partial-container">
+<div class="partial-container mt-3">
   <div class="container-main " >
     <div class="d-flex flex-row">
       <div class="">
         <%#  TODO fix profile image upload %>
         <%=cl_image_tag(profilePhoto || "default-profile.jpg",
-          height: 285,
-          width: 290,
+          height: 255,
+          width: 260,
           crop: :fill,
           aspect_ratio: "4:3",
           radius: "max",
@@ -87,7 +87,7 @@
         </div>
       </div>
       <div class="about-me">
-        <p>Meet <%="#{userFirstName}"%></p>
+        <p style="font-weight:bold; color:$secondary-color;">Meet <%="#{userFirstName}"%></p>
         <div class="quote">
           <p>Hi! I'm <%="#{userFirstName}"%></p>
           <p><%="#{user}"%></p>
@@ -102,6 +102,7 @@
     </div>
 
   </div>
+
 
   <div class="d-flex flex-row ">
     <div class="skills-container">
