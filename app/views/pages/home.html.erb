@@ -16,7 +16,7 @@
 
   <div class="row search justify-content-center">
     <div class="col-sm-8 ">
-      <%= form_with url: specialties_path, method: :get, class:  do %>
+      <%= form_with url: specialties_path, method: :get, class: "d-flex"  do %>
         <%= text_field_tag :query,
               params[:query],
               class: "form-control",
