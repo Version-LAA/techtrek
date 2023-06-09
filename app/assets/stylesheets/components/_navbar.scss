@@ -1,8 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: transparent;
-  color: black;
+
   font-weight: bolder;
+
   // font-family - find font for navbar ***TODO***
 }
 
@@ -16,4 +17,8 @@
 
 .avatar {
   height:45px ;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  color: $white;
 }
