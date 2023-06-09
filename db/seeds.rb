@@ -47,8 +47,8 @@ technology = [
   'cybersecurity',
   'html',
   'css',
-  'resume review',
-  'technical interviews',
+  'resume',
+  'interviewing',
   'datascience',
   'react',
   'node.js',
@@ -60,9 +60,8 @@ technology = [
   'swift',
   'C#',
   'go',
-  'offer negotiation',
+  'job-offer',
   'figma',
-  'general',
   'frontend',
   'backend'
 ]
