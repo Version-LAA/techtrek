@@ -1,8 +1,9 @@
 <div class="container">
-  <h3>What skill do you need mentoship for?</h3>
+  <h3 class="assesment-title">What skill do you need mentorship for?</h3>
   <form action="">
     <div class="technology-card-container"
-      data-controller="technology">
+      data-controller="technology"
+      style="width: 55rem;">
       <% @technologies.each do |technology| %>
         <div class="technology-card"
           data-action="toggle->technology#selecttech"
@@ -82,6 +83,6 @@
     </ul>
   </div>
   <div class="col text-center">
-      <button type="submit" class="submit-button" disabled>Find Mentors</button>
+      <button type="submit" class="submit-button btn-assessment" disabled>Find Mentors</button>
     </div>
 </form>
