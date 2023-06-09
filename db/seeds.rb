@@ -60,7 +60,7 @@ technology = [
   'swift',
   'C#',
   'go',
-  'job-offer',
+  'job offer review',
   'figma',
   'frontend',
   'backend'
