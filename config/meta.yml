@@ -1,0 +1,5 @@
+meta_product_name: "TechTrek"
+meta_title: "TechTrek - Journey through tech without a sweat!"
+meta_description: "Journey through tech without a sweat!"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@TechTrekapp"   # required for Twitter Cards
