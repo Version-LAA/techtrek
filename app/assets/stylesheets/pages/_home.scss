@@ -52,6 +52,7 @@ body {
   margin: 20px;
 }
 
+
 .search {
   border-radius: 20px;
   font-family: 'Averia Gruesa Libre';
@@ -108,6 +109,14 @@ p {
   margin-top: 8px;
 }
 
+.footer {
+  display: flex;
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0px 50px;
+}
 // Media queries can help with responsive design
 @media(max-width: 600px){
   .mainh1 {
