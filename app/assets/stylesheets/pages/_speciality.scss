@@ -29,19 +29,17 @@
 }
 
 .btn-profile{
-  border: 1px;
   background-color:$secondary-color;
   border-radius: 5px;
   padding: 10px;
-  width: 130px;
   // color: #a1f2ac;
   color: $white;
-  font-weight: 600px;
   font-size: 20px;
-  margin: 1%;
+  border: 2px solid #57BE8D;
+  transition: 0.2s color, 0.2s border, 0.2s background-color;
   &:hover{
-    border: solid $secondary-color;
-
+    border: 2px solid $secondary-color;
+    background-color: white;
     color: $secondary-color;
   }
 }
