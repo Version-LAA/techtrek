@@ -3,7 +3,7 @@
     <%if Technology.where(name: params[:query]).exists?%>
         <h1 class = "title1">Discover a <%=params[:query].titleize%> mentor!</h1>
       <%else%>
-        <h1 class = "title1">Discover a mentor!</h1>
+        <h1 class = "title1">Discover a TechTrek Mentor!</h1>
     <%end%>
 
   <p class = "speciality-text"><%=@statement%></p>
