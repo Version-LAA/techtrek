@@ -3,12 +3,8 @@
   <%= simple_form_for Assessment.new, url: new_assessment_path, html: {method: :get} do |f| %>
     <div class="technology-card-container" data-controller="technology" style="width: 55rem;">
       <% @technologies.each do |technology| %>
-        <div class="technology-card"
-          data-action="click->technology#toggleParent"
-          data-technology-target="tech">
-
-          <%= check_box_tag 'technology', technology.name %>
-
+        <div class="technology-card" data-action="click->technology#toggleParent" data-technology-target="tech">
+          <%= check_box_tag 'technologies[]', technology.name %>
           <% if technology.name == "javascript" %>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
           <% elsif technology.name == "ruby on rails" %>
