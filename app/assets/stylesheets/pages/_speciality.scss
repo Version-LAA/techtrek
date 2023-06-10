@@ -2,12 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Averia Gruesa Libre';
   border-radius: 10px;
   font-size: 20px;
-  border: 1px grey;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  background-color: #F3EFE0;
+  border: 4px black;
+  box-shadow: 2px 2px 4px black;
+  background-color: white;
 }
 .card-image-container{
   display: flex;
@@ -25,29 +24,40 @@
   height: 20%;
 }
 
-.btn-profile{
-  background-color: #B1D7B4;
-  color: black;
-  border-radius: 10px;
-  padding: 10px;
-  padding-right: 25px;
-  padding-left: 25px;
-  margin-left: 40px;
+.cont-assessment{
+  margin-top: 50px;
 }
 
-.btn-profile:hover {
-  background-color: #B1D7B4;
-  color: white;
+.btn-profile{
+  border: 1px;
+  background-color:$secondary-color;
+  border-radius: 5px;
+  padding: 10px;
+  width: 130px;
+  // color: #a1f2ac;
+  color: $white;
+  font-weight: 600px;
+  font-size: 20px;
+  margin: 1%;
+  &:hover{
+    border: solid $secondary-color;
+
+    color: $secondary-color;
+  }
 }
 
 .title1{
-  font-family: 'lato';
   font-size: 65px;
+  color: white;
+  text-align: left;
+  margin-left: 120px;
 }
 
 .speciality-text{
-  font-family: 'Averia Gruesa Libre';
   font-size: 20px;
+  color: white;
+  text-align: left;
+  margin-left: 120px;
 }
 
 .whole{
@@ -71,6 +81,7 @@
   width: fit-content;
   height: fit-content;
   position: relative;
+  margin-left: 120px;
 }
 .input-search{
   height: 50px;
@@ -87,7 +98,7 @@
   color:#fff;
 }
 .input-search::placeholder{
-  color:black;
+  color: white;
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;

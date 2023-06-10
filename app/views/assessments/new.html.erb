@@ -1,14 +1,8 @@
 <div class="container">
-  <h1>assessments#new</h1>
+  <h1>Recommended Mentors</h1>
 
-
-
-
-  <%@user_assessment.each do |question|%>
-    <ul>
-      <li><%=question.question.content%></li>
-    </ul>
-  <%end%>
+  <%=render "shared/mentor_card" ,mentors: @mentors %>
+  <%raise%>
 
 
 </div>
