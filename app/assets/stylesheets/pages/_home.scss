@@ -44,16 +44,17 @@
   text-decoration: none;
   background-color: #57BE8D;
   color: white;
-  border-radius: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  border-radius: 999px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   padding-left: 30px;
   padding-right: 30px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 22px;
-  margin: 20px;
+  margin: 18px;
+  border: 2px solid #57BE8D;
   &:hover{
-    border: solid $secondary-color;
+    border: 2px solid $secondary-color;
     background-color: white;
     color: $secondary-color;
   }
@@ -103,9 +104,10 @@ a:hover {
 }
 
 .filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
   justify-content: center;
-  position: static;
-  top: 50%;
   margin-top: 30px;
 }
 
