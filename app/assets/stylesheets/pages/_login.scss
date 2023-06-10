@@ -37,10 +37,10 @@ justify-content: center;
 margin: 140;
 background-color:#B1D7B4;
 color: white;
-width: 440px;
+width: 420px;
 height: 50px;
 border-radius: 30px;
-font-size: 36;
+font-size: 80;
 // background-color: blue;
 }
 
@@ -56,10 +56,10 @@ background-color: rgb(242, 236, 236);
 font-size: 36;
 }
 
-.user_email{
-padding-bottom: 1px;
-background-color: white;
-}
+// .user_email{
+// padding-bottom: 1px;
+// background-color: white;
+// }
 
 .email, .password{
 border:none;
@@ -143,4 +143,26 @@ padding-top: 0px;
   padding-top: 15px;
   padding-bottom: 5px;
   // background-color: orange;
+}
+
+.signup_button, .forgot_password{
+  text-align: center;
+  color: black;
+}
+
+.makevertical {
+  display: flex;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  // margin: 0px;
+  // padding: 0px;
+  // column-gap: 0px;
+  // row-gap: 0px;
+}
+
+.removegap{
+row-gap: 0px;
+padding: 0px;
+margin: 0px;
 }
