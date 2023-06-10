@@ -53,6 +53,7 @@
   font-size: 22px;
   margin: 18px;
   border: 2px solid #57BE8D;
+  transition: 0.2s color, 0.2s border, 0.2s background-color;
   &:hover{
     border: 2px solid $secondary-color;
     background-color: white;
@@ -79,15 +80,19 @@
 .btn-primary {
   background-color: #57BE8D;
   padding-top: 5px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   padding-right: 40px;
   padding-left: 40px;
-  font-size: 15px;
-  height: 55px;
-  border: none;
   margin-left: 25px;
   border-radius: 8px;
-  font-size: 32px;
+  font-size: 28px;
+  border: 2px solid #57BE8D;
+  transition: 0.2s color, 0.2s border, 0.2s background-color;
+  &:hover{
+    border: 2px solid $secondary-color;
+    background-color: white;
+    color: $secondary-color;
+  }
 }
 
 a:hover {
