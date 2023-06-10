@@ -7,6 +7,8 @@
   justify-content: space-between;
   flex-grow: 1;
   border-radius: 20px;
+  max-width: 50%;
+
 
   h1 {
     border-bottom: 1px solid $gray-200;
@@ -15,9 +17,9 @@
   }
 
   .messages {
-    height: 20%;
-    overflow: scroll;
+    max-height: 60%;
     padding: 1rem;
+    overflow-y: auto;
   }
 
   #new_message {

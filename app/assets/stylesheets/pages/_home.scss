@@ -2,7 +2,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
-  height: 43vh;
+  height: 32vh;
 }
 
 .containers {
@@ -13,18 +13,19 @@
 .mainh6 {
   font-family: 'Averia Gruesa Libre';
   font-size: 32px;
-  margin-top: 10px;
+  color: #FFFFFF;
 }
 
 .mainh1 {
   font-size: 120px;
   font-weight: bold;
   font-family: 'Lato';
-  margin-top: 80px;
+  margin-top: 30px;
+  color: #FFFFFF;
 }
 
 body {
-  background-image: image-url("wallpaper03.jpg");
+  background-image: image-url("wallpaper07.jpg");
 }
 
 .subheaders {
@@ -38,9 +39,9 @@ body {
 
 .specialties {
   text-decoration: none;
-  background-color:  #B1D7B4;
+  background-color: #57BE8D;
   color: white;
-  border-radius: 10px;
+  border-radius: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 30px;
@@ -56,55 +57,51 @@ body {
   font-family: 'Averia Gruesa Libre';
   font-size: 20px;
   text-align: center;
-  margin: 50px;
+  margin-bottom: 20px;
   justify-content: center;
-  width: 800px;
+  width: 1050px;
+  position: relative;
 }
 
 .search .form-control {
-  height: 65px;
-  background-color: #D9D9D9;
-  border-radius: 10px;
-}
-.loop {
-  background-color: #B1D7B4;
-  border-radius: 50%;
-  height: max-content;
-  padding: 5px;
-  font-size: 15px;
-  position:relative;
-  right: 80px;
-  top: 9px;
-  height: 50px;
-  width: 50px;
+  height: 55px;
+  background-color: white;
+  border-radius: 8px;
 }
 
 .btn-primary {
-  background-color: #B1D7B4;
+  background-color: #57BE8D;
   padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 40px;
+  padding-bottom: 20px;
   padding-right: 40px;
-  border-radius: 10px;
-  color: white;
-  border-style: none;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  font-size: 36px;
+  padding-left: 40px;
+  font-size: 15px;
+  height: 55px;
+  border: none;
+  margin-left: 25px;
+  border-radius: 8px;
+  font-size: 32px;
 }
 
 a:hover {
   color: black;
 }
 
-.btn-primary:hover {
-  background-color:#B1D7B4;
-  color: black;
+.browse {
+  margin-top: 60px;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #3C3C3C;
 }
 
 .filter-container {
   justify-content: center;
   position: static;
   top: 50%;
+  margin-top: 30px;
 }
 
 p {
@@ -128,7 +125,6 @@ p {
   }
 
   .specialties {
-
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
@@ -139,5 +135,4 @@ p {
     margin: 10px;
     flex-direction: column;
   }
-
 }

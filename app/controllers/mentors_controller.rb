@@ -1,10 +1,13 @@
 class MentorsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show]
   def index
     # This is where we will implement the backend for our search bar if I am not mistaken
   end
 
   def show
+    @profile_page = true
     @mentor = User.find(params[:id])
+    @background_color = "white"
 
     @specialties = Specialty.where(user: @mentor).order(skill_level: :desc)
     @education = Education.where(user: @mentor)

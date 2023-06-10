@@ -1,0 +1,36 @@
+.technology-card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.technology-card {
+  width: 90px;
+  height: 120px;
+  border: 1px solid black;
+  margin: 24px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: $white;
+  i {
+    font-size: 30px;
+  }
+}
+
+.checkbox {
+  position: relative;
+  left: 45%;
+  display: inline;
+}
+
+.submit-button {
+  padding: 10px 50px;
+  background-color: #B1D7B4;
+  color: white;
+  border-radius: 10px
+}
+
+.checked{
+  background-color: #58E85E;
+  opacity: .9;
+}

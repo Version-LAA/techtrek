@@ -6,23 +6,25 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @chat_channel = ChatChannel.find(params[:chat_channel_id])
-    @message.receiver_id = @chat_channel.user1 == current_user ? @chat_channel.user2.id : @chat_channel.user1.id
+    receiver_id = @chat_channel.user1 == current_user ? @chat_channel.user2.id : @chat_channel.user1.id
+    @message.receiver_id = receiver_id
     @message.sender_id = current_user.id
     @message.chat_channel = @chat_channel
-    # if params[:message].key?(:chat_channel)
-    #   @chat_channel.update(name: params[:message][:chat_channel][:name])
-    #   @chat_channel.save
-    #   @message.save
-    # end
     @chat_channel.save
     @message.save
     @user = params[:id]
     @message.save
-    ChatroomChannel.broadcast_to(
-      @chat_channel,
-      render_to_string(partial: "chat_channels/messages", locals: { message: @message })
-    )
-    head :ok
+
+    if params[:message][:redirect] == "true"
+      redirect_to chat_channel_path(@chat_channel, receiver_id: receiver_id)
+    else
+      ChatroomChannel.broadcast_to(
+        @chat_channel,
+        render_to_string(partial: "chat_channels/messages", locals: { message: @message })
+      )
+      head :ok
+    end
+
   end
 
   def show
