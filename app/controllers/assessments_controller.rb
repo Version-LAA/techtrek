@@ -1,12 +1,16 @@
 class AssessmentsController < ApplicationController
   def new
-    @assessment = Assessment.new(user: current_user)
-    @question_bank = Question.all
-    @question_bank.each do |ques|
-      @assessment_question = AssessmentQuestion.new(question: ques, assessment: @assessment)
-      @assessment_question.save
+    search = params[:technologies]
+
+    if search.present?
+      @mentors = User.joins(specialties: [:technology])
+                     .where(technologies: { name: search })
+                     .where("specialties.skill_level > ?", 3)
+                     .distinct
+
+    else
+      @mentors = User.all
     end
-    @user_assessment = AssessmentQuestion.where(assessment_id:@assessment)
 
   end
 
