@@ -26,28 +26,37 @@
 }
 
 .btn-profile{
-  background-color: #B1D7B4;
-  color: black;
-  border-radius: 10px;
+  border: 1px;
+  background-color:$secondary-color;
+  border-radius: 5px;
   padding: 10px;
-  padding-right: 25px;
-  padding-left: 25px;
-  margin-left: 40px;
-}
+  width: 130px;
+  // color: #a1f2ac;
+  color: $white;
+  font-weight: 600px;
+  font-size: 20px;
+  margin: 1%;
+  &:hover{
+    border: solid $secondary-color;
 
-.btn-profile:hover {
-  background-color: #B1D7B4;
-  color: white;
+    color: $secondary-color;
+  }
 }
 
 .title1{
   font-family: 'lato';
   font-size: 65px;
+  color: white;
+  text-align: left;
+  margin-left: 120px;
 }
 
 .speciality-text{
   font-family: 'Averia Gruesa Libre';
   font-size: 20px;
+  color: white;
+  text-align: left;
+  margin-left: 120px;
 }
 
 .whole{
@@ -71,6 +80,7 @@
   width: fit-content;
   height: fit-content;
   position: relative;
+  margin-left: 120px;
 }
 .input-search{
   height: 50px;
@@ -87,7 +97,7 @@
   color:#fff;
 }
 .input-search::placeholder{
-  color:black;
+  color: white;
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;
