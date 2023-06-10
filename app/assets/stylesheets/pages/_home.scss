@@ -117,8 +117,8 @@ p {
 .footer {
   display: flex;
   justify-content: space-between;
-  height: 10vh;
-  position: absolute;
+
+  position: fixed;
   bottom: 0;
   width: 100%;
   padding: 0px 50px;
