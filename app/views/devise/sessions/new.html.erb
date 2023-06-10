@@ -1,20 +1,43 @@
-<h2>Log in</h2>
+<div class="container entirecontainer">
 
+<div class="container boxaroundh2">
+<h2 class="titlesignin">Sign In</h2>
+</div>
+
+<div class="container beigecontainerbox div">
+ <div class= "row inputboxes mergerow1">
+   <div class = "col-sm-6 logincontainer mergecol1">
+     <div class="row text-input-boxes mergerow2">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
-  <div class="form-inputs">
+         </div>
+           <div class="form-inputs email-input col-sm-12">
+             <div class="row emailfieldbox">
+               <div class="col-sm-12">
     <%= f.input :email,
                 required: false,
                 autofocus: true,
+                label: false,
+                placeholder: "Email",
                 input_html: { autocomplete: "email" } %>
+          </div>
+           </div>
+             <div class="passwordfieldbox">
     <%= f.input :password,
                 required: false,
+                label: false,
+                placeholder: "Password",
                 input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+  <div class="form-actions form-actions-login rounded ">
+    <%=f.button :submit, "Log in" %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
