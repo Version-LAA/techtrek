@@ -5,7 +5,9 @@ class MentorsController < ApplicationController
   end
 
   def show
+    @profile_page = true
     @mentor = User.find(params[:id])
+    @background_color = "white"
 
     @specialties = Specialty.where(user: @mentor).order(skill_level: :desc)
     @education = Education.where(user: @mentor)
