@@ -11,7 +11,7 @@
   padding: 10px;
   border-radius: 10px;
   text-align: center;
-  background-color: $secondary-color;
+  background-color: $white;
   i {
     font-size: 30px;
   }
@@ -28,4 +28,9 @@
   background-color: #B1D7B4;
   color: white;
   border-radius: 10px
+}
+
+.checked{
+  background-color: #58E85E;
+  opacity: .9;
 }
