@@ -7,9 +7,13 @@ export default class extends Controller {
     console.log("hello from technology page");
   }
 
-  selecttech(){
-    // console.dir(this.techTarget);
-    console.log("selected");
-
+  toggleParent(event) {
+    const checkbox = event.currentTarget;
+    const card = checkbox.parentElement;
+    if (checkbox.checked) {
+      card.classList.add("checked");
+    } else {
+      card.classList.remove("checked");
+    }
   }
 }
