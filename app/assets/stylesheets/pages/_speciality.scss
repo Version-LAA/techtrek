@@ -5,9 +5,9 @@
   font-family: 'Averia Gruesa Libre';
   border-radius: 10px;
   font-size: 20px;
-  border: 1px grey;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  background-color: #F3EFE0;
+  border: 4px black;
+  box-shadow: 2px 2px 4px black;
+  background-color: white;
 }
 .card-image-container{
   display: flex;
@@ -23,6 +23,10 @@
   border-radius: 30px;
   width: 80%;
   height: 20%;
+}
+
+.cont-assessment{
+  margin-top: 50px;
 }
 
 .btn-profile{
