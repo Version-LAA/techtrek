@@ -47,6 +47,11 @@ body {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 22px;
   margin: 20px;
+  &:hover{
+    border: solid $secondary-color;
+    background-color: white;
+    color: $secondary-color;
+  }
 }
 
 
