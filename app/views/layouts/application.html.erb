@@ -22,7 +22,9 @@
                 end%>">
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-
-    <%= yield %>
+    <div class="banner-background"></div>
+    <div style="z-index: 2; position: relative;">
+      <%= yield %>
+    </div>
   </body>
 </html>

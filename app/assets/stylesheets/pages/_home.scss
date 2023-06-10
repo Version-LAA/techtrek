@@ -26,6 +26,16 @@ body {
   background-image: image-url("wallpaper07.jpg");
 }
 
+.banner-background{
+  position: fixed;
+  background-color: red;
+  width: 100vw;
+  height: 300px;
+  top: 0;
+  z-index: 1;
+
+}
+
 .subheaders {
   text-align: center;
 }
