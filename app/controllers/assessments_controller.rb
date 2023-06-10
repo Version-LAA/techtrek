@@ -3,13 +3,10 @@ class AssessmentsController < ApplicationController
     search = params[:technologies]
 
     if search.present?
-      sql_subquery = <<~SQL
-        technologies.name ILIKE :search
-      SQL
       @mentors = User.joins(specialties: [:technology])
                      .where(technologies: { name: search })
                      .where("specialties.skill_level > ?", 3)
-                     .uniq
+                     .distinct
     else
       @mentors = User.all
     end
