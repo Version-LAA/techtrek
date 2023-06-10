@@ -36,6 +36,8 @@ class SpecialtiesController < ApplicationController
           OR technologies.name ILIKE :query
         SQL
         @mentors = @mentors.joins(specialties: [:technology]).where(sql_subquery, query: "%#{params[:query]}%").uniq
+      else
+        @mentors = User.all
       end
     end
   end
