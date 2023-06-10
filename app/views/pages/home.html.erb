@@ -14,6 +14,21 @@
     </div>
   </div>
 
+  <div class="row search justify-content-center">
+    <div class="col-sm-8 ">
+      <%= form_with url: specialties_path, method: :get, class: "d-flex"  do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Type a keyword"
+          %>
+          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+  <h3 class="browse">Browse technologies</h3>
+
   <div class="filter-container">
      <%= link_to("Javascript", specialties_path(query:"javascript"), class: "specialties")%>
      <%= link_to("Datascience", specialties_path(query:"datascience"), class: "specialties")%>
@@ -22,17 +37,10 @@
      <%= link_to("Frontend Development", specialties_path(query:"frontend"), class: "specialties")%>
   </div>
 
-    <%# This is for the search bar %>
-    <div class="row search justify-content-center">
-      <div class="col-sm-8 ">
-        <%= form_with url: specialties_path, method: :get, class:  do %>
-          <%= text_field_tag :query,
-                params[:query],
-                class: "form-control",
-                placeholder: "Type a keyword"
-            %>
-            <%= submit_tag "🔍", name: "", class: "loop" %>
-        <% end %>
-      </div>
-    </div>
+  <div class="filter-container" style="margin-top: 60px;">
+     <%= link_to("Javascript", specialties_path(query:"javascript"), class: "specialties")%>
+     <%= link_to("Datascience", specialties_path(query:"datascience"), class: "specialties")%>
+     <%= link_to("Career Services", specialties_path(query:"careerservices"), class: "specialties")%>
+     <%= link_to("Python", specialties_path(query:"python"), class: "specialties")%>
+  </div>
 </div>
