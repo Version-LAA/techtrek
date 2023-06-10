@@ -30,17 +30,37 @@
   <h3 class="browse">Browse technologies</h3>
 
   <div class="filter-container">
-     <%= link_to("Javascript", specialties_path(query:"javascript"), class: "specialties")%>
      <%= link_to("Datascience", specialties_path(query:"datascience"), class: "specialties")%>
-     <%= link_to("Career Services", specialties_path(query:"careerservices"), class: "specialties")%>
+     <%= link_to("Cyber Security", specialties_path(query:"cybersecurity"), class: "specialties")%>
      <%= link_to("Python", specialties_path(query:"python"), class: "specialties")%>
      <%= link_to("Frontend Development", specialties_path(query:"frontend"), class: "specialties")%>
   </div>
 
   <div class="filter-container" style="margin-top: 60px;">
      <%= link_to("Javascript", specialties_path(query:"javascript"), class: "specialties")%>
-     <%= link_to("Datascience", specialties_path(query:"datascience"), class: "specialties")%>
-     <%= link_to("Career Services", specialties_path(query:"careerservices"), class: "specialties")%>
-     <%= link_to("Python", specialties_path(query:"python"), class: "specialties")%>
+     <%= link_to("Frontend", specialties_path(query:"frontend"), class: "specialties")%>
+     <%= link_to("BackEnd", specialties_path(query:"backend"), class: "specialties")%>
+     <%= link_to("Top Mentors", specialties_path(query:""), class: "specialties")%>
+  </div>
+
+  <div class="footer">
+    <div class="footer-one">
+      <div>
+        <p><strong><i class="fa-regular fa-compass"></i>Tech<span style="color: green;">TREK </span><span style="margin-left: 10px;"></span>2023 TechTrekApp. All rights reserved</strong></p>
+      </div>
+
+      <div>
+        <p>This web app is open source. <span style="color: green;">Learn more</span></p>
+      </div>
+    </div>
+
+    <div class="footer-two">
+      <p class="mx-3">About the Mission</p>
+      <p class="team mx-2">Meet the Team</p>
+      <p><i class="fa-brands fa-facebook-f mx-2" style="color: #000000;"></i></p>
+      <p><i class="fa-brands fa-instagram mx-2" style="color: #000000;"></i></p>
+      <p><i class="fa-brands fa-youtube mx-2" style="color: #000000;"></i></p>
+      <p><i class="fa-brands fa-linkedin mx-2" style="color: #000000;"></i></p>
+    </div>
   </div>
 </div>
