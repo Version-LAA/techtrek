@@ -1,5 +1,10 @@
 <div class = "container text-center cont-assessment">
-  <h1 class = "title1">Discover a <%=params[:query].titleize%> mentor!</h1>
+
+    <%if Technology.where(name: params[:query]).exists?%>
+        <h1 class = "title1">Discover a <%=params[:query].titleize%> mentor!</h1>
+      <%else%>
+        <h1 class = "title1">Discover a TechTrek Mentor!</h1>
+    <%end%>
 
   <p class = "speciality-text"><%=@statement%></p>
    <div class="search-box">
