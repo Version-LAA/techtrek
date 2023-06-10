@@ -1,5 +1,5 @@
 <div class="container">
-  <h3 class="assesment-title">What skill do you need mentorship for?</h3>
+  <h1 class="assesment-title">What skill would you like to learn?</h1>
   <form action="">
     <div class="technology-card-container"
       data-controller="technology"
@@ -77,12 +77,49 @@
             <input class="checkbox" type="checkbox" id=<%=technology.name%> name=<%="name"%>  value=<%=technology.name%> data-checkbox-select-all-target="child" data-action="change->checkbox-select-all#toggleParent">
             <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original-wordmark.svg" />
+          <% elsif technology.name == "cybersecurity" %>
+            <input class="checkbox" type="checkbox" id=<%=technology.name%> name=<%="name"%>  value=<%=technology.name%> data-checkbox-select-all-target="child" data-action="change->checkbox-select-all#toggleParent">
+            <label for=<%=technology.name%>></label>
+            <i class='fas fa-user-secret' style='font-size:50px;color:black'></i>
+            <p style='font-size:10px;'>cybersecurity</p>
+           <% elsif technology.name == "resume" %>
+            <input class="checkbox" type="checkbox" id=<%=technology.name%> name=<%="name"%>  value=<%=technology.name%> data-checkbox-select-all-target="child" data-action="change->checkbox-select-all#toggleParent">
+            <label for=<%=technology.name%>></label>
+            <i class='fas fa-edit' style='font-size:42px;color:black'></i>
+            <p style='font-size:8px;'>Resume Review</p>
+           <% elsif technology.name == "interviewing" %>
+            <input class="checkbox" type="checkbox" id=<%=technology.name%> name=<%="name"%>  value=<%=technology.name%> data-checkbox-select-all-target="child" data-action="change->checkbox-select-all#toggleParent">
+            <label for=<%=technology.name%>></label>
+            <i class='far fa-handshake' style='font-size:48px;color:black'></i>
+            <p style='font-size:10px;'>Interviewing</p>
+          <% elsif technology.name == "datascience" %>
+            <input class="checkbox" type="checkbox" id=<%=technology.name%> name=<%="name"%>  value=<%=technology.name%> data-checkbox-select-all-target="child" data-action="change->checkbox-select-all#toggleParent">
+            <label for=<%=technology.name%>></label>
+            <i class='fas fa-chart-line' style='font-size:48px;color:black'></i>
+            <p style='font-size:10px;'>Datascience</p>
+          <% elsif technology.name == "job offer review" %>
+            <input class="checkbox" type="checkbox" id=<%=technology.name%> name=<%="name"%>  value=<%=technology.name%> data-checkbox-select-all-target="child" data-action="change->checkbox-select-all#toggleParent">
+            <label for=<%=technology.name%>></label>
+            <i class='fas fa-chart-line' style='font-size:43px;color:black'></i>
+            <p style='font-size:10px;'>Offer Negotiation</p>
+
+          <% elsif technology.name == "backend" %>
+            <input class="checkbox" type="checkbox" id=<%=technology.name%> name=<%="name"%>  value=<%=technology.name%> data-checkbox-select-all-target="child" data-action="change->checkbox-select-all#toggleParent">
+            <label for=<%=technology.name%>></label>
+            <i class='fas fa-desktop' style='font-size:48px;color:black'></i>
+            <p style='font-size:10px;'>Backend</p>
+
+          <% elsif technology.name == "frontend" %>
+            <input class="checkbox" type="checkbox" id=<%=technology.name%> name=<%="name"%>  value=<%=technology.name%> data-checkbox-select-all-target="child" data-action="change->checkbox-select-all#toggleParent">
+            <label for=<%=technology.name%>></label>
+            <i class='fas fa-database' style='font-size:48px;color:black'></i>
+            <p style='font-size:10px;'>Frontend</p>
           <% end %>
+
         </div>
       <% end %>
-    </ul>
   </div>
-  <div class="col text-center">
-      <button type="submit" class="submit-button btn-assessment" disabled>Find Mentors</button>
+    <div class="col text-center">
+      <button type="submit" class="submit-button btn-assessment">Find Mentors</button>
     </div>
-</form>
+  </form>
