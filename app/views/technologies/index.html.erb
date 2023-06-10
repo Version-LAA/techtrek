@@ -1,125 +1,76 @@
 <div class="container">
   <h1 class="assesment-title">What skill would you like to learn?</h1>
-  <form action="">
-    <div class="technology-card-container"
-      data-controller="technology"
-      style="width: 55rem;">
+  <%= simple_form_for Assessment.new, url: new_assessment_path, html: {method: :get} do |f| %>
+    <div class="technology-card-container" data-controller="technology" style="width: 55rem;">
       <% @technologies.each do |technology| %>
         <div class="technology-card"
           data-action="click->technology#toggleParent"
           data-technology-target="tech">
-        <%# TODO - Need images for some of the items - may need to find another source %>
+
+          <%= check_box_tag 'technology', technology.name %>
+
           <% if technology.name == "javascript" %>
-                <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-                <label for=<%=technology.name%>></label>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
           <% elsif technology.name == "ruby on rails" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg" />
           <% elsif technology.name == "react" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
           <% elsif technology.name == "node.js" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
           <% elsif technology.name == "typescript" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
           <% elsif technology.name == "css" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
           <% elsif technology.name == "html" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
           <% elsif technology.name == "python" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
           <% elsif technology.name == "django" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
           <% elsif technology.name == "sql" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
           <% elsif technology.name == "flask" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" />
           <% elsif technology.name == "swift" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original-wordmark.svg" />
           <% elsif technology.name == "go" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" />
           <% elsif technology.name == "C#" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
           <% elsif technology.name == "figma" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
           <% elsif technology.name == "git" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" />
           <% elsif technology.name == "ruby" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original-wordmark.svg" />
           <% elsif technology.name == "cybersecurity" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <i class='fas fa-user-secret' style='font-size:50px;color:black'></i>
             <p style='font-size:10px;'>cybersecurity</p>
-           <% elsif technology.name == "resume" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
+          <% elsif technology.name == "resume" %>
             <i class='fas fa-edit' style='font-size:42px;color:black'></i>
             <p style='font-size:8px;'>Resume Review</p>
-           <% elsif technology.name == "interviewing" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
+          <% elsif technology.name == "interviewing" %>
             <i class='far fa-handshake' style='font-size:48px;color:black'></i>
             <p style='font-size:10px;'>Interviewing</p>
           <% elsif technology.name == "datascience" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <i class='fas fa-chart-line' style='font-size:48px;color:black'></i>
             <p style='font-size:10px;'>Datascience</p>
           <% elsif technology.name == "job offer review" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <i class='fas fa-chart-line' style='font-size:43px;color:black'></i>
             <p style='font-size:10px;'>Offer Negotiation</p>
 
           <% elsif technology.name == "backend" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <i class='fas fa-desktop' style='font-size:48px;color:black'></i>
             <p style='font-size:10px;'>Backend</p>
 
           <% elsif technology.name == "frontend" %>
-            <input class="checkbox" type="checkbox" id="<%=technology.name%>" name="<%= technology.name %>"  value="<%=technology.name%>" data-technology-target="tech" data-action="click->technology#toggleParent">
-            <label for=<%=technology.name%>></label>
             <i class='fas fa-database' style='font-size:48px;color:black'></i>
             <p style='font-size:10px;'>Frontend</p>
           <% end %>
 
         </div>
       <% end %>
-  </div>
-    <div class="col text-center">
-      <%= link_to "Find Mentors", root_path, class: "submit-button btn-assessment" %>
+      <%= f.button :submit %>
     </div>
-  </form>
+  <% end %>
+</div>
