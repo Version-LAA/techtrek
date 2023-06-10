@@ -14,8 +14,8 @@
     </div>
   </div>
 
-  <div class="row search justify-content-center">
-    <div class="col-sm-8 ">
+  <div class="search">
+    <%# <div class="col-sm-8 "> %>
       <%= form_with url: specialties_path, method: :get, class: "d-flex"  do %>
         <%= text_field_tag :query,
               params[:query],
@@ -24,7 +24,7 @@
           %>
           <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
       <% end %>
-    </div>
+    <%# </div> %>
   </div>
 
   <h3 class="browse">Browse technologies</h3>
@@ -34,9 +34,9 @@
      <%= link_to("Cyber Security", specialties_path(query:"cybersecurity"), class: "specialties")%>
      <%= link_to("Python", specialties_path(query:"python"), class: "specialties")%>
      <%= link_to("Frontend Development", specialties_path(query:"frontend"), class: "specialties")%>
-  </div>
+  <%# </div> %>
 
-  <div class="filter-container" style="margin-top: 60px;">
+  <%# <div class="filter-container" style="margin-top: 60px;"> %>
      <%= link_to("Javascript", specialties_path(query:"javascript"), class: "specialties")%>
      <%= link_to("Frontend", specialties_path(query:"frontend"), class: "specialties")%>
      <%= link_to("BackEnd", specialties_path(query:"backend"), class: "specialties")%>

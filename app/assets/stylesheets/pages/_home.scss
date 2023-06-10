@@ -1,8 +1,6 @@
 .header {
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  height: 32vh;
+  padding-bottom: 45px;
 }
 
 .containers {
@@ -10,6 +8,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .mainh6 {
   font-size: 32px;
   color: #FFFFFF;
@@ -22,8 +21,14 @@
   color: #FFFFFF;
 }
 
-body {
-  background-image: image-url("wallpaper07.jpg");
+.banner-background{
+  position: fixed;
+  background-color: $main-color;
+  width: 100vw;
+  height: 430px;
+  top: 0;
+  z-index: 1;
+
 }
 
 .subheaders {
@@ -39,16 +44,18 @@ body {
   text-decoration: none;
   background-color: #57BE8D;
   color: white;
-  border-radius: 30px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  border-radius: 999px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   padding-left: 30px;
   padding-right: 30px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-size: 22px;
-  margin: 20px;
+  margin: 18px;
+  border: 2px solid #57BE8D;
+  transition: 0.2s color, 0.2s border, 0.2s background-color;
   &:hover{
-    border: solid $secondary-color;
+    border: 2px solid $secondary-color;
     background-color: white;
     color: $secondary-color;
   }
@@ -60,7 +67,7 @@ body {
   text-align: center;
   margin-bottom: 20px;
   justify-content: center;
-  width: 1050px;
+  width: 650px;
   position: relative;
 }
 
@@ -73,15 +80,19 @@ body {
 .btn-primary {
   background-color: #57BE8D;
   padding-top: 5px;
-  padding-bottom: 20px;
+  padding-bottom: 5px;
   padding-right: 40px;
   padding-left: 40px;
-  font-size: 15px;
-  height: 55px;
-  border: none;
   margin-left: 25px;
   border-radius: 8px;
-  font-size: 32px;
+  font-size: 28px;
+  border: 2px solid #57BE8D;
+  transition: 0.2s color, 0.2s border, 0.2s background-color;
+  &:hover{
+    border: 2px solid $secondary-color;
+    background-color: white;
+    color: $secondary-color;
+  }
 }
 
 a:hover {
@@ -98,9 +109,10 @@ a:hover {
 }
 
 .filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
   justify-content: center;
-  position: static;
-  top: 50%;
   margin-top: 30px;
 }
 
@@ -111,8 +123,8 @@ p {
 .footer {
   display: flex;
   justify-content: space-between;
-  height: 10vh;
-  position: absolute;
+
+  position: fixed;
   bottom: 0;
   width: 100%;
   padding: 0px 50px;
