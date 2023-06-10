@@ -106,11 +106,21 @@ p {
 
 .footer {
   display: flex;
+  justify-content: space-between;
   height: 10vh;
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 0px 50px;
+}
+
+.footer-one {
+
+}
+
+.footer-two {
+ display: flex;
+
 }
 
 // Media queries can help with responsive design
