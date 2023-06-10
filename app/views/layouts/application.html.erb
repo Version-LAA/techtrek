@@ -20,10 +20,10 @@
                 else
                     'main'
                 end%>">
-    <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
     <div class="banner-background"></div>
     <div style="z-index: 2; position: relative;">
+      <%= render "shared/navbar" %>
       <%= yield %>
     </div>
   </body>

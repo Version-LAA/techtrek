@@ -22,15 +22,11 @@
   color: #FFFFFF;
 }
 
-body {
-  background-image: image-url("wallpaper07.jpg");
-}
-
 .banner-background{
   position: fixed;
-  background-color: red;
+  background-color: $main-color;
   width: 100vw;
-  height: 300px;
+  height: 430px;
   top: 0;
   z-index: 1;
 
