@@ -44,20 +44,24 @@
   font-size: 80;
   border: 2px solid #57BE8D;
   transition: 0.2s color, 0.2s border, 0.2s background-color;
-  // background-color: blue;
+  &:hover{
+    border: 2px solid $secondary-color;
+    background-color: white;
+    color: $secondary-color;
+  }
 }
 
-.form-actions-login input:hover{
-  background-color: rgb(242, 236, 236);
-  // width: 600px;
-  // border-radius: 50px;
-  // justify-content: center;
-  // margin: 140;
-  // width: 600px;
-  // height: 50px;
-  // border-radius: 30px;
-  font-size: 36;
-}
+// .form-actions-login input:hover{
+//   background-color: rgb(242, 236, 236);
+//   // width: 600px;
+//   // border-radius: 50px;
+//   // justify-content: center;
+//   // margin: 140;
+//   // width: 600px;
+//   // height: 50px;
+//   // border-radius: 30px;
+//   font-size: 36;
+// }
 
 // .user_email{
 // padding-bottom: 1px;
