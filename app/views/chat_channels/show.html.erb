@@ -13,15 +13,17 @@
     <div class="message-form">
       <%= simple_form_for [@chat_channel, @message], html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }},
       url: chat_channel_messages_path(@channel) do |f| %>
-        <div class="input-wrapper">
-          <%= f.input :content,
-            label: false,
-            placeholder: "Type something to send",
-            class: "form-control"
-          %>
-        </div>
-        <div class="button-wrapper">
-          <%= f.submit "Send", class: "btn btn-primary" %>
+        <div class="row messagensend">
+          <div class="col input-wrapper">
+            <%= f.input :content,
+              label: false,
+              placeholder: "Type something to send",
+              class: "form-control"
+            %>
+          </div>
+          <div class="col button-wrapper">
+            <%= f.submit "Send", class: "btn btn-primary" %>
+          </div>
         </div>
       <% end %>
     </div>
