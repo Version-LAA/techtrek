@@ -1,12 +1,19 @@
 <div class="container">
   <h1 class="assesment-title">What skill would you like to learn?</h1>
   <%= simple_form_for Assessment.new, url: new_assessment_path, html: {method: :get} do |f| %>
-    <div class="technology-card-container" data-controller="technology" style="width: 55rem;">
+    <%= f.button :submit , class:"btn profile-btn assessment-btn"%>
+    <div class="technology-card-container"
+       data-controller="technology"
+       style="width: 55rem;"
+       data-action="click->technology#toggleParent"
+       data-technology-target="tech"
+       >
       <% @technologies.each do |technology| %>
-        <div class="technology-card" data-action="click->technology#toggleParent" data-technology-target="tech">
-          <%= check_box_tag 'technologies[]', technology.name %>
+        <div class="technology-card" >
+          <%= check_box_tag "technologies[]",technology.name%>
           <% if technology.name == "javascript" %>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+
           <% elsif technology.name == "ruby on rails" %>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg" />
           <% elsif technology.name == "react" %>
@@ -66,7 +73,6 @@
 
         </div>
       <% end %>
-      <%= f.button :submit %>
     </div>
   <% end %>
 </div>

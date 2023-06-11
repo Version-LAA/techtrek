@@ -1,6 +1,9 @@
 .technology-card-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .technology-card {
@@ -12,6 +15,7 @@
   border-radius: 10px;
   text-align: center;
   background-color: $white;
+
   i {
     font-size: 30px;
   }
