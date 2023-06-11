@@ -1,6 +1,11 @@
 .technology-card-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+
+
 }
 
 .technology-card {
@@ -12,15 +17,21 @@
   border-radius: 10px;
   text-align: center;
   background-color: $white;
+
+  &:hover{
+    background-color: $secondary-color;
+  }
+
   i {
     font-size: 30px;
   }
+
 }
 
 .checkbox {
-  position: relative;
-  left: 45%;
-  display: inline;
+  // position: relative;
+  // left: 50%;
+  // display: inline;
 }
 
 .submit-button {
@@ -31,6 +42,10 @@
 }
 
 .checked{
-  background-color: #58E85E;
+  background-color: $secondary-color;
   opacity: .9;
+}
+
+.checkbox-container{
+  display: none;
 }
