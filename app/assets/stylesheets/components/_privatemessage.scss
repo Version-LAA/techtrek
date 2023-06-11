@@ -8,7 +8,7 @@
   flex-grow: 1;
   border-radius: 20px;
   max-width: 50%;
-
+  padding: 20px;
 
   h1 {
     border-bottom: 1px solid $gray-200;
@@ -29,5 +29,10 @@
     .form-group {
       margin-bottom: 0;
     }
+  }
+
+  .messager {
+    display: flex;
+    justify-content: center;
   }
 }
