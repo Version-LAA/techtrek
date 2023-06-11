@@ -12,8 +12,8 @@
   }
 
 .titlesignin{
-justify-content: center;
-font-family: 'Averia Gruesa Libre';
+  justify-content: center;
+  font-family: 'Averia Gruesa Libre';
 }
 
 .logincontainer{
@@ -27,33 +27,33 @@ font-family: 'Averia Gruesa Libre';
   // background-color: red;
   }
 
-  .text-input-boxes{
+.text-input-boxes{
   justify-content: center;
   margin: 5px;
-  }
+}
 
 .form-actions-login input {
-justify-content: center;
-margin: 140;
-background-color:#B1D7B4;
-color: white;
-width: 420px;
-height: 50px;
-border-radius: 30px;
-font-size: 80;
-// background-color: blue;
+  justify-content: center;
+  margin: 140;
+  background-color:#B1D7B4;
+  color: white;
+  width: 420px;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 80;
+  // background-color: blue;
 }
 
 .form-actions-login input:hover{
-background-color: rgb(242, 236, 236);
-// width: 600px;
-// border-radius: 50px;
-// justify-content: center;
-// margin: 140;
-// width: 600px;
-// height: 50px;
-// border-radius: 30px;
-font-size: 36;
+  background-color: rgb(242, 236, 236);
+  // width: 600px;
+  // border-radius: 50px;
+  // justify-content: center;
+  // margin: 140;
+  // width: 600px;
+  // height: 50px;
+  // border-radius: 30px;
+  font-size: 36;
 }
 
 // .user_email{
@@ -62,9 +62,9 @@ font-size: 36;
 // }
 
 .email, .password{
-border:none;
-background-color: white;
-border-bottom: 1px solid black
+  border:none;
+  background-color: white;
+  border-bottom: 1px solid black
 }
 
 // .password{
@@ -78,32 +78,32 @@ border-bottom: 1px solid black
 // }
 
 .emailfieldbox{
-text-align: left;
-justify-content: center;
-margin-bottom: 1px;
-padding-bottom: 0px;
-background-color: white;
-// background-color: bisque;
-border-radius: 60%;
-// border-bottom: 1px solid black
+  text-align: left;
+  justify-content: center;
+  margin-bottom: 1px;
+  padding-bottom: 0px;
+  background-color: white;
+  // background-color: bisque;
+  border-radius: 60%;
+  // border-bottom: 1px solid black
 }
 
 .passwordfieldbox{
-text-align: left;
-margin-top: 1px;
-padding-top: 0px;
-background-color: white;
-// background-color: bisque;
-border-radius: 60%;
-// border-bottom: 1px solid black
+  text-align: left;
+  margin-top: 1px;
+  padding-top: 0px;
+  background-color: white;
+  // background-color: bisque;
+  border-radius: 60%;
+  // border-bottom: 1px solid black
 }
 
 .inputboxes{
-justify-content: center;
-margin-bottom: 5px;
-padding: 10px;
-padding-top: 0px;
-// background-color: aquamarine;
+  justify-content: center;
+  margin-bottom: 5px;
+  padding: 10px;
+  padding-top: 0px;
+  // background-color: aquamarine;
 }
 
 // .mergerow1{
