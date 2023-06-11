@@ -49,26 +49,11 @@
   }
 }
 
-// .user_email{
-// padding-bottom: 1px;
-// background-color: white;
-// }
-
 .email, .password{
   border:none;
   background-color: white;
   border-bottom: 1px solid black
 }
-
-// .password{
-// border:none;
-// background-color: white;
-// }
-// .optional{
-// background-color: white;
-// // padding-bottom: 1px;
-// // margin-bottom: 1px;
-// }
 
 .emailfieldbox{
   text-align: left;
@@ -76,9 +61,7 @@
   margin-bottom: 1px;
   padding-bottom: 0px;
   background-color: white;
-  // background-color: bisque;
   border-radius: 60%;
-  // border-bottom: 1px solid black
 }
 
 .passwordfieldbox{
@@ -86,55 +69,20 @@
   margin-top: 1px;
   padding-top: 0px;
   background-color: white;
-  // background-color: bisque;
   border-radius: 60%;
-  // border-bottom: 1px solid black
 }
 
 .inputboxes{
   justify-content: center;
   padding: 10px;
   padding-top: 0px;
-  // background-color: aquamarine;
 }
-
-// .mergerow1{
-// margin-bottom: 0px;
-// padding-bottom: 0px;
-// }
-
-// .mergerow2{
-//   margin-top: 0px;
-//   padding-top: 0px;
-// }
-
-// .mergecol1{
-// margin-top: Opx;
-// padding-top: 0px;
-//}
-
-// .form-control:focus{
-//   justify-content: center;
-//   height: 600;
-// }
-
-// .input{
-//   justify-content: center;
-//   box-sizing: content-box;
-// }
-
-// .emailinput{
-//   justify-content: center;
-//   height:max-content;
-// }
-
 
 .beigecontainerbox{
   justify-content: center;
   margin: 5px;
   padding-top: 15px;
   padding-bottom: 5px;
-  // background-color: orange;
 }
 
 .signup_button, .forgot_password{
