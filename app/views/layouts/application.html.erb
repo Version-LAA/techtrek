@@ -36,7 +36,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="<%= if controller.controller_name === 'mentors'
+  <body class="<%= if controller.controller_name == 'mentors'
                    'profile-page'
                 elsif controller.controller_name == 'users'
                     'profile-page'
@@ -44,8 +44,10 @@
                     'main'
                 end%>">
     <%= render "shared/flashes" %>
-    <div class="banner-background"></div>
-    <div style="z-index: 2; position: relative;">
+    <% if !(controller.controller_name == 'mentors' ||  controller.controller_name == 'users') %>
+      <div class="banner-background"></div>
+      <div style="z-index: 2; position: relative;">
+    <%end%>
       <%= render "shared/navbar" %>
       <%= yield %>
     </div>
