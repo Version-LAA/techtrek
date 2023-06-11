@@ -1,80 +1,82 @@
 <div class="container">
-  <h1 class="assesment-title">What skill would you like to learn?</h1>
+  <h1 class="assesment-title mt-5 mb-4">What skills would you like to learn?</h1>
   <%= simple_form_for Assessment.new, url: new_assessment_path, html: {method: :get} do |f| %>
     <%= f.button :submit , class:"btn profile-btn assessment-btn"%>
-    <div class="technology-card-container"
-       data-controller="technology"
-       style="width: 55rem;"
-       data-action="click->technology#toggleParent"
-       data-technology-target="tech"
-       >
-      <% @technologies.each do |technology| %>
-        <div class="technology-card" >
-          <div class="checkbox-container">
-            <%= check_box_tag "technologies[]",technology.name%>
+    <div class="assessment-frame">
+      <div class="technology-card-container"
+        data-controller="technology"
+        style="width: 55rem;"
+        data-action="click->technology#toggleParent"
+        data-technology-target="tech"
+        >
+        <% @technologies.each do |technology| %>
+          <div class="technology-card" >
+            <div class="checkbox-container">
+              <%= check_box_tag "technologies[]",technology.name%>
+            </div>
+            <% if technology.name == "javascript" %>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+
+            <% elsif technology.name == "ruby on rails" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg" />
+            <% elsif technology.name == "react" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
+            <% elsif technology.name == "node.js" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+            <% elsif technology.name == "typescript" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
+            <% elsif technology.name == "css" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+            <% elsif technology.name == "html" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
+            <% elsif technology.name == "python" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+            <% elsif technology.name == "django" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
+            <% elsif technology.name == "sql" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
+            <% elsif technology.name == "flask" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" />
+            <% elsif technology.name == "swift" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original-wordmark.svg" />
+            <% elsif technology.name == "go" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" />
+            <% elsif technology.name == "C#" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
+            <% elsif technology.name == "figma" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
+            <% elsif technology.name == "git" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" />
+            <% elsif technology.name == "ruby" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original-wordmark.svg" />
+            <% elsif technology.name == "cybersecurity" %>
+              <i class='fas fa-user-secret' style='font-size:50px;color:black'></i>
+              <p style='font-size:10px;'>cybersecurity</p>
+            <% elsif technology.name == "resume" %>
+              <i class='fas fa-edit' style='font-size:42px;color:black'></i>
+              <p style='font-size:8px;'>Resume Review</p>
+            <% elsif technology.name == "interviewing" %>
+              <i class='far fa-handshake' style='font-size:48px;color:black'></i>
+              <p style='font-size:10px;'>Interviewing</p>
+            <% elsif technology.name == "datascience" %>
+              <i class='fas fa-chart-line' style='font-size:48px;color:black'></i>
+              <p style='font-size:10px;'>Datascience</p>
+            <% elsif technology.name == "job offer review" %>
+              <i class='fas fa-chart-line' style='font-size:43px;color:black'></i>
+              <p style='font-size:10px;'>Offer Negotiation</p>
+
+            <% elsif technology.name == "backend" %>
+              <i class='fas fa-desktop' style='font-size:48px;color:black'></i>
+              <p style='font-size:10px;'>Backend</p>
+
+            <% elsif technology.name == "frontend" %>
+              <i class='fas fa-database' style='font-size:48px;color:black'></i>
+              <p style='font-size:10px;'>Frontend</p>
+            <% end %>
+
           </div>
-          <% if technology.name == "javascript" %>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-
-          <% elsif technology.name == "ruby on rails" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rails/rails-original-wordmark.svg" />
-          <% elsif technology.name == "react" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
-          <% elsif technology.name == "node.js" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-          <% elsif technology.name == "typescript" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
-          <% elsif technology.name == "css" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-          <% elsif technology.name == "html" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" />
-          <% elsif technology.name == "python" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-          <% elsif technology.name == "django" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
-          <% elsif technology.name == "sql" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-          <% elsif technology.name == "flask" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" />
-          <% elsif technology.name == "swift" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original-wordmark.svg" />
-          <% elsif technology.name == "go" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" />
-          <% elsif technology.name == "C#" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
-          <% elsif technology.name == "figma" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" />
-          <% elsif technology.name == "git" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg" />
-          <% elsif technology.name == "ruby" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original-wordmark.svg" />
-          <% elsif technology.name == "cybersecurity" %>
-            <i class='fas fa-user-secret' style='font-size:50px;color:black'></i>
-            <p style='font-size:10px;'>cybersecurity</p>
-          <% elsif technology.name == "resume" %>
-            <i class='fas fa-edit' style='font-size:42px;color:black'></i>
-            <p style='font-size:8px;'>Resume Review</p>
-          <% elsif technology.name == "interviewing" %>
-            <i class='far fa-handshake' style='font-size:48px;color:black'></i>
-            <p style='font-size:10px;'>Interviewing</p>
-          <% elsif technology.name == "datascience" %>
-            <i class='fas fa-chart-line' style='font-size:48px;color:black'></i>
-            <p style='font-size:10px;'>Datascience</p>
-          <% elsif technology.name == "job offer review" %>
-            <i class='fas fa-chart-line' style='font-size:43px;color:black'></i>
-            <p style='font-size:10px;'>Offer Negotiation</p>
-
-          <% elsif technology.name == "backend" %>
-            <i class='fas fa-desktop' style='font-size:48px;color:black'></i>
-            <p style='font-size:10px;'>Backend</p>
-
-          <% elsif technology.name == "frontend" %>
-            <i class='fas fa-database' style='font-size:48px;color:black'></i>
-            <p style='font-size:10px;'>Frontend</p>
-          <% end %>
-
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
   <% end %>
+  </div>
 </div>
