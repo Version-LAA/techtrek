@@ -22,9 +22,9 @@
 }
 
 .checkbox {
-  position: relative;
-  left: 45%;
-  display: inline;
+  // position: relative;
+  // left: 50%;
+  // display: inline;
 }
 
 .submit-button {
@@ -37,4 +37,8 @@
 .checked{
   background-color: #58E85E;
   opacity: .9;
+}
+
+.checkbox-container{
+  display: none;
 }

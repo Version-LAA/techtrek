@@ -10,7 +10,9 @@
        >
       <% @technologies.each do |technology| %>
         <div class="technology-card" >
-          <%= check_box_tag "technologies[]",technology.name%>
+          <div class="checkbox-container">
+            <%= check_box_tag "technologies[]",technology.name%>
+          </div>
           <% if technology.name == "javascript" %>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
 
