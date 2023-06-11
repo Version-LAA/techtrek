@@ -3,17 +3,17 @@
   text-align: center;
   width: 500;
   height: 500;
-  // background-color: black;
 }
 
 .boxaroundh2{
   margin-bottom: 500;
-  // background-color: purple;
   }
 
 .titlesignin{
   justify-content: center;
-  font-family: 'Averia Gruesa Libre';
+  color: white;
+  margin-bottom: 25px;
+  margin-top: 10px;
 }
 
 .logincontainer{
@@ -24,7 +24,6 @@
   border-radius: 40px;
   padding: 20px;
   background-color: white;
-  // background-color: red;
   }
 
 .text-input-boxes{
@@ -34,7 +33,6 @@
 
 .form-actions-login input {
   justify-content: center;
-  margin: 140;
   background-color:#57BE8D;
   color: white;
   width: 420px;
@@ -95,7 +93,6 @@
 
 .inputboxes{
   justify-content: center;
-  margin-bottom: 5px;
   padding: 10px;
   padding-top: 0px;
   // background-color: aquamarine;
