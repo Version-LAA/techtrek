@@ -1,5 +1,7 @@
 <div class="messaging">
   <div class="container">
+      <div class="leftside"></div>
+      <div class="rightside"></div>
   <h1 class="message-header">Private Messages</h1>
     <div class="channels mt-2">
     <%@channels.each do |channel|%>
@@ -18,10 +20,8 @@
                             aspect_ratio: "4:3",
                             radius: "20") %>
           <%if Message.where(chat_channel_id:channel).exists?%>
-            <%# <%="#{Message.where(chat_channel_id:channel.id).last.content}"%>
           <%end%>
             <p class="message-content m-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
-
         <% end %>
       </div>
       <%end%>
