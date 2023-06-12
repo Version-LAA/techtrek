@@ -167,7 +167,6 @@
   overflow-y: auto;
 }
 
-
 .chatchatlist .chatblock {
   position: relative;
   width: 100%;
@@ -176,7 +175,6 @@
   padding: 15px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
   cursor: pointer;
-
 }
 
 .chatchatlist .chatblock .chatimgbx {
@@ -207,6 +205,10 @@
 .chatchatlist .chatblock .chatdetails .chatlistHead .chattime {
   font-size: 0.75em;
   color: #aaa;
+  margin-top: 0px;
+}
+
+.chatmessage {
   margin-top: 0px;
 }
 
