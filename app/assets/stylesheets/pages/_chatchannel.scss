@@ -231,3 +231,15 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.chatmessage_p b {
+  background: #57BE8D;
+  color: white;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75em;
+}
