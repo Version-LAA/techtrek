@@ -121,5 +121,28 @@ body {
   color: #51585c;
   font-size: 1.5em;
   margin-left: 22px;
+}
 
+.search-chat {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.search_chat div {
+  width: 100%;
+}
+
+.search_chat div input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: #fff;
+  padding: 6px;
+  height: 38px;
 }
