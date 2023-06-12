@@ -26,10 +26,10 @@
           </div>
         </div>
 
-        <div class="channels mt-2">
+        <div class="chatblock">
           <%@channels.each do |channel|%>
-            <div class="row chatdetails">
-
+            <div class="chatdetails">
+              <div class="chatimgbx">
               <%= link_to(chat_channel_path(channel), class: "chat-channels") do %>
                 <%userphoto_attribute = if channel.user1_id == current_user.id%>
                   <%userphoto = :user2_id%>
@@ -43,14 +43,15 @@
                                   crop: :scale,
                                   aspect_ratio: "4:3",
                                   radius: "50") %>
-
                 <%if Message.where(chat_channel_id:channel).exists?%>
                 <%end%>
+                </div>
+                <div class="chatdetails">
                 <div class="chatlistHead">
                   <h6><%= User.find(userphoto).first_name + " " + User.find(userphoto).last_name %></h4>
                 </div>
                 <div class="chatmessage_p">
-                  <p class="message-content m-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
+                  <p class="chatmessage">Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
                 </div>
               <% end %>
             </div>
