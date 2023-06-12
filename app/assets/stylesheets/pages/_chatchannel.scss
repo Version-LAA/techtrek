@@ -109,3 +109,17 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+.nav_icons {
+  display: flex;
+}
+
+.nav_icons li {
+  display: flex;
+  cursor: pointer;
+  list-style: none;
+  color: #51585c;
+  font-size: 1.5em;
+  margin-left: 22px;
+
+}
