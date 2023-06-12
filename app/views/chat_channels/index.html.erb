@@ -26,46 +26,10 @@
           </div>
         </div>
 
-                <div class="chatblock">
-          <div class="chatimgbx">
-            <%# This will need to be changed with our users info %>
-            <img src="pic.png" class="">
-          </div>
-          <div class="chatdetails">
-            <div class="chatlistHead">
-              <%# This will need to be changed with our users info %>
-              <h4>Mike Tyson</h4>
-              <%# This will need to be changed with accurate time instead of hard coded %>
-              <p class="chattime">10:52</p>
-            </div>
-            <div class="chatmessage_p">
-              <%# This may need to be replaced with the user's actual message %>
-              <p class="chatmessage">Hey! What time are coming later? Hey! What time are coming later?</p>
-            </div>
-          </div>
-        </div>
-        <div class="chatblock">
-          <div class="chatimgbx">
-            <%# This will need to be changed with our users info %>
-            <img src="pic.png" class="chatcover">
-          </div>
-          <div class="chatdetails">
-            <div class="chatlistHead">
-              <%# This will need to be changed with our users info %>
-              <h4>Steven Wilson</h4>
-              <%# This will need to be changed with accurate time instead of hard coded %>
-              <p class="chattime">yesterday</p>
-            </div>
-            <div class="chatmessage_p">
-              <%# This may need to be replaced with the user's actual message %>
-              <p class="chatmessage">Frontend or backend?</p>
-            </div>
-          </div>
-        </div>
-
         <div class="channels mt-2">
           <%@channels.each do |channel|%>
             <div class="row chatdetails">
+
               <%= link_to(chat_channel_path(channel), class: "chat-channels") do %>
                 <%userphoto_attribute = if channel.user1_id == current_user.id%>
                   <%userphoto = :user2_id%>
@@ -86,7 +50,7 @@
                   <h6><%= User.find(userphoto).first_name + " " + User.find(userphoto).last_name %></h4>
                 </div>
                 <div class="chatmessage_p">
-                  <p class="chatmessage">Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
+                  <p class="message-content m-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
                 </div>
               <% end %>
             </div>

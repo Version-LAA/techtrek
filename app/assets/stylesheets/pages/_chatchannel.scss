@@ -1,25 +1,25 @@
-.chat-channels {
-  margin: auto;
-  border-radius: 10px;
-  color: $black;
-  max-height: 80px;
-  margin-bottom: 3%;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  transition: 0.2s color, 0.2s border, 0.2s background-color;
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  padding-left: 15px;
-  padding-right: 5px;
-  &:hover {
-    background: $main-color;
-  }
-}
+// .chat-channels {
+//   margin: auto;
+//   border-radius: 10px;
+//   color: $black;
+//   max-height: 80px;
+//   margin-bottom: 3%;
+//   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+//   transition: 0.2s color, 0.2s border, 0.2s background-color;
+//   position: relative;
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+//   cursor: pointer;
+//   padding-bottom: 10px;
+//   padding-top: 10px;
+//   padding-left: 15px;
+//   padding-right: 5px;
+//   &:hover {
+//     background: $main-color;
+//   }
+// }
 
 // .channels {
 //   background-color: $white;
