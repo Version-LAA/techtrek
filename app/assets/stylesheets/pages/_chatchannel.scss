@@ -180,6 +180,10 @@
   padding-right: 5px;
 }
 
+.chatchatlist .chatblock.active {
+  background: #ebebeb;
+}
+
 .chatchatlist .chatblock .chatimgbx {
   position: relative;
   min-width: 45px;
@@ -209,6 +213,11 @@
   font-size: 0.75em;
   color: #aaa;
   margin-top: 0px;
+}
+
+.chatchatlist .chatblock .chatdetails .chatlistHead .chattime  {
+  color: #111;
+
 }
 
 .chatmessage {
