@@ -155,5 +155,14 @@ body {
   left: 30px;
   top: 14px;
   font-size: 1.2em;
+}
 
+.search_chat div input::placeholder {
+  color: #bbb;
+}
+
+.chatlist {
+  position: relative;
+  height: calc(100% - 110px);
+  overflow-y: auto;
 }
