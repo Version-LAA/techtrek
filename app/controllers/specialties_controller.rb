@@ -24,7 +24,7 @@ class SpecialtiesController < ApplicationController
       @mentors = get_filter(frontend)
       @statement = display_statement[4]
     else
-      @mentors = User.all
+      @mentors = User.where.not(id: current_user.id)
       @statement = display_statement[5]
       # fix
       if params[:query].present?
@@ -35,9 +35,12 @@ class SpecialtiesController < ApplicationController
           OR users.about ILIKE :query
           OR technologies.name ILIKE :query
         SQL
-        @mentors = @mentors.joins(specialties: [:technology]).where(sql_subquery, query: "%#{params[:query]}%").uniq
+        @mentors = @mentors.joins(specialties: [:technology])
+                           .where.not(users: { id: current_user.id })
+                           .where(sql_subquery, query: "%#{params[:query]}%")
+                           .uniq
       else
-        @mentors = User.all
+        @mentors = User.where.not(id: current_user.id)
       end
     end
   end
@@ -46,6 +49,7 @@ class SpecialtiesController < ApplicationController
 
   def get_filter(filter)
     @mentors = User.joins(specialties: [:technology])
+                   .where.not(users: { id: current_user.id })
                    .where(technologies: { name: filter }).uniq
   end
 
