@@ -1,53 +1,55 @@
-<div class="container">
+<div class="test">
+  <div class="chatcontainer">
 
-  <%# Header %>
-  <div class="leftside">
-    <div class="header">
-      <div class="userimg">
+    <%# Header %>
+    <div class="chatleftside">
+      <div class="chatheader">
+        <div class="chatuserimg">
 
-        <%# This will need to be changed to the user who is logged in's photo %>
-        <img src="profilePic.png" class="cover">
-      </div>
-      <ul class="nav_icons">
-        <li><ion-icon name="scan-circle-outline"></ion-icon></li>
-        <li><ion-icon name="chatbox"></ion-icon></li>
-        <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
-      </ul>
-    </div>
-    <%# Search %>
-    <div class="search_chat">
-      <div>
-        <input type="text" placeholder="Search or start new chat?">
-        <ion-icon name="search-outline"></ion-icon>
-      </div>
-    </div>
-
-    <%# chat list %>
-    <div class="chatlist">
-      <div class="block">
-        <div class="imgbx">
-          <%# This will need to be changed with our users info %>
-          <img src="pic.png" class="cover">
+          <%# This will need to be changed to the user who is logged in's photo %>
+          <img src="profilePic.png" class="chatcover">
         </div>
-        <div class="details">
-          <div class="listHead">
+        <ul class="chatnav_icons">
+          <li><ion-icon name="scan-circle-outline"></ion-icon></li>
+          <li><ion-icon name="chatbox"></ion-icon></li>
+          <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+        </ul>
+      </div>
+      <%# Search %>
+      <div class="chatsearch_chat">
+        <div>
+          <input type="text" placeholder="Search or start new chat?">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+      </div>
+
+      <%# chat list %>
+      <div class="chatchatlist">
+        <div class="chatblock">
+          <div class="chatimgbx">
             <%# This will need to be changed with our users info %>
-            <h4>Testing</h4>
-            <%# This will need to be changed with accurate time instead of hard coded %>
-            <p clas="time">10:56</p>
+            <img src="pic.png" class="chatcover">
           </div>
-          <div class="message_p">
-            <%# This may need to be replaced with the user's actual message %>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <div class="chatdetails">
+            <div class="chatlistHead">
+              <%# This will need to be changed with our users info %>
+              <h4>Testing</h4>
+              <%# This will need to be changed with accurate time instead of hard coded %>
+              <p class="chattime">10:56</p>
+            </div>
+            <div class="chatmessage_p">
+              <%# This may need to be replaced with the user's actual message %>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="chatrightside">
+    </div>
   </div>
 
-  <div class="rightside">
-  </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </div>
-
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
