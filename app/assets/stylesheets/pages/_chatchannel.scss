@@ -1,5 +1,4 @@
 .chat-channels {
-  padding: 50px;
   margin: auto;
   border-radius: 10px;
   color: $black;
@@ -32,4 +31,17 @@
   filter: blur(2px);
   display: inline;
   white-space: nowrap;
+}
+
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
