@@ -172,9 +172,12 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 15px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
   cursor: pointer;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 5px;
 }
 
 .chatchatlist .chatblock .chatimgbx {
@@ -210,6 +213,7 @@
 
 .chatmessage {
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .chatmessage_p {
