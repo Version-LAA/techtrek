@@ -61,9 +61,21 @@ body {
   position: relative;
   flex: 30%;
   background-color: white;
+  border-right: 1px solid black;
 }
+
 .container .rightside {
   position: relative;
   flex: 70%;
   background: #e5ddd5;
+}
+
+.container .rightside::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // background: url(chatpic.png);
+  // opacity: 0.06%;
 }
