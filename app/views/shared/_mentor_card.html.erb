@@ -11,6 +11,10 @@
             gravity: "face"
             )%>
         </div>
+        <%if controller.controller_name == 'assessments'%>
+          <%raise%>
+          <p>Skill: </p>
+        <%end%>
       <div class="card-body">
         <%=link_to "View Profile",mentor_path(mentor),class:"btn btn-profile"%>
       </div>
