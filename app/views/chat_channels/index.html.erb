@@ -44,7 +44,7 @@
             </div>
           </div>
         </div>
-                <div class="chatblock">
+        <div class="chatblock">
           <div class="chatimgbx">
             <%# This will need to be changed with our users info %>
             <img src="pic.png" class="chatcover">
@@ -65,8 +65,7 @@
 
         <div class="channels mt-2">
           <%@channels.each do |channel|%>
-            <div class="row">
-
+            <div class="row chatdetails">
               <%= link_to(chat_channel_path(channel), class: "chat-channels") do %>
                 <%userphoto_attribute = if channel.user1_id == current_user.id%>
                   <%userphoto = :user2_id%>
@@ -83,9 +82,12 @@
 
                 <%if Message.where(chat_channel_id:channel).exists?%>
                 <%end%>
-
-
-                  <p class="message-content m-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
+                <div class="chatlistHead">
+                  <h6><%= User.find(userphoto).first_name + " " + User.find(userphoto).last_name %></h4>
+                </div>
+                <div class="chatmessage_p">
+                  <p class="chatmessage">Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
+                </div>
               <% end %>
             </div>
           <%end%>
@@ -111,4 +113,3 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </div>
-35:18
