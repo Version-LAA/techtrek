@@ -219,9 +219,13 @@
   margin-top: 0px;
 }
 
-.chatchatlist .chatblock .chatdetails .chatlistHead .chattime  {
+.chatchatlist .chatblock .chatdetails .chatlistHead .chattime {
   color: #111;
+}
 
+
+.chatchatlist .chatblock.unread .chatdetails .chatlistHead .chattime {
+  color: #57BE8D;
 }
 
 .chatmessage {
