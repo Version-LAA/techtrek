@@ -8,6 +8,7 @@ class AssessmentsController < ApplicationController
                      .where("specialties.skill_level > ?", 3)
                      .distinct
 
+
     else
       @mentors = User.all
     end

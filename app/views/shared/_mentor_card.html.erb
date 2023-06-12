@@ -17,7 +17,7 @@
             <%skills = mentor.technologies.pluck(:name) & params[:technologies]%>
             <%skills.each do |skill|%>
 
-              <div><%="⭐️ #{skill.upcase}"%></div>
+              <div class="results-skill"><%="✅ #{skill.upcase}"%></div>
             <%end%>
           </p>
         <%end%>

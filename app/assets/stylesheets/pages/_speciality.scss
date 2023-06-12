@@ -4,9 +4,9 @@
   align-items: center;
   border-radius: 10px;
   font-size: 20px;
-  // border: 4px black;
+  border: 2px solid $secondary-color;
   box-shadow: 1px 1px 3px grey;
-  background-color: white;
+  background-color: #FFFDFA;
 }
 .card-image-container{
   display: flex;
