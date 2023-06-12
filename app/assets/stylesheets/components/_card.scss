@@ -3,9 +3,6 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
-
-
 }
 
 .technology-card {
@@ -20,18 +17,13 @@
 
   &:hover{
     background-color: $secondary-color;
+    cursor: pointer;
   }
 
   i {
     font-size: 30px;
   }
 
-}
-
-.checkbox {
-  // position: relative;
-  // left: 50%;
-  // display: inline;
 }
 
 .submit-button {
