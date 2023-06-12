@@ -12,8 +12,14 @@
             )%>
         </div>
         <%if controller.controller_name == 'assessments'%>
-          <%raise%>
-          <p>Skill: </p>
+          <div style="font-weight: bolder;">Matched Skill(s): </div>
+          <p>
+            <%skills = mentor.technologies.pluck(:name) & params[:technologies]%>
+            <%skills.each do |skill|%>
+
+              <div><%="⭐️ #{skill.upcase}"%></div>
+            <%end%>
+          </p>
         <%end%>
       <div class="card-body">
         <%=link_to "View Profile",mentor_path(mentor),class:"btn btn-profile"%>
