@@ -176,10 +176,14 @@ body {
   align-items: center;
   padding: 15px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
+  cursor: pointer;
 }
 
 .chatlist .block .imgbx {
   position: relative;
   width: 45px;
   height: 45px;
+  overflow: hidden;
+  border-radius: 50%;
+
 }
