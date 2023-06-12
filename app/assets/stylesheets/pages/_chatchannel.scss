@@ -166,3 +166,20 @@ body {
   height: calc(100% - 110px);
   overflow-y: auto;
 }
+
+
+.chatlist .block {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.chatlist .block .imgbx {
+  position: relative;
+  width: 45px;
+  height: 45px;
+}
