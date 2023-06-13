@@ -1,7 +1,8 @@
 .chatroom {
   background: white;
   margin-top: 50px;
-  height: calc(100vh - 75px);
+  margin-bottom: 50px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9,6 +10,7 @@
   border-radius: 20px;
   max-width: 60%;
   padding: 20px;
+  box-shadow: 1px 1px 3px grey;
 
   h1 {
     border-bottom: 1px solid $gray-200;
@@ -21,6 +23,8 @@
     padding: 1rem;
     overflow-y: auto;
     margin-top: 10px;
+    display: flex;
+    flex-direction: column;
   }
 
   #new_message {
@@ -33,7 +37,7 @@
   }
 
   .form-control {
-    max-width: 55%;
+    padding-right: 0%;
   }
 
   .messager {
@@ -49,6 +53,7 @@
   .rightside{
     position: relative;
     flex: 30%;
+    padding-left: 0px;
   }
 
 }
