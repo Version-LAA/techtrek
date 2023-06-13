@@ -19,9 +19,6 @@
                             radius: "50",
                             class: "my-image") %>
           <%if Message.where(chat_channel_id:channel).exists?%>
-            <% last_message = Message.where(chat_channel_id: channel).last %>
-            <% last_message_time = last_message.created_at.strftime("%H:%M") %>
-            <p class="message-time"><%= last_message_time %></p>
           <%end%>
             <p class="message-content m-4"><%= Faker::Lorem.sentence(word_count: rand(1..12)) %></p>
         <% end %>
