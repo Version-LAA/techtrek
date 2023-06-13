@@ -1,8 +1,8 @@
 .chat-channels {
   border-radius: 10px;
   color: $black;
-  max-width: 50%;
-  margin-bottom: 3%;
+  width: 99%;
+  margin-bottom: 1%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   transition: 0.2s color, 0.2s border, 0.2s background-color;
   &:hover {
@@ -16,7 +16,6 @@
 
 .messaging {
   background-color: $white;
-
 }
 
 .message-header{
@@ -25,7 +24,9 @@
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-top: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-bottom: 25px;
   border-bottom: 1px solid black;
   background-color: #3261bb;
   color: white;
