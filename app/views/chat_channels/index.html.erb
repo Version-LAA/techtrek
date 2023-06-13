@@ -19,7 +19,7 @@
                             radius: "20") %>
           <%if Message.where(chat_channel_id:channel).exists?%>
           <%end%>
-            <p class="message-content m-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
+            <p class="message-content m-4"><%= Faker::Lorem.sentence(word_count: rand(1..12)) %></p>
         <% end %>
       </div>
       <%end%>
