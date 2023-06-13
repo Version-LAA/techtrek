@@ -27,14 +27,19 @@
 }
 .skills-container{
 
-  padding-right: 120px;
-  border: 1px;
-  background-color: $light-gray;
-  max-width: 455px;
-  position: relative;
-  top: 50px;
+ padding-right: 161px;
+ border: 1px;
+ background-color: $light-gray;
+ max-width: 455px;
+ position: relative;
+ top: 50px;
+ padding-bottom: 10%;
+ margin-left: 1%;
+ border-radius: 10px;
+ color: $black;
+ text-align: center;
 
-  padding-bottom: 20%;
+ padding-bottom: 10%;
 
   & p {
     text-align: center;
@@ -42,8 +47,9 @@
   }
 
   & .skill-text{
-    font-size: 18px;
+    font-size: px;
     margin-left: 20px;
+    text-align: center;
 
   }
 }
@@ -66,8 +72,11 @@
 }
 
 .profile-body{
-  margin-left: 18%;
-  margin-top: 40px;
+  // margin-left: 18%;
+  margin-top: 50px;
+
+  padding-left: 18%;
+
 
   & .work-exp{
     position: relative;
@@ -151,4 +160,21 @@
 
 .education {
   font-weight: normal;
+}
+
+.star-block{
+
+
+}
+
+.skill-list{
+  font-size: 30px;
+  list-style: none;
+  text-align: left;
+}
+
+.skill-header{
+  position: relative;
+  left: 70px;
+
 }
