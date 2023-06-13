@@ -1,24 +1,39 @@
 <div class="container chatroom">
-
  <div data-controller="chatroom-subscription"
-  data-chatroom-subscription-chatroom-id-value="<%=@channel.id%>"
-  >
-    <h3> Message Between <%="#{User.find(@channel.user1_id).first_name} & #{User.find(@channel.user2_id).first_name}" %></h3>
+  data-chatroom-subscription-chatroom-id-value="<%=@channel.id%>">
 
+    <%# Top section (name) %>
+    <h1 class="messager"><%="#{User.find(@channel.user2_id).first_name} #{User.find(@channel.user2_id).last_name}" %></h1>
+
+
+    <%# Mid section (messages) %>
     <div class="messages" data-chatroom-subscription-target="messages">
       <% @messages.each do |message| %>
         <%= render "chat_channels/messages", message: message%>
       <% end %>
     </div>
-    <%= simple_form_for [@chat_channel, @message],  html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }},
-     url:chat_channel_messages_path(@channel) do |f| %>
-    <%= f.input :content,
-      label: false,
-      placeholder: "Message ##",
-      class:"form-control"
-    %>
-    <%= f.submit "Send", class: "btn btn-primary ml-1" %>
-  <% end %>
-  </div>
+    <%= simple_form_for [@chat_channel, @message], html: { data: { action: "turbo:submit-end->chatroom-subscription#resetForm" }},
+    url: chat_channel_messages_path(@channel) do |f| %>
 
+
+
+    <%# Bottom section %>
+    <%# Type new message %>
+    <div class="row messagensend">
+      <div class="col leftside">
+        <%= f.input :content,
+          label: false,
+          placeholder: "Type something to send",
+          class: "form-control"
+        %>
+      </div>
+
+      <%# Send button %>
+      <div class="col rightside">
+        <%= f.submit "Send", class: "btn btn-primary" %>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
 </div>
