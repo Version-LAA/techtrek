@@ -23,6 +23,13 @@ class SpecialtiesController < ApplicationController
     elsif params[:query] == 'frontend'
       @mentors = get_filter(frontend)
       @statement = display_statement[4]
+    elsif params[:query] == ""
+      @statement = display_statement[5]
+      if current_user
+        @mentors = User.where.not(id: current_user.id)
+      else
+        @mentors = User.all
+      end
     else
       # @mentors = User.where.not(id: current_user.id)
       @statement = display_statement[5]
