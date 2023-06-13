@@ -40,4 +40,15 @@
     display: flex;
     justify-content: center;
   }
+
+  .leftside{
+    position: relative;
+    flex: 70%;
+  }
+
+  .rightside{
+    position: relative;
+    flex: 30%;
+  }
+
 }
