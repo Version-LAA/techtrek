@@ -1,96 +1,28 @@
-<%# Most comments are minor fixes. %>
-
-<div class="test">
-  <div class="chatcontainer">
-
-    <%# Header %>
-    <div class="chatleftside">
-      <div class="chatheader">
-        <div class="chatuserimg">
-
-          <%# This will need to be changed to the user who is logged in's photo %>
-          <img src="profilePic.png" class="chatcover">
-        </div>
-        <ul class="chatnav_icons">
-          <li><ion-icon name="scan-circle-outline"></ion-icon></li>
-          <li><ion-icon name="chatbox"></ion-icon></li>
-          <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
-        </ul>
+<div class="messaging">
+  <div class="container">
+  <h1 class="message-header">Private Messages</h1>
+    <div class="channels mt-2">
+    <%@channels.each do |channel|%>
+      <div class="row">
+        <%= link_to(chat_channel_path(channel), class: "chat-channels") do %>
+          <%userphoto_attribute = if channel.user1_id == current_user.id%>
+            <%userphoto = :user2_id%>
+          <%else%>
+            <%userphoto = :user1_id%>
+          <%end%>
+          <% userphoto = channel.send(userphoto_attribute) %>
+          <%= cl_image_tag(User.find(userphoto).photo.key,
+                            height: 75,
+                            width: 75,
+                            crop: :scale,
+                            aspect_ratio: "4:3",
+                            radius: "20") %>
+          <%if Message.where(chat_channel_id:channel).exists?%>
+          <%end%>
+            <p class="message-content m-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.?</p>
+        <% end %>
       </div>
-      <%# Search %>
-      <div class="chatsearch_chat">
-        <div>
-          <input type="text" placeholder="Search or start new chat?">
-          <ion-icon name="search-outline"></ion-icon>
-        </div>
-      </div>
-
-      <%# chat list %>
-      <div class="chatchatlist">
-        <div class="chatblock active">
-          <div class="chatimgbx">
-            <%# This will need to be changed with our users info %>
-            <img src="pic.png" class="chatcover">
-          </div>
-          <div class="chatdetails">
-            <div class="chatlistHead">
-              <%# This will need to be changed with our users info %>
-              <h4>Professor Snape</h4>
-              <%# This will need to be changed with accurate time instead of hard coded %>
-              <p class="chattime">11:14</p>
-            </div>
-            <div class="chatmessage_p">
-              <%# This may need to be replaced with the user's actual message %>
-              <p class="chatmessage">Lorem ipsum dolor sit amet consectetur</p>
-            </div>
-          </div>
-        </div>
-
-                <div class="chatblock unread">
-          <div class="chatimgbx">
-            <%# This will need to be changed with our users info %>
-            <img src="pic.png" class="chatcover">
-          </div>
-          <div class="chatdetails">
-            <div class="chatlistHead">
-              <%# This will need to be changed with our users info %>
-              <h4>Mike Tyson</h4>
-              <%# This will need to be changed with accurate time instead of hard coded %>
-              <p class="chattime">10:52</p>
-            </div>
-            <div class="chatmessage_p">
-              <%# This may need to be replaced with the user's actual message %>
-              <p class="chatmessage">Hey! What time are
-.chatchatlist .chatblock .chatdetails .chatlistHead .chattime</p>
-              <b>1</b>
-            </div>
-          </div>
-        </div>
-        <div class="chatblock">
-          <div class="chatimgbx">
-            <%# This will need to be changed with our users info %>
-            <img src="pic.png" class="chatcover">
-          </div>
-          <div class="chatdetails">
-            <div class="chatlistHead">
-              <%# This will need to be changed with our users info %>
-              <h4>Steven Wilson</h4>
-              <%# This will need to be changed with accurate time instead of hard coded %>
-              <p class="chattime">09:15</p>
-            </div>
-            <div class="chatmessage_p">
-              <%# This may need to be replaced with the user's actual message %>
-              <p class="chatmessage">Frontend or backend?</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="chatrightside">
+      <%end%>
     </div>
   </div>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </div>
