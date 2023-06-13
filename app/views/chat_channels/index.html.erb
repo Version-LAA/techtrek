@@ -1,7 +1,7 @@
 <div class="messaging">
   <div class="chat-container">
-  <h1 class="message-header">Private Messages</h1>
-    <div class="channels mt-2">
+  <h2 class="message-header">Private Messages</h2>
+    <div class="channels ">
     <%@channels.each do |channel|%>
       <div class="row">
         <%= link_to(chat_channel_path(channel), class: "chat-channels") do %>
@@ -12,12 +12,16 @@
           <%end%>
           <% userphoto = channel.send(userphoto_attribute) %>
           <%= cl_image_tag(User.find(userphoto).photo.key,
-                            height: 75,
-                            width: 75,
+                            height: 60,
+                            width: 60,
                             crop: :scale,
                             aspect_ratio: "4:3",
-                            radius: "20") %>
+                            radius: "50",
+                            class: "my-image") %>
           <%if Message.where(chat_channel_id:channel).exists?%>
+            <% last_message = Message.where(chat_channel_id: channel).last %>
+            <% last_message_time = last_message.created_at.strftime("%H:%M") %>
+            <p class="message-time"><%= last_message_time %></p>
           <%end%>
             <p class="message-content m-4"><%= Faker::Lorem.sentence(word_count: rand(1..12)) %></p>
         <% end %>
