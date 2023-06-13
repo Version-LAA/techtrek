@@ -92,7 +92,7 @@
           <p>Hi! I'm <%="#{userFirstName}"%></p>
           <p><%="#{user}"%></p>
         </div>
-        <div class="d-flex justify-content-around icons">
+        <div class="d-flex justify-content-evenly icons">
           <i class="fa-brands fa-linkedin"></i>
           <i class="fa-brands fa-github"></i>
           <i class="fa-brands fa-bitbucket"></i>
@@ -106,14 +106,20 @@
 
   <div class="d-flex flex-row ">
     <div class="skills-container">
-      <p class="justify-content-start"><strong>Skills</strong></p>
+      <p class="skill-header"><strong>Skills</strong></p>
+
       <%skills.each do |skill|%>
         <div class="skill-text mb-3">
-          <%=skill.technology.name.titleize%>
-          <%skill.skill_level.times do |level|%>
-              <span class="stars"><i class="fa-regular fa-star"></i></span>
-          <%end%>
+          <ul>
+           <li class="skill-list"> <%=skill.technology.name.titleize%>
+            <div class="star-block">
+              <%skill.skill_level.times do |level|%>
+                  <span class="stars"><i class="fa-regular fa-star"></i></span>
+              <%end%>
+            </div> </li>
+          </ul>
         </div>
+
       <%end%>
     </div>
     <div class="profile-body">
