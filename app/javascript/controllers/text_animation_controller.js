@@ -13,7 +13,10 @@ export default class extends Controller {
 
 function typeWriter() {
   if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
+    // guard clause
+    const demoElement = document.getElementById("demo");
+    if (!demoElement) return;
+    demoElement.innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
