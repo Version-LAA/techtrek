@@ -5,7 +5,7 @@ class SpecialtiesController < ApplicationController
     datascience = ['TensorFlow', 'PyTorch','Apache Spark', 'Tableau', 'Matlab', 'python', 'sql']
     careerservices = ['resume review','technical interviews','offer negotiation']
     frontend = ['javascript', 'html', 'css', 'react', 'angular', 'jquery', 'node.js']
-
+    @mentors = [] # Assign an empty array as the initial value
     # line 9 - 23 to be refactored. Statement complicates things. We shouldnt't specify these words.
     @specialties = Specialty.all
     if params[:query] == 'python'
@@ -24,7 +24,7 @@ class SpecialtiesController < ApplicationController
       @mentors = get_filter(frontend)
       @statement = display_statement[4]
     else
-      @mentors = User.where.not(id: current_user.id)
+      # @mentors = User.where.not(id: current_user.id)
       @statement = display_statement[5]
       # fix
       if params[:query].present?
@@ -35,12 +35,22 @@ class SpecialtiesController < ApplicationController
           OR users.about ILIKE :query
           OR technologies.name ILIKE :query
         SQL
-        @mentors = @mentors.joins(specialties: [:technology])
-                           .where.not(users: { id: current_user.id })
-                           .where(sql_subquery, query: "%#{params[:query]}%")
-                           .uniq
+        if current_user
+          @mentors = User.joins(specialties: [:technology])
+                         .where.not(users: { id: current_user.id })
+                         .where(sql_subquery, query: "%#{params[:query]}%")
+                         .uniq
+        else
+          @mentors = User.joins(specialties: [:technology])
+                         .where(sql_subquery, query: "%#{params[:query]}%")
+                         .uniq
+        end
       else
-        @mentors = User.where.not(id: current_user.id)
+        if current_user
+          @mentors = User.where.not(id: current_user.id)
+        else
+          @mentors = User.all
+        end
       end
     end
   end
@@ -48,9 +58,14 @@ class SpecialtiesController < ApplicationController
   private
 
   def get_filter(filter)
-    @mentors = User.joins(specialties: [:technology])
-                   .where.not(users: { id: current_user.id })
-                   .where(technologies: { name: filter }).uniq
+    if current_user
+      User.joins(specialties: [:technology])
+          .where.not(users: { id: current_user.id })
+          .where(technologies: { name: filter }).uniq
+    else
+      User.joins(specialties: [:technology])
+          .where(technologies: { name: filter }).uniq
+    end
   end
 
   def display_statement
