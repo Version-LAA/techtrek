@@ -82,9 +82,13 @@
 }
 
 .sender-style {
-  background-color: lightcoral;
+  background-color: $main-color;
+  color: white;
+  border-radius: 20px;
 }
 
 .receiver-style {
-  background-color: lightblue;
+  background-color: $secondary-color;
+  color: white;
+  border-radius: 20px;
 }
