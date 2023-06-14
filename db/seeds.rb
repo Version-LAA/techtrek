@@ -322,31 +322,7 @@ end
   Education.create(institution_name: "LeWagon", degree_type: "Certification", start_date:"01-01-2023", end_date:"06-15-2023", user: fake_user)
   puts "user created "
 end
-# User.find_each do |u|
-#   puts "adding to #{u.first_name}"
-#   puts "technology created"
-#   Specialty.create(technology: Technology.all.sample,skill_level: rand(1..4), hourly_rate: rand(25..100), user: u)
-#   puts "specialty one added to #{u.first_name}"
-#   Specialty.create(technology: Technology.all.sample,skill_level: rand(1..4), hourly_rate: rand(25..100), user: u)
-#   puts "specialty two added to #{u.first_name}"
-#   Specialty.create(technology: Technology.all.sample,skill_level: rand(1..4), hourly_rate: rand(25..100), user: u)
-#   puts "specialty three added to #{u.first_name}"
-#   lang = SpokenLanguage.create(name: languages[rand(languages.count)])
-#   lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
-#   puts "languages created"
-#   UserSpokenLanguage.create(spoken_language:lang,user:u)
-#   UserSpokenLanguage.create(spoken_language:lang_two,user:u)
-#   puts "languages added to #{u.first_name}"
-#   file = URI.open('https://assets.stickpng.com/thumbs/5845ca7c1046ab543d25238b.png')
-#   u.photo.attach(io: file, filename: "profilePic.png", content_type: "image/png")
-#   u.save
-#   puts 'photo added'
-#   Experience.create(company_name: "TechTrek", position_title: "Lead Developer", start_date:"01-01-2021", end_date:"02-02-2023", user: u)
-#   Experience.create(company_name: "Codemon", position_title: "Product Manager", start_date:"01-01-2020", end_date:"01-01-2021", user: u)
-#   puts 'experience added'
-#   Education.create(institution_name: "LeWagon", degree_type: "Certification", start_date:"01-01-2023", end_date:"06-15-2023", user: u)
-#   puts 'education added'
-# end
+
 
 # creating assessment questions
 assessment_questions = [
@@ -363,3 +339,86 @@ assessment_questions.each do |question|
 end
 
 puts "questions seeded"
+
+
+# pitch users
+puts "creating users for pitch"
+
+bridget = User.create(
+  first_name: "Brigette",
+  last_name: "Gonzales",
+  location: "Los Angeles",
+  about: "I have over 5 years experience working for various tech companies as a full stack developer, " \
+         "with a specialty in Ruby on Rails. " \
+         "I love to mentor up and coming students enter the field of technology.",
+  email: "bridget@techtrek.com",
+  password: "password",
+  title: "Full Stack Developer and Mentor "
+)
+
+Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: 4, hourly_rate: rand(25..100), user: bridget)
+Specialty.create(technology: Technology.where(name:"ruby on rails")[0],skill_level: rand(4), hourly_rate: rand(25..100), user: bridget)
+Specialty.create(technology: Technology.where(name:"html")[0],skill_level: 4, hourly_rate: rand(25..100), user: bridget)
+Specialty.create(technology: Technology.where(name:"css")[0],skill_level: 3, hourly_rate: rand(25..100), user: bridget)
+Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: bridget)
+Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 4, hourly_rate: rand(25..100), user: bridget)
+
+
+
+puts "specialties created"
+lang = SpokenLanguage.create(name: languages[rand(languages.count)])
+lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
+UserSpokenLanguage.create(spoken_language:lang,user:bridget)
+UserSpokenLanguage.create(spoken_language:lang_two,user:bridget)
+puts "languages created"
+puts "#{bridget.first_name} created"
+Experience.create(company_name: "Amazon", position_title: "Staff Fullstack Developer", start_date:"01-01-2021", end_date:"02-02-2023", user: bridget)
+Experience.create(company_name: "Rubrix", position_title: "Sr. Rails Developer", start_date:"12-01-2019", end_date:"01-01-2021", user: bridget)
+Experience.create(company_name: "Uber", position_title: "Jr. Frontend Developer", start_date:"12-01-2016", end_date:"11-20-2019", user: bridget)
+puts 'experience added'
+Education.create(institution_name: "LeWagon", degree_type: "Certification", start_date:"05-01-2016", end_date:"11-01-2016", user: bridget)
+puts 'education added'
+bridget.photo.attach(io: File.open('app/assets/images/profile/bridget.jpg'), filename: "bridget.jpg", content_type: "image/jpg")
+bridget.save
+puts 'photo added'
+puts "bridget created"
+
+
+
+james = User.create(
+  first_name: "James",
+  last_name: "Benoit ",
+  location: "Philadelphia",
+  about: "I'm a cybersecurity expert who has helped built tools to help the cybersecurity community. " \
+         "I have a background in python and django. " \
+         "I love to provide mentorship and helping students nail their technical interviews and offer negotiation!",
+  email: "james@techtrek.com",
+  password: "password",
+  title: "Cybersecurity Developer"
+)
+
+Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
+Specialty.create(technology: Technology.where(name:"django")[0],skill_level: rand(4), hourly_rate: rand(25..100), user: james)
+Specialty.create(technology: Technology.where(name:"html")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
+Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 3, hourly_rate: rand(25..100), user: james)
+Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: james)
+Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
+
+
+puts "specialties created"
+lang = SpokenLanguage.create(name: languages[rand(languages.count)])
+lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
+UserSpokenLanguage.create(spoken_language:lang,user:james)
+UserSpokenLanguage.create(spoken_language:lang_two,user:james)
+puts "languages created"
+puts "#{james.first_name} created"
+Experience.create(company_name: "Google", position_title: "Sr CyberSecurity Developer", start_date:"01-01-2021", end_date:"02-02-2023", user: james)
+Experience.create(company_name: "Meta", position_title: "Security Engineer", start_date:"12-01-2019", end_date:"01-01-2021", user: james)
+Experience.create(company_name: "Netflix", position_title: "Jr. Engineer", start_date:"12-01-2016", end_date:"11-20-2019", user: james)
+puts 'experience added'
+Education.create(institution_name: "University of Pennsylvania", degree_type: "BS", start_date:"05-01-2012", end_date:"11-01-2016", user: james)
+puts 'education added'
+james.photo.attach(io: File.open('app/assets/images/profile/james.jpg'), filename: "james.jpg", content_type: "image/jpg")
+james.save
+puts 'photo added'
+puts "james created"

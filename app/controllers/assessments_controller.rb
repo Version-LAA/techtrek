@@ -6,6 +6,7 @@ class AssessmentsController < ApplicationController
       @mentors = User.joins(specialties: [:technology])
                      .where(technologies: { name: search })
                      .where("specialties.skill_level > ?", 3)
+                     .where.not(users: { id: current_user.id })
                      .distinct
 
 
