@@ -6,7 +6,7 @@ let speed = 90;
 export default class extends Controller {
   static targets = ["text"]
   connect() {
-    console.log("chris")
+    // cache issue fixed
     typeWriter()
   }
 }
