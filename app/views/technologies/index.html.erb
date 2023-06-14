@@ -1,7 +1,7 @@
 <div class="container">
-  <h1 class="assesment-title mt-5 mb-4">What skills would you like to learn?</h1>
+  <h1 class="assesment-title mt-5 mb-1">What skills would you like to learn?</h1>
   <%= simple_form_for Assessment.new, url: new_assessment_path, html: {method: :get} do |f| %>
-    <%= f.button :submit , class:"btn profile-btn assessment-btn", value: "Start Learning!"%>
+
     <div class="assessment-frame">
       <div class="technology-card-container"
         data-controller="technology"
@@ -79,6 +79,7 @@
           </div>
         <% end %>
       </div>
+      <%= f.button :submit , class:"btn profile-btn assessment-btn", value: "Start Learning!"%>
   <% end %>
   </div>
 </div>
