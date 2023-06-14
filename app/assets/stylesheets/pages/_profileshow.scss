@@ -1,6 +1,10 @@
 .container-main{
-  margin-left: 50px;
-
+  padding: 20px;
+  border: 1px solid rgb(230, 230, 240);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 16px rgba(0 ,0 ,0, 0.15);
+  border-radius: 8px;
 }
 
 .profile-picture{
@@ -13,12 +17,14 @@
 .about-me {
   max-width: 400px;
   position: relative;
-  left: 170px;
-  top: 45px;
+  border: 1px solid rgb(230, 230, 240);
+  background-color: rgba(230, 230, 240, 0.5) ;
+  border-radius: 8px;
+  padding: 8px;
 
   & .quote {
-    font-style: italic;
-    font-size: 18px;
+    font-size: 16px;
+    color: #555;
   }
 
   & .icons {
@@ -38,8 +44,8 @@
  border-radius: 10px;
  color: $black;
  text-align: center;
-
  padding-bottom: 10%;
+ height: auto;
 
   & p {
     text-align: center;
@@ -62,6 +68,8 @@
 
 .stars {
   margin-left: 5px;
+  color: #57BE8D;
+  font-size: 18px;
 }
 
 .profile-container{
@@ -74,7 +82,6 @@
 .profile-body{
   // margin-left: 18%;
   margin-top: 50px;
-
   padding-left: 18%;
 
 
@@ -82,6 +89,8 @@
     position: relative;
     right: 85px;
     font-size: 20px;
+    width: 670px;
+
   }
 
   & .line{
@@ -145,7 +154,6 @@
 }
 .profile-info{
   margin-left: 60px;
-  margin-top: 40px;
 
   & .title {
     font-size: 25px;
@@ -155,7 +163,7 @@
 
 .profile-info h1 {
   font-size: 48px;
-
+  font-weight: bold;
 }
 
 .education {
@@ -168,7 +176,7 @@
 }
 
 .skill-list{
-  font-size: 30px;
+  font-size: 25px;
   list-style: none;
   text-align: left;
 }
@@ -177,4 +185,14 @@
   position: relative;
   left: 70px;
 
+}
+
+.partial-container{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.date-experience{
+  position: absolute;
+  right: 65px;
 }
