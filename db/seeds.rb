@@ -394,7 +394,7 @@ james = User.create(
          "I love to provide mentorship and helping students nail their technical interviews and offer negotiation!",
   email: "james@techtrek.com",
   password: "password",
-  title: "Cybersecurity Developer"
+  title: "Cybersecurity Software Developer"
 )
 
 Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
@@ -416,9 +416,87 @@ Experience.create(company_name: "Google", position_title: "Sr CyberSecurity Deve
 Experience.create(company_name: "Meta", position_title: "Security Engineer", start_date:"12-01-2019", end_date:"01-01-2021", user: james)
 Experience.create(company_name: "Netflix", position_title: "Jr. Engineer", start_date:"12-01-2016", end_date:"11-20-2019", user: james)
 puts 'experience added'
-Education.create(institution_name: "University of Pennsylvania", degree_type: "BS", start_date:"05-01-2012", end_date:"11-01-2016", user: james)
+Education.create(institution_name: "University of Pennsylvania", degree_type: "BS", start_date:"2012", end_date:"2016", user: james)
 puts 'education added'
 james.photo.attach(io: File.open('app/assets/images/profile/james.jpg'), filename: "james.jpg", content_type: "image/jpg")
 james.save
 puts 'photo added'
 puts "james created"
+
+
+
+darla = User.create(
+  first_name: "Darla",
+  last_name: "James ",
+  location: "Montreal",
+  about: "experienced application security engineer with a passion for ensuring the safety and integrity of software " \
+         "systems. With a keen eye for detail, she excels in finding bugs and vulnerabilities, leveraging her expertise " \
+         "in JavaScript and secure coding practices. Darla also finds fulfillment in mentoring aspiring security " \
+         "professionals, sharing her knowledge and helping them navigate the complex world of cybersecurity.",
+  email: "darla@techtrek.com",
+  password: "password",
+  title: "Application Security Engineer"
+)
+
+Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: rand(4), hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 3, hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"go")[0],skill_level: 2, hourly_rate: rand(25..100), user: darla)
+
+
+puts "specialties created"
+lang = SpokenLanguage.create(name: languages[rand(languages.count)])
+lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
+UserSpokenLanguage.create(spoken_language:lang,user:darla)
+UserSpokenLanguage.create(spoken_language:lang_two,user:darla)
+puts "languages created"
+puts "#{darla.first_name} created"
+Experience.create(company_name: "Microsoft", position_title: "Sr Application Security", start_date:"01-01-2021", end_date:"present", user: darla)
+Experience.create(company_name: "ServiceNow", position_title: "Security Software Engineer", start_date:"12-01-2019", end_date:"01-01-2021", user: darla)
+Experience.create(company_name: "PWC", position_title: "Associate Engineer", start_date:"12-01-2016", end_date:"11-20-2019", user: darla)
+puts 'experience added'
+Education.create(institution_name: "University of Montreal", degree_type: "BS", start_date:"2012", end_date:"2016", user: darla)
+puts 'education added'
+darla.photo.attach(io: File.open('app/assets/images/profile/darla.jpg'), filename: "darla.jpg", content_type: "image/jpg")
+darla.save
+puts 'photo added'
+puts "darla created"
+
+darla = User.create(
+  first_name: "Darla",
+  last_name: "James ",
+  location: "Montreal",
+  about: "experienced application security engineer with a passion for ensuring the safety and integrity of software " \
+         "systems. With a keen eye for detail, she excels in finding bugs and vulnerabilities, leveraging her expertise " \
+         "in JavaScript and secure coding practices. Darla also finds fulfillment in mentoring aspiring security " \
+         "professionals, sharing her knowledge and helping them navigate the complex world of cybersecurity.",
+  email: "darla@techtrek.com",
+  password: "password",
+  title: "Application Security Engineer"
+)
+
+Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: rand(4), hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 3, hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"go")[0],skill_level: 2, hourly_rate: rand(25..100), user: darla)
+
+
+puts "specialties created"
+lang = SpokenLanguage.create(name: languages[rand(languages.count)])
+lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
+UserSpokenLanguage.create(spoken_language:lang,user:darla)
+UserSpokenLanguage.create(spoken_language:lang_two,user:darla)
+puts "languages created"
+puts "#{darla.first_name} created"
+Experience.create(company_name: "Microsoft", position_title: "Sr Application Security", start_date:"01-01-2021", end_date:"present", user: darla)
+Experience.create(company_name: "ServiceNow", position_title: "Security Software Engineer", start_date:"12-01-2019", end_date:"01-01-2021", user: darla)
+Experience.create(company_name: "PWC", position_title: "Associate Engineer", start_date:"12-01-2016", end_date:"11-20-2019", user: darla)
+puts 'experience added'
+Education.create(institution_name: "University of Montreal", degree_type: "BS", start_date:"2012", end_date:"2016", user: darla)
+puts 'education added'
+darla.photo.attach(io: File.open('app/assets/images/profile/darla.jpg'), filename: "darla.jpg", content_type: "image/jpg")
+darla.save
+puts 'photo added'
+puts "darla created"
