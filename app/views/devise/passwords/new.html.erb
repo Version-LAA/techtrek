@@ -1,18 +1,33 @@
-<h2>Forgot your password?</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
+<div class="container entirecontainer">
+  <div class="container boxaroundh2">
+    <h1 class="titlesignin">Forgot your password?</h1>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
-<% end %>
+  <div class="container beigecontainerbox div">
+    <div class= "row inputboxes mergerow1">
+      <div class = "col-sm-6 logincontainer mergecol1">
+        <div class="row text-input-boxes mergerow2">
 
-<%= render "devise/shared/links" %>
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= f.error_notification %>
+          <div class="form-inputs email-input col-sm-12">
+            <div class="row emailfieldbox">
+              <div class="form-inputs sm-12">
+                <%= f.input :email,
+                            required: true,
+                            autofocus: true,
+                            input_html: { autocomplete: "email" } %>
+              </div>
+            </div>
+          <div class="form-actions form-actions-login rounded ">
+            <%= f.button :submit, "Send me reset password instructions" %>
+          </div>
+        <% end %>
+
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render "devise/shared/links" %>
+</div>
