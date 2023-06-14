@@ -15,12 +15,9 @@
         )%>
 
     <div class="skills">
-      <h1 class="name"><%= @specialty.user.first_name  %></h1>
+      <h1 class="name" style="margin-bottom: 0px;"><%= @specialty.user.first_name  %></h1>
       <h5 class="position"><%= @specialty.user.title.capitalize  %></h4>
-    </div>
-
-    <div class="skills">
-      <h5 class="skill-chosen">Skill:</h5>
+      <h5 class="skill-chosen" style="margin-top: 40px;">Skill:</h5>
       <h3 class="skill"><%= @specialty.technology.name.capitalize  %></h3>
       <h3>Total: <%= @specialty.hourly_rate%>$</h3>
     </div>
