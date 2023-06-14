@@ -1,12 +1,12 @@
 <%# Some of the styling can be found inside _login.scss since I reused some of the HTML %>
 <div class="container entirecontainer">
   <div class="container boxaroundh2">
-    <h1 class="titlesignin">Forgot your password?</h1>
+    <h1 class="passwordsignin">Forgot your password?</h1>
   </div>
 
   <div class="container beigecontainerbox div">
     <div class= "row inputboxes mergerow1">
-      <div class = "col-sm-6 logincontainer mergecol1">
+      <div class = "col-sm-6 passwordcontainer mergecol1">
         <div class="row text-input-boxes mergerow2">
 
         <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
