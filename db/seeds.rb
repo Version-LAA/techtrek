@@ -249,7 +249,7 @@ puts "andrew created"
 
 # need to fix personal info so that it is accurate
 
-#skill level: 1 = beginer; 2= midlevel 3= advanced 4 =expert
+# skill level: 1 = beginer; 2= midlevel 3= advanced 4 =expert
 
 puts "seeding fake users"
 
