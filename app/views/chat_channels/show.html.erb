@@ -3,7 +3,7 @@
   data-chatroom-subscription-chatroom-id-value="<%=@channel.id%>">
 
     <%# Top section (name) %>
-    <h1 class="messager"><%="#{User.find(@channel.user2_id).first_name} #{User.find(@channel.user2_id).last_name}" %></h1>
+    <h1 class="messager"><%=link_to "#{User.find(@channel.user2_id).first_name} #{User.find(@channel.user2_id).last_name}",mentor_path(User.find(@channel.user2_id))%></h1>
 
 
     <%# Mid section (messages) %>
