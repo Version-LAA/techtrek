@@ -4,6 +4,7 @@
     <div class="channels ">
     <%@channels.each do |channel|%>
       <div class="row">
+
         <%= link_to(chat_channel_path(channel), class: "chat-channels") do %>
           <%userphoto_attribute = if channel.user1_id == current_user.id%>
             <%userphoto = :user2_id%>
