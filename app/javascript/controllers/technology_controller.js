@@ -6,7 +6,7 @@ export default class extends Controller {
   connect() {
     console.log("hello from technology page");
     this.updateSubmitButtonState();
-    console.log(this.submitButtonTarget);
+    // console.log(this.submitButtonTarget);
   }
 
   toggleParent(event) {
@@ -35,6 +35,7 @@ export default class extends Controller {
      const checkboxes = form.querySelectorAll('input[type="checkbox"]:checked');
      const submitButton = this.submitButtonTarget;
      submitButton.disabled = checkboxes.length === 0;
+
    }
 
 }

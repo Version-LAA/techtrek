@@ -1,12 +1,17 @@
 .assessment-btn{
-  width: 30% !important;
+  width: 40% !important;
   font-size: 20px !important;
   margin-top: 50px;
   display: block;
   margin: 0 auto;
   text-align: center;
   position: relative;
-  left: 55px;
+  left: 10px;
+
+  &:disabled{
+    background-color: $secondary-color;
+    color: white;
+  }
 }
 
 .assessment-container {
