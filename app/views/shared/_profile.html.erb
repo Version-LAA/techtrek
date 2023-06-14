@@ -1,11 +1,11 @@
 <div class="partial-container mt-3">
   <div class="container-main " >
-    <div class="d-flex flex-row">
+    <div class="d-flex flex-row align-items-center justify-content-between">
       <div class="">
         <%#  TODO fix profile image upload %>
         <%=cl_image_tag(profilePhoto || "default-profile.jpg",
-          height: 255,
-          width: 260,
+          height: 240,
+          width: 240,
           crop: :fill,
           aspect_ratio: "4:3",
           radius: "max",
@@ -14,7 +14,7 @@
       </div>
       <div class="profile-info">
         <h1><%= "#{userFirstName} #{userLastName} " %></h1>
-        <p class="mt-3 title"><%= "#{user_title}"%></p>
+        <p class= "title"><%= "#{user_title}"%></p>
         <p><i class="fa-solid fa-location-pin"></i> <%="#{userLocation}"%></p>
         <div class="d-flex flex-row">
           <%if current_page?(!my_profile_path)%>
@@ -114,6 +114,9 @@
            <li class="skill-list"> <%=skill.technology.name.titleize%>
             <div class="star-block">
               <%skill.skill_level.times do |level|%>
+                  <span class="stars"><i class="fa-solid fa-star"></i></span>
+              <%end%>
+              <%(5 - skill.skill_level).times do |level|%>
                   <span class="stars"><i class="fa-regular fa-star"></i></span>
               <%end%>
             </div> </li>
@@ -122,13 +125,18 @@
 
       <%end%>
     </div>
-    <div class="profile-body">
+    <div class="profile-body ">
       <div class="work">
         <p style="font-size:35px"><strong>Work Experience</strong></p>
         <div>
           <%experiences.each do |e|%>
-            <div class="work-exp">
-              <p><span class="logo">🖥</span> <%="#{e.position_title} #{e.company_name} #{e.start_date} - #{e.end_date} "%></p>
+            <div class="work-exp ">
+              <p>
+                <span class="logo">🖥</span>
+                <span> <%="#{e.position_title} #{e.company_name}"%> </span>
+                <span class="date-experience"> <%=" #{e.start_date} - #{e.end_date} "%> </span>
+              </p>
+
             </div>
           <%end%>
         </div>
@@ -141,7 +149,8 @@
         <p style="font-size:35px"><strong>Education</strong></p>
           <%education.each do |edu|%>
             <div class="work-exp">
-            <p><%="📓 #{edu.institution_name} #{edu.degree_type} #{edu.start_date} - Present"%>
+            <p><%="📓 #{edu.institution_name} #{edu.degree_type}"%>
+              <span class="date-experience"> <%=" #{edu.start_date} - Present"%> </span>
             </div>
           <%end%>
 
