@@ -60,7 +60,7 @@ technology = [
   'swift',
   'C#',
   'go',
-  'job offer review',
+  'offer negotiation',
   'figma',
   'frontend',
   'backend'
@@ -124,8 +124,8 @@ Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, 
 Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"sql")[0],skill_level: 3, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
-Specialty.create(technology: Technology.where(name:"technical interviews")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
-Specialty.create(technology: Technology.where(name:"resume review")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"resume")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
 
 puts "specialties created"
 lang = SpokenLanguage.create(name: languages[rand(languages.count)])
@@ -403,6 +403,7 @@ Specialty.create(technology: Technology.where(name:"html")[0],skill_level: 4, ho
 Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 3, hourly_rate: rand(25..100), user: james)
 Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: james)
 Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
+Specialty.create(technology: Technology.where(name:"offer negotiation")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
 
 
 puts "specialties created"
@@ -443,6 +444,7 @@ Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level:
 Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 3, hourly_rate: rand(25..100), user: darla)
 Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: darla)
 Specialty.create(technology: Technology.where(name:"go")[0],skill_level: 2, hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 2, hourly_rate: rand(25..100), user: darla)
 
 
 puts "specialties created"
@@ -483,6 +485,7 @@ Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level:
 Specialty.create(technology: Technology.where(name:"go")[0],skill_level: 2, hourly_rate: rand(25..100), user: darla)
 
 
+
 puts "specialties created"
 lang = SpokenLanguage.create(name: languages[rand(languages.count)])
 lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
@@ -500,3 +503,79 @@ darla.photo.attach(io: File.open('app/assets/images/profile/darla.jpg'), filenam
 darla.save
 puts 'photo added'
 puts "darla created"
+
+
+darla = User.create(
+  first_name: "Darla",
+  last_name: "James ",
+  location: "Montreal",
+  about: "An experienced application security engineer with a passion for ensuring the safety and integrity of software " \
+         "systems. With a keen eye for detail, she excels in finding bugs and vulnerabilities, leveraging her expertise " \
+         "in JavaScript and secure coding practices. Darla also finds fulfillment in mentoring aspiring security " \
+         "professionals, sharing her knowledge and helping them navigate the complex world of cybersecurity.",
+  email: "darla@techtrek.com",
+  password: "password",
+  title: "Application Security Engineer"
+)
+
+Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: rand(4), hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 3, hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"go")[0],skill_level: 2, hourly_rate: rand(25..100), user: darla)
+Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 2, hourly_rate: rand(25..100), user: darla)
+
+
+puts "specialties created"
+lang = SpokenLanguage.create(name: languages[rand(languages.count)])
+lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
+UserSpokenLanguage.create(spoken_language:lang,user:darla)
+UserSpokenLanguage.create(spoken_language:lang_two,user:darla)
+puts "languages created"
+puts "#{darla.first_name} created"
+Experience.create(company_name: "Microsoft", position_title: "Sr Application Security", start_date:"01-01-2021", end_date:"present", user: darla)
+Experience.create(company_name: "ServiceNow", position_title: "Security Software Engineer", start_date:"12-01-2019", end_date:"01-01-2021", user: darla)
+Experience.create(company_name: "PWC", position_title: "Associate Engineer", start_date:"12-01-2016", end_date:"11-20-2019", user: darla)
+puts 'experience added'
+Education.create(institution_name: "University of Montreal", degree_type: "Compuuter Science", start_date:"2012", end_date:"2016", user: darla)
+puts 'education added'
+darla.photo.attach(io: File.open('app/assets/images/profile/darla.jpg'), filename: "darla.jpg", content_type: "image/jpg")
+darla.save
+puts 'photo added'
+puts "darla created"
+
+amin = User.create(
+  first_name: "Amin",
+  last_name: "Saad",
+  location: "California",
+  about: "A mid-level security engineer with a passion for building and inspiring. " \
+         "systems. With a keen eye for detail, she excels in finding bugs and vulnerabilities, leveraging her expertise " \
+         "in JavaScript and secure coding practices. Darla also finds fulfillment in mentoring aspiring security " \
+         "professionals, sharing her knowledge and helping them navigate the complex world of cybersecurity.",
+  email: "amin@techtrek.com",
+  password: "password",
+  title: "Security Engineer"
+)
+
+Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, hourly_rate: rand(25..100), user: amin)
+Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 3, hourly_rate: rand(25..100), user: amin)
+Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: amin)
+Specialty.create(technology: Technology.where(name:"go")[0],skill_level: 2, hourly_rate: rand(25..100), user: amin)
+
+
+puts "specialties created"
+lang = SpokenLanguage.create(name: languages[rand(languages.count)])
+lang_two = SpokenLanguage.create(name: languages[rand(languages.count)])
+UserSpokenLanguage.create(spoken_language:lang,user:amin)
+UserSpokenLanguage.create(spoken_language:lang_two,user:amin)
+puts "languages created"
+puts "#{amin.first_name} created"
+Experience.create(company_name: "Datadog", position_title: "Security Software Engineer", start_date:"12-01-2019", end_date:"present", user: amin)
+Experience.create(company_name: "US Bank", position_title: "Associate Engineer", start_date:"12-01-2016", end_date:"11-20-2019", user: amin)
+puts 'experience added'
+Education.create(institution_name: "Lewagon", degree_type: "Certificate", start_date:"2012", end_date:"2016", user: amin)
+puts 'education added'
+amin.photo.attach(io: File.open('app/assets/images/profile/amin.jpg'), filename: "amin.jpg", content_type: "image/jpg")
+amin.save
+puts 'photo added'
+puts "amin created"
