@@ -11,6 +11,7 @@
   max-width: 60%;
   padding: 20px;
   box-shadow: 1px 1px 3px grey;
+  overflow: scroll;
 
   h1 {
     border-bottom: 1px solid $gray-200;
@@ -21,7 +22,6 @@
   .messages {
     max-height: 60%;
     padding: 1rem;
-    overflow-y: auto;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -56,4 +56,35 @@
     padding-left: 0px;
   }
 
+}
+
+.msg-form{
+  // position: fixed;
+  // bottom: 0;
+  // width: 90%;
+  // height: 100vh;
+  // overflow: scroll;
+
+}
+
+.message-row {
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+// To style the message itself
+.sender-style, .receiver-style {
+  width: 70%;
+  max-width: 400px;
+  border-radius: 4px;
+  padding: 8px;
+  min-height: 80px;
+}
+
+.sender-style {
+  background-color: lightcoral;
+}
+
+.receiver-style {
+  background-color: lightblue;
 }
