@@ -9,7 +9,8 @@
   align-items: center;
   gap: 10px;
   &:hover {
-    background: $main-color;
+    border: 2px solid $secondary-color;
+    background-color: white;
   }
 }
 
