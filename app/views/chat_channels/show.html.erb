@@ -9,8 +9,8 @@
 
     <%# Mid section (messages) %>
     <div class="messages msg-form" data-chatroom-subscription-target="messages">
+      <%groupone = current_user%>
       <% @messages.each do |message| %>
-
         <div class="message-row d-flex <%= message.sender == current_user ? 'justify-content-end' : 'justify-content-start' %>">
           <div class="<%= message.sender==current_user ? 'sender-style' : 'receiver-style' %>">
             <%= render "chat_channels/messages", message: message%>
