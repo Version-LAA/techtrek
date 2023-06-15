@@ -37,6 +37,8 @@
   display: inline;
   white-space: nowrap;
   padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .chat-container {
@@ -47,4 +49,12 @@
 
 .my-image {
   padding: 5px;
+}
+
+.message-text {
+  flex-grow: 1;
+}
+
+.chattime {
+
 }
