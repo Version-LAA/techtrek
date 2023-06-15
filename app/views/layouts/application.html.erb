@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload",media: 'all', 'data-turbolinks-track': 'reload', version: '1.0'  %>
     <% cache_busting_id = Time.current.to_i %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true, "v": cache_busting_id %>
   </head>
