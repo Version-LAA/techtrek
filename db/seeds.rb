@@ -415,7 +415,7 @@ puts "languages created"
 puts "#{james.first_name} created"
 Experience.create(company_name: "Google", position_title: "Sr CyberSecurity Developer", start_date:"01-01-2021", end_date:"02-02-2023", user: james)
 Experience.create(company_name: "Meta", position_title: "Security Engineer", start_date:"12-01-2019", end_date:"01-01-2021", user: james)
-Experience.create(company_name: "Netflix", position_title: "Jr. Engineer", start_date:"12-01-2016", end_date:"11-20-2019", user: james)
+Experience.create(company_name: "Netflix", position_title: "Jr. Engineer", start_date:"12-01-2016", end_date:"11-01-2019", user: james)
 puts 'experience added'
 Education.create(institution_name: "University of Pennsylvania", degree_type: "BS", start_date:"2012", end_date:"2016", user: james)
 puts 'education added'
@@ -454,11 +454,11 @@ UserSpokenLanguage.create(spoken_language:lang,user:darla)
 UserSpokenLanguage.create(spoken_language:lang_two,user:darla)
 puts "languages created"
 puts "#{darla.first_name} created"
-Experience.create(company_name: "Microsoft", position_title: "Sr Application Security", start_date:"01-01-2021", end_date:"present", user: darla)
+Experience.create(company_name: "Microsoft", position_title: "Sr Application Security", start_date:"01-01-2021", end_date:"06-06-2023", user: darla)
 Experience.create(company_name: "ServiceNow", position_title: "Security Software Engineer", start_date:"12-01-2019", end_date:"01-01-2021", user: darla)
-Experience.create(company_name: "PWC", position_title: "Associate Engineer", start_date:"12-01-2016", end_date:"11-20-2019", user: darla)
+Experience.create(company_name: "PWC", position_title: "Associate Engineer", start_date:"12-01-2016", end_date:"11-01-2019", user: darla)
 puts 'experience added'
-Education.create(institution_name: "University of Montreal", degree_type: "BS", start_date:"2012", end_date:"2016", user: darla)
+Education.create(institution_name: "University of Montreal", degree_type: "BS", start_date:"01-01-2020", end_date:"2016", user: darla)
 puts 'education added'
 darla.photo.attach(io: File.open('app/assets/images/profile/darla.jpg'), filename: "darla.jpg", content_type: "image/jpg")
 darla.save
@@ -489,8 +489,8 @@ UserSpokenLanguage.create(spoken_language:lang,user:amin)
 UserSpokenLanguage.create(spoken_language:lang_two,user:amin)
 puts "languages created"
 puts "#{amin.first_name} created"
-Experience.create(company_name: "Datadog", position_title: "Security Software Engineer", start_date:"12-01-2019", end_date:"present", user: amin)
-Experience.create(company_name: "US Bank", position_title: "Associate Engineer", start_date:"12-01-2016", end_date:"11-20-2019", user: amin)
+Experience.create(company_name: "Datadog", position_title: "Security Software Engineer", start_date:"12-01-2019", end_date:"06-06-2023", user: amin)
+Experience.create(company_name: "US Bank", position_title: "Associate Engineer", start_date:"12-01-2016", end_date:"11-01-2019", user: amin)
 puts 'experience added'
 Education.create(institution_name: "Lewagon", degree_type: "Certificate", start_date:"2012", end_date:"2016", user: amin)
 puts 'education added'
