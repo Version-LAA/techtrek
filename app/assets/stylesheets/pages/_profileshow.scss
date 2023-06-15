@@ -36,7 +36,7 @@
  padding-right: 161px;
  border: 1px;
  background-color: $light-gray;
- max-width: 455px;
+ max-width: 300px;
  position: relative;
  top: 50px;
  padding-bottom: 10%;
@@ -82,23 +82,23 @@
 .profile-body{
   // margin-left: 18%;
   margin-top: 50px;
-  padding-left: 18%;
+  padding-left: 12%;
 
 
   & .work-exp{
     position: relative;
     right: 85px;
     font-size: 20px;
-    width: 670px;
+    width: 804px;
 
   }
 
   & .line{
     position: relative;
-    right: 150px;
+    right: 87px;
     color: $secondary-color;
     font-weight: bolder;
-
+    width: 741px;
 
   }
 }
@@ -172,9 +172,10 @@
 
 
 .skill-list{
-  font-size: 25px;
+  font-size: 20px;
   list-style: none;
   text-align: left;
+  width: 190px;
 }
 
 .skill-header{
@@ -191,4 +192,8 @@
 .date-experience{
   position: absolute;
   right: 65px;
+}
+
+.star-block{
+  width: 150px;
 }
