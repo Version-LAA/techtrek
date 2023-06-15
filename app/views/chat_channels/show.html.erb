@@ -12,7 +12,7 @@
       # aspect_ratio: "4:3",
       radius: "50",
       class: "my-image") %>
-      <%=link_to "#{User.find(@channel.user2_id).first_name} #{User.find(@channel.user2_id).last_name}",mentor_path(User.find(@channel.user2_id))%>
+      <%=link_to "#{User.find(@channel.user2_id).first_name} #{User.find(@channel.user2_id).last_name}",mentor_path(User.find(@channel.user2_id)),class: "chat-header"%>
 
     </h1>
 

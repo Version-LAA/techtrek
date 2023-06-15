@@ -110,3 +110,11 @@
   width: 95%;
   margin: 0 auto;
 }
+
+.chat-header{
+  text-decoration: none;
+  color: $secondary-color;
+  &:hover {
+    color: $main-color;
+  }
+}
