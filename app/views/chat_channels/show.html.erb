@@ -4,7 +4,17 @@
   data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
 
     <%# Top section (name) %>
-    <h1 class="messager"><%=link_to "#{User.find(@channel.user2_id).first_name} #{User.find(@channel.user2_id).last_name}",mentor_path(User.find(@channel.user2_id))%></h1>
+    <h1 class="messager">
+      <%= cl_image_tag(User.find(@channel.user2_id).photo.key,
+      height: 60,
+      width: 60,
+      crop: :scale,
+      # aspect_ratio: "4:3",
+      radius: "50",
+      class: "my-image") %>
+      <%=link_to "#{User.find(@channel.user2_id).first_name} #{User.find(@channel.user2_id).last_name}",mentor_path(User.find(@channel.user2_id))%>
+
+    </h1>
 
 
     <%# Mid section (messages) %>
