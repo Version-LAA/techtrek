@@ -111,21 +111,22 @@ latoya = User.create(
   first_name: "Latoya",
   last_name: "Alford",
   location: "Philadelphia",
-  about: "Lorem ipsum dolor sit amet," \
-         "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut" \
-         "labore et dolore magna aliqua.",
+  about: "I'm the founder and lead developer of Techtrek!" \
+         "I have over a decade of experience in cybersecurity and threat operations with a love for helping to foster " \
+         "a community through learning and mentorship to those in tech. I hope you enjoy this platform as much as I enjoyed creating it!",
   email: "latoya@techtrek.com",
   password: "password",
   title: "Cybersecurity Warrior"
 )
 
-Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 5, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"sql")[0],skill_level: 3, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"resume")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"offer negotiation")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
 
 puts "specialties created"
 lang = SpokenLanguage.create(name: languages[rand(languages.count)])
@@ -374,7 +375,7 @@ puts "languages created"
 puts "#{bridget.first_name} created"
 Experience.create(company_name: "Amazon", position_title: "Staff Fullstack Developer", start_date:"01-01-2021", end_date:"02-02-2023", user: bridget)
 Experience.create(company_name: "Rubrix", position_title: "Sr. Rails Developer", start_date:"12-01-2019", end_date:"01-01-2021", user: bridget)
-Experience.create(company_name: "Uber", position_title: "Jr. Frontend Developer", start_date:"12-01-2016", end_date:"11-20-2019", user: bridget)
+Experience.create(company_name: "Uber", position_title: "Jr. Frontend Developer", start_date:"12-01-2016", end_date:"11-11-2019", user: bridget)
 puts 'experience added'
 Education.create(institution_name: "LeWagon", degree_type: "Certification", start_date:"05-01-2016", end_date:"11-01-2016", user: bridget)
 puts 'education added'
@@ -400,9 +401,9 @@ james = User.create(
 Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
 Specialty.create(technology: Technology.where(name:"django")[0],skill_level: rand(4), hourly_rate: rand(25..100), user: james)
 Specialty.create(technology: Technology.where(name:"html")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
-Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 3, hourly_rate: rand(25..100), user: james)
+Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 5, hourly_rate: rand(25..100), user: james)
 Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: james)
-Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
+Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 5, hourly_rate: rand(25..100), user: james)
 Specialty.create(technology: Technology.where(name:"offer negotiation")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
 
 
@@ -417,7 +418,7 @@ Experience.create(company_name: "Google", position_title: "Sr CyberSecurity Deve
 Experience.create(company_name: "Meta", position_title: "Security Engineer", start_date:"12-01-2019", end_date:"01-01-2021", user: james)
 Experience.create(company_name: "Netflix", position_title: "Jr. Engineer", start_date:"12-01-2016", end_date:"11-01-2019", user: james)
 puts 'experience added'
-Education.create(institution_name: "University of Pennsylvania", degree_type: "BS", start_date:"2012", end_date:"2016", user: james)
+Education.create(institution_name: "University of Pennsylvania", degree_type: "BS", start_date:"01-01-2016", end_date:"2016", user: james)
 puts 'education added'
 james.photo.attach(io: File.open('app/assets/images/profile/james.jpg'), filename: "james.jpg", content_type: "image/jpg")
 james.save
@@ -492,7 +493,7 @@ puts "#{amin.first_name} created"
 Experience.create(company_name: "Datadog", position_title: "Security Software Engineer", start_date:"12-01-2019", end_date:"06-06-2023", user: amin)
 Experience.create(company_name: "US Bank", position_title: "Associate Engineer", start_date:"12-01-2016", end_date:"11-01-2019", user: amin)
 puts 'experience added'
-Education.create(institution_name: "Lewagon", degree_type: "Certificate", start_date:"2012", end_date:"2016", user: amin)
+Education.create(institution_name: "Lewagon", degree_type: "Certificate", start_date:"12-01-2018", end_date:"2016", user: amin)
 puts 'education added'
 amin.photo.attach(io: File.open('app/assets/images/profile/amin.jpg'), filename: "amin.jpg", content_type: "image/jpg")
 amin.save
