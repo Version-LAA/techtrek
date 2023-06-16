@@ -111,21 +111,22 @@ latoya = User.create(
   first_name: "Latoya",
   last_name: "Alford",
   location: "Philadelphia",
-  about: "Lorem ipsum dolor sit amet," \
-         "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut" \
-         "labore et dolore magna aliqua.",
+  about: "I'm the founder and lead developer of Techtrek!" \
+         "I have over a decade of experience in cybersecurity and threat operations with a love for helping to foster " \
+         "a community through learning and mentorship to those in tech. I hope you enjoy this platform as much as I enjoyed creating it!",
   email: "latoya@techtrek.com",
   password: "password",
   title: "Cybersecurity Warrior"
 )
 
-Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 5, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"sql")[0],skill_level: 3, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"ruby")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
 Specialty.create(technology: Technology.where(name:"resume")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
+Specialty.create(technology: Technology.where(name:"offer negotiation")[0],skill_level: 4, hourly_rate: rand(25..100), user: latoya)
 
 puts "specialties created"
 lang = SpokenLanguage.create(name: languages[rand(languages.count)])
@@ -400,9 +401,9 @@ james = User.create(
 Specialty.create(technology: Technology.where(name:"python")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
 Specialty.create(technology: Technology.where(name:"django")[0],skill_level: rand(4), hourly_rate: rand(25..100), user: james)
 Specialty.create(technology: Technology.where(name:"html")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
-Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 3, hourly_rate: rand(25..100), user: james)
+Specialty.create(technology: Technology.where(name:"cybersecurity")[0],skill_level: 5, hourly_rate: rand(25..100), user: james)
 Specialty.create(technology: Technology.where(name:"javascript")[0],skill_level: 3, hourly_rate: rand(25..100), user: james)
-Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
+Specialty.create(technology: Technology.where(name:"interviewing")[0],skill_level: 5, hourly_rate: rand(25..100), user: james)
 Specialty.create(technology: Technology.where(name:"offer negotiation")[0],skill_level: 4, hourly_rate: rand(25..100), user: james)
 
 
