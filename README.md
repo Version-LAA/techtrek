@@ -159,11 +159,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <!-- ROADMAP -->
 ## Roadmap
+- Mentor Profiles
+    - [Profile Creation](https://github.com/Version-LAA/techtrek/issues/155)
+    - [Profile Editing](https://github.com/Version-LAA/techtrek/issues/156)
+- [Message Notifications](https://github.com/Version-LAA/techtrek/issues/157)
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
 
 See the [open issues](https://github.com/Version-LAA/techtrek/issues) for a full list of proposed features (and known issues).
 
@@ -201,7 +201,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Latoya - VersionLAA@gmail.com
 
 Project Link: [https://github.com/Version-LAA/techtrek](https://github.com/Version-LAA/techtrek)
 
@@ -211,7 +211,7 @@ Project Link: [https://github.com/Version-LAA/techtrek](https://github.com/Versi
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-To the amazing development team!
+To the amazing core development team that worked tiredlessly to make this possible, thank you!
 
 * [Kameron](https://github.com/Kameronjan)
 * [Bertrand T.](https://github.com/btukov)
