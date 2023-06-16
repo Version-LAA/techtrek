@@ -16,7 +16,7 @@
   background-color: $white;
 
   &:hover{
-    background-color: $secondary-color;
+    background-color:#d3fce9;
     cursor: pointer;
   }
 
@@ -34,8 +34,8 @@
 }
 
 .checked{
-  background-color: $secondary-color;
-  opacity: .7;
+  background-color: #d3fce9;
+  border: 2px solid $secondary-color;
 }
 
 .checkbox-container{
