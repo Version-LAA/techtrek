@@ -19,9 +19,15 @@
                             # aspect_ratio: "4:3",
                             radius: "50",
                             class: "my-image") %>
-          <%if Message.where(chat_channel_id:channel).exists?%>
-          <%end%>
-            <p class="message-content m-4"><%= Faker::Lorem.sentence(word_count: rand(1..12)) %></p>
+          <% last_message = Message.where(chat_channel_id: channel.id, sender_id: current_user.id).or(Message.where(chat_channel_id: channel.id, receiver_id: current_user.id)).order(created_at: :desc).first %>
+          <% if last_message %>
+            <p class="message-content m-4">
+              <span class="message-text">Let's work on this project together!</span>
+              <span class="chattime"><%= last_message.created_at.strftime("%H:%M") %></span>
+            </p>
+          <% else %>
+            <p class="message-content m-4">Let's work on this project together!</p>
+          <% end %>
         <% end %>
       </div>
       <%end%>
