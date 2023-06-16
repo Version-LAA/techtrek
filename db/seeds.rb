@@ -493,7 +493,7 @@ puts "#{amin.first_name} created"
 Experience.create(company_name: "Datadog", position_title: "Security Software Engineer", start_date:"12-01-2019", end_date:"06-06-2023", user: amin)
 Experience.create(company_name: "US Bank", position_title: "Associate Engineer", start_date:"12-01-2016", end_date:"11-01-2019", user: amin)
 puts 'experience added'
-Education.create(institution_name: "Lewagon", degree_type: "Certificate", start_date:"2012", end_date:"2016", user: amin)
+Education.create(institution_name: "Lewagon", degree_type: "Certificate", start_date:"12-01-2018", end_date:"2016", user: amin)
 puts 'education added'
 amin.photo.attach(io: File.open('app/assets/images/profile/amin.jpg'), filename: "amin.jpg", content_type: "image/jpg")
 amin.save
