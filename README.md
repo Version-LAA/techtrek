@@ -149,16 +149,13 @@ To successfully set up the project locally please ensure you have both Ruby 3.1.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
+Features we ared hoping to release soon!
 - Mentor Profiles
     - [Profile Creation](https://github.com/Version-LAA/techtrek/issues/155)
     - [Profile Editing](https://github.com/Version-LAA/techtrek/issues/156)
