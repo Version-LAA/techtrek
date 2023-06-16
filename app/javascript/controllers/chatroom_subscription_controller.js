@@ -22,7 +22,7 @@ export default class extends Controller {
   // private function
 
   #insertMessageAndScrollDown(data) {
-
+    console.log(data.sender_id);
     const currentUserIsSender = this.currentUserIdValue !== data.sender_id;
     const messageElement = this.#buildMessageElement(currentUserIsSender, data.message)
     this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
