@@ -41,6 +41,8 @@
 
 
 
+
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -69,12 +71,16 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About The Project - Check out a live demo below!
+
+https://github.com/Version-LAA/techtrek/assets/53385426/92a85acd-a339-4971-b2ba-3eab2f1753dc
+
+## Project photos
 <div align="center">
-  <img src="app/assets/images/home.png" alt="Logo" width="600" height="400">
+  <img src="app/assets/images/home.png" alt="Logo" width="300" height="200">
+  <img width="300" height="200" alt="Screen Shot 2023-06-17 at 8 39 59 PM" src="https://github.com/Version-LAA/techtrek/assets/53385426/12738340-5164-4792-9fec-350c3e02fdde" >
+
 </div>
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
