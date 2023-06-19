@@ -18,7 +18,7 @@
 <h3 align="center">The TechTrekApp</h3>
 
   <p align="left">
-    The TechTrekApp is a powerful application designed to connect students with mentors, field-specific programs, and career services, empowering them to elevate their tech careers to new heights.
+    The TechTrekApp is a powerful application to connect students with mentors, field-specific programs, and career services, empowering them to elevate their tech careers to new heights.
     <br/>
     <br/>
     Whether you're a student exploring different tech disciplines or an aspiring professional looking to advance in your current field, The TechTrekApp is your ultimate companion on the journey to success.
