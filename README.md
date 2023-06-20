@@ -24,6 +24,7 @@
     Whether you're a student exploring different tech disciplines or an aspiring professional looking to advance in your current field, The TechTrekApp is your ultimate companion on the journey to success.
     <br/>
     <br/>
+    <br/>
     Join TechTrek today and unlock the doors to endless possibilities in the world of technology.
   <br/>
     <a href="https://github.com/Version-LAA/techtrek"><strong>Explore the docs »</strong></a>
